@@ -8,16 +8,18 @@ public class SceneMovement : MonoBehaviour
     public GameObject[] sceneArr;
 
 
-    private int currentSceneIndex = 0; 
+    private int currentSceneIndex = 0;
 
-
-
-    void OnMouseDown(){ // needs collider for interaction
-        if(gameObject.tag == "Door"){
-            if(currentSceneIndex < sceneArr.Length){
+    void OnMouseDown()
+    { // needs collider for interaction
+        if (gameObject.tag == "Door")
+        {
+            if (currentSceneIndex < sceneArr.Length)
+            {
                 sceneArr[currentSceneIndex].SetActive(false);
                 currentSceneIndex++;
-                if(currentSceneIndex >= sceneArr.Length){
+                if (currentSceneIndex >= sceneArr.Length)
+                {
                     currentSceneIndex = 0;
                 }
                 sceneArr[currentSceneIndex].SetActive(true);

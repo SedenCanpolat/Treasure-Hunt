@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 10f;
+
+    public float xRange;
+    public float yRange;
     Vector2 lastClickedPos;
     bool moving;
 
@@ -19,7 +22,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            moving = true;
+            if (lastClickedPos.x < xRange && lastClickedPos.x > -xRange && lastClickedPos.y < yRange)
+            {
+                moving = true;
+            }
+            else
+            {
+                moving = false;
+            }
         }
         if (moving && (Vector2)transform.position != lastClickedPos)
         {
