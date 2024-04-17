@@ -4,20 +4,41 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
-    public float moveSpeed;
-    private float speedX, speedY;
+    public float speed = 10f;
+
+    public float xRange;
+    public float yRange;
+    Vector2 lastClickedPos;
+    bool moving;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
-        rb2D.velocity = new Vector2(speedX, speedY);
+        if (Input.GetMouseButtonDown(0))
+        {
+            lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (lastClickedPos.x < xRange && lastClickedPos.x > -xRange && lastClickedPos.y < yRange)
+            {
+                moving = true;
+            }
+            else
+            {
+                moving = false;
+            }
+        }
+        if (moving && (Vector2)transform.position != lastClickedPos)
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, lastClickedPos, step);
+        }
+        else
+        {
+            moving = false;
+        }
     }
 }
