@@ -43,8 +43,7 @@ public class SceneMovement : MonoBehaviour
             if(currentSceneIndex < sceneArr.Length){
                 sceneArr[currentSceneIndex].SetActive(false);
                 currentSceneIndex++;
-                if (currentSceneIndex >= sceneArr.Length)
-                {
+                if(currentSceneIndex >= sceneArr.Length){
                     currentSceneIndex = 0;
                 }
                 sceneArr[currentSceneIndex].SetActive(true);
