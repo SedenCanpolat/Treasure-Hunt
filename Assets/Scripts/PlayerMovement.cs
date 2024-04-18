@@ -10,13 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float yRange;
     Vector2 lastClickedPos;
     bool moving;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
