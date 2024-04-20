@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 309126191}
   - component: {fileID: 309126193}
   - component: {fileID: 309126192}
+  - component: {fileID: 309126194}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -372,6 +373,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309126190}
   m_CullTransparentMesh: 1
+--- !u!114 &309126194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309126190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e878db64e5e66f48a8c8dcd3e8ef2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorImage: {fileID: 546951654}
+  actorName: {fileID: 1328471454}
+  messageText: {fileID: 686653270}
+  backgroundBox: {fileID: 309126191}
+  player: {fileID: 355445155}
+--- !u!1 &355445155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+  m_PrefabInstance: {fileID: 8009142610385908682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &366841272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,8 +512,8 @@ RectTransform:
   m_GameObject: {fileID: 546951652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 309126191}
   m_RootOrder: 2
@@ -513,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4889433, g: 0.09019607, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -643,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -673,7 +696,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 681321552}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 681321554}
+        m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
+        m_MethodName: StartDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &681321552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,11 +766,15 @@ MonoBehaviour:
     message: "G\xFCnayd\u0131n Marcus."
   - actorId: 0
     message: "Kahvalt\u0131ya otur hadi."
+  - actorId: 2
+    message: Tamam geliyorum.
   actors:
   - name: Grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
   - name: Grandpa
     sprite: {fileID: 21300000, guid: 4edad936f609e3e4dbdb0dfa4ad38c6a, type: 3}
+  - name: Marcus
+    sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
 --- !u!1 &686653268
 GameObject:
   m_ObjectHideFlags: 0
