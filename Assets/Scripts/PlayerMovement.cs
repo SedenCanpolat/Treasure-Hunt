@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (DialogManager.isActive == true) //if dialogue is open, then character not moving
+            return;
+
         if (Input.GetMouseButtonDown(0) && floorScript.check)
         {
             lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
