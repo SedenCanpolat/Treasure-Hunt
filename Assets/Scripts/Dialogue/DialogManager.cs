@@ -15,16 +15,19 @@ public class DialogManager : MonoBehaviour
 
     Message[] currentMessages;
     Actor[] currentActors;
-    int activeMessage = 0;
+    int activeMessage;
+    int endMessage;
     public static bool isActive = false;
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(Message[] messages, Actor[] actors, int active, int end)
     {
         currentMessages = messages;
         currentActors = actors;
-        activeMessage = 0;
+        activeMessage = active;
+        endMessage = end + 1;
         isActive = true;
         player.GetComponent<PlayerMovement>().enabled = false;
+
 
         DisplayMessage();
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);
@@ -50,7 +53,7 @@ public class DialogManager : MonoBehaviour
     public void NextMessage()
     {
         activeMessage++;
-        if (activeMessage < currentMessages.Length)
+        if (activeMessage < endMessage)
         {
             DisplayMessage();
         }
