@@ -7,15 +7,10 @@ public class DialogTrigger : MonoBehaviour
     public Message[] messages;
     public Actor[] actors;
 
-    public int Active;
-    public int End;
 
-
-    public void StartDialogue(int active, int end)
+    public void StartDialogue()
     { // singleton also can be used
-        Active = active;
-        End = end;
-        FindObjectOfType<DialogManager>().OpenDialogue(messages, actors, Active, End);
+        FindObjectOfType<DialogManager>().OpenDialogue(messages, actors);
     }
 
 }

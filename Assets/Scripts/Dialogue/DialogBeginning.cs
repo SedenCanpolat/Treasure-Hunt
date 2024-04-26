@@ -7,7 +7,7 @@ public class DialogBeginning : MonoBehaviour
     public DialogTrigger trigger;
     void Start()
     {
-        trigger.StartDialogue(0, 0);
+        trigger.StartDialogue();
     }
     void Update()
     {

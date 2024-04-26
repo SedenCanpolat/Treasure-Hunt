@@ -467,8 +467,6 @@ MonoBehaviour:
   - actorId: 0
     message: alala
   actors: []
-  Active: 0
-  End: 0
 --- !u!114 &321351256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,7 +479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f10453dad8616499a0dfefa4982fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  end: 0
   trigger: {fileID: 321351255}
 --- !u!61 &321351257
 BoxCollider2D:
@@ -898,10 +895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mission: 0
-  check_on: 5
-  check_off: 6
-  length: 7
   trigger: {fileID: 556706934}
 --- !u!114 &556706934
 MonoBehaviour:
@@ -918,28 +911,22 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "G\xFCnayd\u0131n yavrum."
-  - actorId: 1
-    message: "G\xFCnayd\u0131n anane, d\u0131\u015Far\u0131 \xE7\u0131kabilir miyim?"
+  - actorId: 0
+    message: "D\u0131\u015Far\u0131 \xE7\u0131kmak m\u0131 istiyorsun?"
   - actorId: 0
     message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayaca\u011F\u0131n\u0131
       biliyorsun"
   - actorId: 1
-    message: "Gelince toplasam olmaz m\u0131\u0131?"
+    message: "Gelince toplasam olmaz m\u0131i Anane?"
   - actorId: 0
     message: "Be\u015F dakikan\u0131 almaz Marcus, bu konuda pazarl\u0131k istemiyorum."
   - actorId: 1
     message: TAMAM
-  - actorId: 0
-    message: "Odan\u0131 toplamadan \xE7\u0131kamazs\u0131n"
-  - actorId: 0
-    message: "\u015Eimdi \xE7\u0131kabilirsin"
   actors:
   - name: Grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  Active: 0
-  End: 5
 --- !u!1 &681321549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,8 +1090,6 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 4edad936f609e3e4dbdb0dfa4ad38c6a, type: 3}
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  Active: 0
-  End: 0
 --- !u!1 &686653268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,6 +1855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1495608596}
+  - component: {fileID: 1495608597}
   m_Layer: 0
   m_Name: Grandma
   m_TagString: Untagged
@@ -1893,6 +1879,22 @@ Transform:
   m_Father: {fileID: 1128984396}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1495608597
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495608593}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1 &1571990539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,8 +2167,6 @@ MonoBehaviour:
   actors:
   - name: grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
-  Active: 0
-  End: 0
 --- !u!114 &1830460537
 MonoBehaviour:
   m_ObjectHideFlags: 0

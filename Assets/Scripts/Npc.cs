@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Npc : MonoBehaviour
 {
-    public int end;
     public DialogTrigger trigger;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") == true)
-            trigger.StartDialogue(0, end);
+        if(collision.gameObject.CompareTag("Player")==true)
+        trigger.StartDialogue();
     }
 }
