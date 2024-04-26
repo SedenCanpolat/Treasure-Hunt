@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moving = false;
+            floorScript.check = false;
         }
     }
 
