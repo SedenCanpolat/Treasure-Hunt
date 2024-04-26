@@ -49,7 +49,6 @@ public class DialogManager : MonoBehaviour
 
     public void NextMessage()
     {
-        activeMessage++;
         if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
@@ -61,6 +60,7 @@ public class DialogManager : MonoBehaviour
             isActive = false;
             player.GetComponent<PlayerMovement>().enabled = true;
         }
+        activeMessage++;
 
     }
 
