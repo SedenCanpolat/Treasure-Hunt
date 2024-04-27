@@ -479,6 +479,8 @@ MonoBehaviour:
     message: barbarbar
   - actorId: 0
     message: alala
+  mission: []
+  completed_mission: []
   actors: []
 --- !u!114 &321351256
 MonoBehaviour:
@@ -939,6 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mission: -1
   trigger: {fileID: 556706934}
 --- !u!114 &556706934
 MonoBehaviour:
@@ -955,17 +958,29 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "G\xFCnayd\u0131n yavrum."
-  - actorId: 0
-    message: "D\u0131\u015Far\u0131 \xE7\u0131kmak m\u0131 istiyorsun?"
+  - actorId: 1
+    message: "G\xFCnayd\u0131n anane, d\u0131\u015Far\u0131 \xE7\u0131kabilir miyim?"
   - actorId: 0
     message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayaca\u011F\u0131n\u0131
       biliyorsun"
   - actorId: 1
-    message: "Gelince toplasam olmaz m\u0131i Anane?"
+    message: "Gelince toplasam olmaz m\u0131\u0131?"
   - actorId: 0
     message: "Be\u015F dakikan\u0131 almaz Marcus, bu konuda pazarl\u0131k istemiyorum."
   - actorId: 1
     message: TAMAM
+  mission:
+  - actorId: 0
+    message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayac\u011F\u0131n\u0131
+      biliyorsun Marcus"
+  - actorId: 0
+    message: hey
+  completed_mission:
+  - actorId: 0
+    message: "D\u0131\u015Far\u0131 \xE7\u0131kabilirsin ama ak\u015Fam yeme\u011Finde
+      burda ol."
+  - actorId: 0
+    message: "Hadi iyi e\u011Flencelerr"
   actors:
   - name: Grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
@@ -1127,6 +1142,8 @@ MonoBehaviour:
     message: "Kahvalt\u0131ya otur hadi."
   - actorId: 2
     message: Tamam geliyorum.
+  mission: []
+  completed_mission: []
   actors:
   - name: Grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
@@ -2419,6 +2436,8 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: Wake Up!!!
+  mission: []
+  completed_mission: []
   actors:
   - name: grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}

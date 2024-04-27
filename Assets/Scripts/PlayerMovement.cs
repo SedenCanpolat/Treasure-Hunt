@@ -32,17 +32,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moving = false;
-        }
-    }
-
-    public void movement()
-    {
-        lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if ((Vector2)transform.position != lastClickedPos)
-        {
-            float step = speed * 0.1f;
-            transform.position = Vector2.MoveTowards(transform.position, lastClickedPos, speed);
+            floorScript.check = false;
         }
     }
 }
