@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogOnMouseDown : MonoBehaviour
+public class DialogOnMouseDown : Interactable
 {
     public int mission;
     public DialogTrigger trigger;
     void OnMouseDown()
     {
-        if (mission == -1)
+        if(isActive){
+            if (mission == -1)
             trigger.StartDialogue();
-        if (mission == 0)
+            if (mission == 0)
             trigger.MissionDialogue();
-        if (mission == 1)
+            if (mission == 1)
             trigger.CompletedMissionDialogue();
+        }
+        
+        
     }
 }

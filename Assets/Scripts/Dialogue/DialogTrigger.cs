@@ -11,16 +11,16 @@ public class DialogTrigger : MonoBehaviour
 
 
     public void StartDialogue()
-    { // singleton also can be used
+    { 
         FindObjectOfType<DialogManager>().OpenDialogue(messages, actors);
     }
     public void MissionDialogue()
-    { // singleton also can be used
+    { 
         FindObjectOfType<DialogManager>().OpenDialogue(mission, actors);
     }
 
     public void CompletedMissionDialogue()
-    { // singleton also can be used
+    { 
         FindObjectOfType<DialogManager>().OpenDialogue(completed_mission, actors);
     }
 }

@@ -22,4 +22,11 @@ public class SedenDeneme : MonoBehaviour
                 sceneArr[currentSceneIndex].SetActive(true);
             }
     }
+
+    private void Update() {
+        //gameObject.GetComponent<SceneMovement>().enabled = false; // Sadece SceneMovement in update i kapaniyor
+        // Bu sekilde script i kapatamazsin
+        // fonki kapatma da yok
+        // ayni zamanda her frame bunu kontrol etmek kotu bir fikir
+    }
 }

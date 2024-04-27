@@ -21,17 +21,15 @@ public class Transition : Interactable
 
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
-       
     }
     
 
     void OnMouseDown(){
         if(isActive){
-            LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spam
-            LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend);
-            print("omyomy<3");
+            LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
+            LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
         }
-        
+
     } 
 
     void SceneChangend(){

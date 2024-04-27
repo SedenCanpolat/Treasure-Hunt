@@ -16,7 +16,7 @@ public class DialogManager : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
-    public static bool isActive = false;
+    public static bool isActive = false; // singleton also can be used
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
