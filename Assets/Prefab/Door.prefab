@@ -125,3 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomId: 0
+  supposedPosition: {x: 0, y: 0}
+  LoadCanvas: {fileID: 0}
+  LoadImage: {fileID: 0}
+  to: 0
+  time: 1
+  delay: 0.5

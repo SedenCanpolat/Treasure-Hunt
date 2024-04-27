@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Transition : MonoBehaviour
+public class Transition : Interactable
 {
+    //Transition inherit from Interactable
     public int roomId;
     public Vector2 supposedPosition;
 
     private GameObject player;
+
+    [SerializeField] CanvasGroup LoadCanvas;
+    [SerializeField] GameObject LoadImage;
+    [SerializeField] float to;
+    [SerializeField] float time;
+    [SerializeField] float delay;
+    
+    
 
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -16,8 +26,18 @@ public class Transition : MonoBehaviour
     
 
     void OnMouseDown(){
-        SceneMovement.instance.changeScene(roomId);
+        if(isActive){
+            LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spam
+            LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend);
+            print("omyomy<3");
+        }
         
+    } 
+
+    void SceneChangend(){
+        SceneMovement.instance.changeScene(roomId);        
         player.transform.position = supposedPosition;
-    }   
+        LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(0f, time);
+        
+    }  
 }

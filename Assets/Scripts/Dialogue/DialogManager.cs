@@ -20,6 +20,7 @@ public class DialogManager : MonoBehaviour
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
+        Interactable.isActive = false;
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;
@@ -56,6 +57,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
+            Interactable.isActive = true;
             Debug.Log("Conversation eneded!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
             isActive = false;
