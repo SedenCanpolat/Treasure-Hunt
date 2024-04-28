@@ -87,6 +87,5 @@ public class DialogManager : MonoBehaviour
             NextMessage();
         }
 
-
     }
 }

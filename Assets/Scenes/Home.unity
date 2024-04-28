@@ -476,16 +476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: deneme
-  - actorId: 1
-    message: barbarbar
-  - actorId: 0
-    message: alala
-  mission: []
-  completed_mission: []
   actors: []
+  dialodIndex: 0
+  dialogs: []
 --- !u!114 &321351256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,7 +835,6 @@ GameObject:
   - component: {fileID: 556706931}
   - component: {fileID: 556706932}
   - component: {fileID: 556706934}
-  - component: {fileID: 556706933}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -933,20 +925,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00000023841858, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &556706933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556706929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mission: -1
-  trigger: {fileID: 556706934}
 --- !u!114 &556706934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,37 +937,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: "G\xFCnayd\u0131n yavrum."
-  - actorId: 1
-    message: "G\xFCnayd\u0131n anane, d\u0131\u015Far\u0131 \xE7\u0131kabilir miyim?"
-  - actorId: 0
-    message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayaca\u011F\u0131n\u0131
-      biliyorsun"
-  - actorId: 1
-    message: "Gelince toplasam olmaz m\u0131\u0131?"
-  - actorId: 0
-    message: "Be\u015F dakikan\u0131 almaz Marcus, bu konuda pazarl\u0131k istemiyorum."
-  - actorId: 1
-    message: TAMAM
-  mission:
-  - actorId: 0
-    message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayac\u011F\u0131n\u0131
-      biliyorsun Marcus"
-  - actorId: 0
-    message: hey
-  completed_mission:
-  - actorId: 0
-    message: "D\u0131\u015Far\u0131 \xE7\u0131kabilirsin ama ak\u015Fam yeme\u011Finde
-      burda ol."
-  - actorId: 0
-    message: "Hadi iyi e\u011Flencelerr"
   actors:
   - name: Grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
+  dialodIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: "G\xFCnayd\u0131n yavrum."
+    - actorId: 1
+      message: "G\xFCnayd\u0131n anane, d\u0131\u015Far\u0131 \xE7\u0131kabilir miyim?"
+    - actorId: 0
+      message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayaca\u011F\u0131n\u0131
+        biliyorsun"
+    - actorId: 1
+      message: "Gelince toplasam olmaz m\u0131\u0131?"
+    - actorId: 0
+      message: "Be\u015F dakikan\u0131 almaz Marcus, bu konuda pazarl\u0131k istemiyorum."
+    - actorId: 1
+      message: TAMAM
+  - dialog:
+    - actorId: 0
+      message: "Odan\u0131 toplamadan d\u0131\u015Far\u0131 \xE7\u0131kamayac\u011F\u0131n\u0131
+        biliyorsun Marcus"
+    - actorId: 0
+      message: hey
+  - dialog:
+    - actorId: 0
+      message: "Tamam \u015Fimdi \xE7\u0131kabillirsin."
+    - actorId: 0
+      message: "Ama \xE7ok ge\xE7 kalma."
 --- !u!1 &643188025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: -1
   trigger: {fileID: 643188029}
+  dialogs: []
 --- !u!114 &643188029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,16 +1057,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: "Burdaki oyuncaklarla oynamaktan s\u0131k\u0131ld\u0131m."
-  mission:
-  - actorId: 0
-    message: 
-  completed_mission: []
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
+  dialodIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: "Burdaki oyuncaklarla oynamaktan s\u0131k\u0131ld\u0131m."
 --- !u!212 &643188030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1286,17 +1264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: "G\xFCnayd\u0131n yavrum."
-  - actorId: 1
-    message: "G\xFCnayd\u0131n Marcus."
-  - actorId: 0
-    message: "Kahvalt\u0131ya otur hadi."
-  - actorId: 2
-    message: Tamam geliyorum.
-  mission: []
-  completed_mission: []
   actors:
   - name: Grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
@@ -1304,6 +1271,8 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 4edad936f609e3e4dbdb0dfa4ad38c6a, type: 3}
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
+  dialodIndex: 0
+  dialogs: []
 --- !u!1 &686653268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1453,6 @@ GameObject:
   - component: {fileID: 900929685}
   - component: {fileID: 900929689}
   - component: {fileID: 900929688}
-  - component: {fileID: 900929687}
   - component: {fileID: 900929686}
   m_Layer: 0
   m_Name: Meyve
@@ -1534,20 +1502,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &900929687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900929684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mission: -1
-  trigger: {fileID: 900929688}
 --- !u!114 &900929688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,16 +1514,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: "\xC7oktan yedim."
-  mission:
-  - actorId: 0
-    message: 
-  completed_mission: []
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
+  dialodIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: "\xC7oktan yedim."
 --- !u!212 &900929689
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2322,6 +2274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: -1
   trigger: {fileID: 1274205139}
+  dialogs: []
 --- !u!114 &1274205139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2334,16 +2287,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: "Bu kitaplar\u0131 \xE7oktan okudum."
-  mission:
-  - actorId: 0
-    message: 
-  completed_mission: []
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
+  dialodIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: "Bu kitaplar\u0131 \xE7oktan okudum."
 --- !u!1 &1328471452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +2804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: -1
   trigger: {fileID: 1613437464}
+  dialogs: []
 --- !u!114 &1613437464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,16 +2817,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: "D\u0131\u015Far\u0131 \xE7\u0131kamam"
-  mission:
-  - actorId: 0
-    message: 
-  completed_mission: []
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
+  dialodIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: "D\u0131\u015Far\u0131 \xE7\u0131kamam"
 --- !u!212 &1613437465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3058,14 +3008,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorId: 0
-    message: Wake Up!!!
-  mission: []
-  completed_mission: []
   actors:
   - name: grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
+  dialodIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: Wake Up!!!
 --- !u!114 &1830460537
 MonoBehaviour:
   m_ObjectHideFlags: 0

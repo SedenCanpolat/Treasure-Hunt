@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class Transition : Interactable
 {
@@ -12,10 +13,8 @@ public class Transition : Interactable
     private GameObject player;
 
     [SerializeField] CanvasGroup LoadCanvas;
-    [SerializeField] GameObject LoadImage;
-    [SerializeField] float to;
     [SerializeField] float time;
-    [SerializeField] float delay;
+    [SerializeField] AudioClip StairSFX;
     
     
 
@@ -26,6 +25,7 @@ public class Transition : Interactable
 
     void OnMouseDown(){
         if(isActive){
+            SoundEffectController.PlaySFX(StairSFX).SetVolume(1.30f);
             LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
             LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
         }
