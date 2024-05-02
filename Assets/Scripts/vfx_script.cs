@@ -20,12 +20,14 @@ public class vfx_script : MonoBehaviour
 
     private void Mouse()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            mouse=Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vfx.SetActive(true);
             Vfx.transform.position = new Vector3(mouse.x, mouse.y, 0f);
         }
-        if(Input.GetMouseButtonUp(0)) {
+        if (Input.GetMouseButtonUp(0))
+        {
             Vfx.SetActive(false);
         }
     }
