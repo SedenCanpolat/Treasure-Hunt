@@ -305,11 +305,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 307655319281533825, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
   m_PrefabInstance: {fileID: 226613773}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &259022080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 307655319281533827, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
-  m_PrefabInstance: {fileID: 366841272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &309126190
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actors: []
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs: []
 --- !u!114 &321351256
 MonoBehaviour:
@@ -673,11 +668,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 307655319281533825, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
   m_PrefabInstance: {fileID: 366841272}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &368146982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 307655319281533827, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
-  m_PrefabInstance: {fileID: 226613773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &546951652
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +754,6 @@ GameObject:
   m_Component:
   - component: {fileID: 550238765}
   - component: {fileID: 550238766}
-  - component: {fileID: 550238767}
   m_Layer: 0
   m_Name: Rooms
   m_TagString: Untagged
@@ -806,23 +795,6 @@ MonoBehaviour:
   - {fileID: 1027228964}
   - {fileID: 1128984395}
   - {fileID: 1099961399}
---- !u!114 &550238767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550238764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ba657b876b12241a86f6b19e1f6262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closedObjects:
-  - {fileID: 1588838689}
-  - {fileID: 259022080}
-  - {fileID: 1211478832}
-  - {fileID: 368146982}
 --- !u!1 &556706929
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +914,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs:
   - dialog:
     - actorId: 0
@@ -980,7 +952,6 @@ GameObject:
   - component: {fileID: 643188026}
   - component: {fileID: 643188030}
   - component: {fileID: 643188029}
-  - component: {fileID: 643188028}
   - component: {fileID: 643188027}
   m_Layer: 0
   m_Name: OyuncakKutusu
@@ -1030,21 +1001,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &643188028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643188025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mission: -1
-  trigger: {fileID: 643188029}
-  dialogs: []
 --- !u!114 &643188029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,7 +1016,7 @@ MonoBehaviour:
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs:
   - dialog:
     - actorId: 0
@@ -1271,7 +1227,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 4edad936f609e3e4dbdb0dfa4ad38c6a, type: 3}
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs: []
 --- !u!1 &686653268
 GameObject:
@@ -1517,7 +1473,7 @@ MonoBehaviour:
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs:
   - dialog:
     - actorId: 0
@@ -2066,11 +2022,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1211478832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 307655319281533827, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
-  m_PrefabInstance: {fileID: 1381327703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1236688998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,7 +2109,6 @@ GameObject:
   - component: {fileID: 1274205135}
   - component: {fileID: 1274205136}
   - component: {fileID: 1274205139}
-  - component: {fileID: 1274205138}
   - component: {fileID: 1274205137}
   m_Layer: 0
   m_Name: Bookcase
@@ -2260,21 +2210,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1274205138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274205134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mission: -1
-  trigger: {fileID: 1274205139}
-  dialogs: []
 --- !u!114 &1274205139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,7 +2225,7 @@ MonoBehaviour:
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs:
   - dialog:
     - actorId: 0
@@ -2640,11 +2575,6 @@ Transform:
   m_Father: {fileID: 1128984396}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1588838689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 307655319281533827, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
-  m_PrefabInstance: {fileID: 307655320430762475}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1595220442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,7 +2670,6 @@ GameObject:
   - component: {fileID: 1613437461}
   - component: {fileID: 1613437465}
   - component: {fileID: 1613437464}
-  - component: {fileID: 1613437463}
   - component: {fileID: 1613437462}
   m_Layer: 0
   m_Name: Door
@@ -2790,21 +2719,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1613437463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613437460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4894348a322c61d4ba198af3ce64daba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mission: -1
-  trigger: {fileID: 1613437464}
-  dialogs: []
 --- !u!114 &1613437464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2820,7 +2734,7 @@ MonoBehaviour:
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs:
   - dialog:
     - actorId: 0
@@ -2923,6 +2837,7 @@ GameObject:
   - component: {fileID: 1830460533}
   - component: {fileID: 1830460537}
   - component: {fileID: 1830460536}
+  - component: {fileID: 1830460538}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3011,7 +2926,7 @@ MonoBehaviour:
   actors:
   - name: grandma
     sprite: {fileID: 21300000, guid: a42fc216af6360144acc20e1fedc0387, type: 3}
-  dialodIndex: 0
+  dialogIndex: 0
   dialogs:
   - dialog:
     - actorId: 0
@@ -3029,6 +2944,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1830460536}
+  BirdSFX: {fileID: 8300000, guid: f8ae794bafb018f4a9b681ca6fbd4b9a, type: 3}
+--- !u!82 &1830460538
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830460532}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3d487009152db544d9493f9d0dff8161, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2134385104
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,6 +3406,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: walkSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: eec5ff2b3982a8b42886548c280b6d24, type: 3}
     - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: floorScript
       value: 
