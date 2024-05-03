@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 lastClickedPos;
     bool moving;
 
+    [SerializeField] AudioClip walkSFX;
+    SoundSource walksound;
+
     void Update()
     {
         if (DialogManager.isActive == true) //if dialogue is open, then character not moving
@@ -21,10 +25,12 @@ public class PlayerMovement : MonoBehaviour
         {
             lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving = true;
-
         }
         if (moving && (Vector2)transform.position != lastClickedPos)
         {
+            if(!walksound)
+                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.50f).RandomPitchRange(1.60f,2.40f).SetLoop(true);
+
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, lastClickedPos, step);
             floorScript.check = false;
@@ -33,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
         {
             moving = false;
             floorScript.check = false;
+            if(walksound){
+                SoundEffectController.StopSFX(walksound);
+                walksound = null;
+            }
         }
     }
 }

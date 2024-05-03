@@ -128,4 +128,4 @@ MonoBehaviour:
   supposedPosition: {x: 0, y: 0}
   LoadCanvas: {fileID: 0}
   time: 0.7
-  StairSFX: {fileID: 8300000, guid: 08b28f107eff7514db8b460404760606, type: 3}
+  StairSFX: {fileID: 8300000, guid: 1715ba229a34ca545a876628af87ca78, type: 3}
