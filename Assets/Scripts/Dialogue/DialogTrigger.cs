@@ -10,7 +10,7 @@ public class DialogTrigger : Interactable
     //public Message[] completed_mission;
     public Actor[] actors;
 
-    public int dialogIndex;
+    public int dialodIndex;
     public Dialogs[] dialogs;
     
     
@@ -18,7 +18,7 @@ public class DialogTrigger : Interactable
 
     public void StartDialogue()
     { 
-        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors);
+        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialodIndex].dialog, actors);
     }
 
     void OnMouseDown()
