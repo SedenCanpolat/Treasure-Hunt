@@ -879,7 +879,6 @@ GameObject:
   m_Component:
   - component: {fileID: 550238765}
   - component: {fileID: 550238766}
-  - component: {fileID: 550238767}
   m_Layer: 0
   m_Name: Rooms
   m_TagString: Untagged
@@ -921,18 +920,6 @@ MonoBehaviour:
   - {fileID: 1027228964}
   - {fileID: 1128984395}
   - {fileID: 1099961399}
---- !u!114 &550238767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550238764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ba657b876b12241a86f6b19e1f6262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &556706929
 GameObject:
   m_ObjectHideFlags: 0
