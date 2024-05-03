@@ -32,10 +32,8 @@ public class DraggableItem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("aa");
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("bb");
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
