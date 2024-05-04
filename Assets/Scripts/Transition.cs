@@ -25,7 +25,7 @@ public class Transition : Interactable
 
     void OnMouseDown(){
         if(isActive){
-            SoundEffectController.PlaySFX(StairSFX).SetVolume(1.90f).RandomPitchRange(0.90f,1.10f);
+            SoundEffectController.PlaySFX(StairSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
             LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
             LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
         }

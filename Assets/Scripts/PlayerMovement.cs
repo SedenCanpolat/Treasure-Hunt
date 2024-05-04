@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (moving && (Vector2)transform.position != lastClickedPos)
         {
             if(!walksound)
-                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.50f).RandomPitchRange(1.60f,2.40f).SetLoop(true);
+                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f,2.40f).SetLoop(true);
 
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, lastClickedPos, step);
