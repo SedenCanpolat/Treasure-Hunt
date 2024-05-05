@@ -316,7 +316,8 @@ GameObject:
   - component: {fileID: 235331405}
   - component: {fileID: 235331406}
   - component: {fileID: 235331408}
-  - component: {fileID: 235331409}
+  - component: {fileID: 235331410}
+  - component: {fileID: 235331411}
   m_Layer: 0
   m_Name: clothes_3
   m_TagString: Untagged
@@ -332,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235331404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9100001, y: -3.55, z: -1}
+  m_LocalPosition: {x: -1.9100001, y: -3.55, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -403,34 +404,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db2b1a1834334849a91195a81e04928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 355445156}
+  subTask: {fileID: 1830460539}
+  dialogTrigger: {fileID: 556706934}
   correctForm: {fileID: 846222826}
---- !u!61 &235331409
-BoxCollider2D:
+--- !u!114 &235331410
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235331404}
   m_Enabled: 1
-  m_Density: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853e871e731873146b7d33591854696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &235331411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235331404}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018327713, y: 0.14216232}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4765263, y: 1.5214624}
-  m_EdgeRadius: 0
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0.21133333, z: 0}
 --- !u!1 &309126190
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,17 +697,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
   m_PrefabInstance: {fileID: 8009142610385908682}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &355445156 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-  m_PrefabInstance: {fileID: 8009142610385908682}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355445155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d2ac1daf83f7f94593862b7fd63a0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &366841272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1817,6 +1807,7 @@ GameObject:
   - component: {fileID: 924427896}
   - component: {fileID: 924427895}
   - component: {fileID: 924427898}
+  - component: {fileID: 924427899}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1985,6 +1976,19 @@ PolygonCollider2D:
       - {x: -9.599999, y: -5.4}
       - {x: 9.599999, y: -5.4}
       - {x: 9.599999, y: -5.21}
+--- !u!114 &924427899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924427894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8da08b2f203ab145926554b3b55b563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check: 0
 --- !u!1 &1027228964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,7 +2680,8 @@ GameObject:
   - component: {fileID: 1397823929}
   - component: {fileID: 1397823932}
   - component: {fileID: 1397823931}
-  - component: {fileID: 1397823930}
+  - component: {fileID: 1397823933}
+  - component: {fileID: 1397823934}
   m_Layer: 0
   m_Name: clothes_1 (1)
   m_TagString: Untagged
@@ -2692,39 +2697,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397823928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.62, y: -3.51, z: -1}
+  m_LocalPosition: {x: -3.62, y: -3.51, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 671708215}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1397823930
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397823928}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11410785, y: 0.12619877}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7035651, y: 1.4706192}
-  m_EdgeRadius: 0
 --- !u!114 &1397823931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2737,7 +2716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db2b1a1834334849a91195a81e04928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 355445156}
+  subTask: {fileID: 1830460539}
+  dialogTrigger: {fileID: 556706934}
   correctForm: {fileID: 846222826}
 --- !u!212 &1397823932
 SpriteRenderer:
@@ -2791,6 +2771,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1397823933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397823928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853e871e731873146b7d33591854696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1397823934
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397823928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0.21133333, z: 0}
 --- !u!1 &1421778932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2807,8 @@ GameObject:
   - component: {fileID: 1421778933}
   - component: {fileID: 1421778934}
   - component: {fileID: 1421778936}
-  - component: {fileID: 1421778937}
+  - component: {fileID: 1421778938}
+  - component: {fileID: 1421778939}
   m_Layer: 0
   m_Name: clothes_1
   m_TagString: Untagged
@@ -2818,7 +2824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421778932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -2.94, z: -1}
+  m_LocalPosition: {x: -5.09, y: -2.94, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2889,34 +2895,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db2b1a1834334849a91195a81e04928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 355445156}
+  subTask: {fileID: 1830460539}
+  dialogTrigger: {fileID: 556706934}
   correctForm: {fileID: 846222826}
---- !u!61 &1421778937
-BoxCollider2D:
+--- !u!114 &1421778938
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421778932}
   m_Enabled: 1
-  m_Density: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853e871e731873146b7d33591854696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1421778939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421778932}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.038431168, y: 0.069438696}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6444397, y: 1.4114947}
-  m_EdgeRadius: 0
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0.21133333, z: 0}
 --- !u!1 &1489587249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,7 +2934,8 @@ GameObject:
   - component: {fileID: 1489587250}
   - component: {fileID: 1489587251}
   - component: {fileID: 1489587253}
-  - component: {fileID: 1489587254}
+  - component: {fileID: 1489587255}
+  - component: {fileID: 1489587256}
   m_Layer: 0
   m_Name: clothes_2
   m_TagString: Untagged
@@ -2944,7 +2951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489587249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.75, y: -3.04, z: -1}
+  m_LocalPosition: {x: -0.75, y: -3.04, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3015,34 +3022,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db2b1a1834334849a91195a81e04928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 355445156}
+  subTask: {fileID: 1830460539}
+  dialogTrigger: {fileID: 556706934}
   correctForm: {fileID: 846222826}
---- !u!61 &1489587254
-BoxCollider2D:
+--- !u!114 &1489587255
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489587249}
   m_Enabled: 1
-  m_Density: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853e871e731873146b7d33591854696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1489587256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489587249}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.025422096, y: 0.11969352}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5356483, y: 1.4386926}
-  m_EdgeRadius: 0
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0.21133333, z: 0}
 --- !u!1 &1495608593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3429,7 @@ GameObject:
   - component: {fileID: 1830460537}
   - component: {fileID: 1830460536}
   - component: {fileID: 1830460538}
+  - component: {fileID: 1830460539}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3641,6 +3649,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1830460539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830460532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e431ffeeeae588b4698f76a64b39c294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clothesNum: 4
 --- !u!1 &2134385104
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DraggableItem : MonoBehaviour
 {
-    public PlayerMovement playerMovement;
+    public SubTask subTask;
+    public DialogTrigger dialogTrigger;
     public GameObject correctForm;
     private bool moving;
     private bool finish;
@@ -26,16 +27,16 @@ public class DraggableItem : MonoBehaviour
             }
         }
     }
-
     private void OnMouseDown()
     {
-        playerMovement.enabled = false;
-        moving = true;
+        Debug.Log("a");
+        Debug.Log(dialogTrigger.dialogIndex);
+        if (dialogTrigger.dialogIndex > 0)
+            moving = true;
     }
 
     public void OnMouseUp()
     {
-        playerMovement.enabled = true;
         moving = false;
 
         if (Mathf.Abs(this.transform.position.x - correctForm.transform.position.x) <= 2f &&
@@ -43,6 +44,9 @@ public class DraggableItem : MonoBehaviour
         {
             this.transform.position = new Vector2(correctForm.transform.position.x, correctForm.transform.position.y);
             finish = true;
+            subTask.clothesNum--;
+            //Debug.Log(clothesNum);
+            if (subTask.clothesNum == 0) dialogTrigger.dialogIndex = 2;
 
         }
         else
