@@ -967,6 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
+  playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
 --- !u!114 &235331410
 MonoBehaviour:
@@ -1676,6 +1677,7 @@ MonoBehaviour:
   actors: []
   dialogIndex: 0
   dialogs: []
+  check: 0
 --- !u!114 &321351256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,6 +1847,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
   m_PrefabInstance: {fileID: 8009142610385908682}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &355445156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+  m_PrefabInstance: {fileID: 8009142610385908682}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355445155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2ac1daf83f7f94593862b7fd63a0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &366841272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2943,6 +2956,7 @@ MonoBehaviour:
       message: Can I go out now to play grandma?
     - actorId: 0
       message: Okay, but don't be late!
+  check: 0
 --- !u!1 &559448620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3107,7 @@ MonoBehaviour:
   - dialog:
     - actorId: 0
       message: "Burdaki oyuncaklarla oynamaktan s\u0131k\u0131ld\u0131m."
+  check: 0
 --- !u!212 &643188030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3373,6 +3388,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 1c8d806053c36c0469d2c175b5d1da20, type: 3}
   dialogIndex: 0
   dialogs: []
+  check: 0
 --- !u!1 &686653268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,6 +3939,7 @@ MonoBehaviour:
   - dialog:
     - actorId: 0
       message: "\xC7oktan yedim."
+  check: 0
 --- !u!212 &900929689
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5436,6 +5453,7 @@ MonoBehaviour:
   - dialog:
     - actorId: 0
       message: "Bu kitaplar\u0131 \xE7oktan okudum."
+  check: 0
 --- !u!1 &1286809893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,6 +5845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
+  playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
 --- !u!212 &1397823932
 SpriteRenderer:
@@ -6139,6 +6158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
+  playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
 --- !u!114 &1421778938
 MonoBehaviour:
@@ -6445,6 +6465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
+  playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
 --- !u!114 &1489587255
 MonoBehaviour:
@@ -6825,6 +6846,7 @@ MonoBehaviour:
   - dialog:
     - actorId: 0
       message: "D\u0131\u015Far\u0131 \xE7\u0131kamam"
+  check: 0
 --- !u!212 &1613437465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7491,6 +7513,7 @@ MonoBehaviour:
       message: Today is also same with others.
     - actorId: 1
       message: It's again very boring summer day.
+  check: 0
 --- !u!114 &1830460537
 MonoBehaviour:
   m_ObjectHideFlags: 0

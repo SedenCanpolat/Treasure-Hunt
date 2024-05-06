@@ -6,6 +6,7 @@ public class DraggableItem : MonoBehaviour
 {
     public SubTask subTask;
     public DialogTrigger dialogTrigger;
+    public PlayerMovement playerMovement;
     public GameObject correctForm;
     private bool moving;
     private bool finish;
@@ -29,15 +30,17 @@ public class DraggableItem : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Debug.Log("a");
-        Debug.Log(dialogTrigger.dialogIndex);
         if (dialogTrigger.dialogIndex > 0)
+        {
             moving = true;
+            playerMovement.enabled = false;
+        }
     }
 
     public void OnMouseUp()
     {
         moving = false;
+        playerMovement.enabled = true;
 
         if (Mathf.Abs(this.transform.position.x - correctForm.transform.position.x) <= 2f &&
             Mathf.Abs(this.transform.position.y - correctForm.transform.position.y) <= 2f)
