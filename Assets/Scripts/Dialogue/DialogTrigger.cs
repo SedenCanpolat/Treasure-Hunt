@@ -7,12 +7,9 @@ public class DialogTrigger : Interactable
 {
 
     public Actor[] actors;
-
     public int dialogIndex;
     public Dialogs[] dialogs;
-
-
-
+    public bool check = false;
 
     public void StartDialogue()
     {
@@ -23,8 +20,10 @@ public class DialogTrigger : Interactable
     {
         if (isActive)
         {
+            Debug.Log(dialogs.Length);
+            Debug.Log(dialogIndex);
             StartDialogue();
-            if (dialogIndex == 0) dialogIndex = 1;
+            if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
         }
 
     }
