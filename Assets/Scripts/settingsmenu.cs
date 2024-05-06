@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using TMPro;
 
-public class settings : MonoBehaviour
+public class settingsmenu: MonoBehaviour
 {
     public TMP_Dropdown graphicsDropdown;
     public Slider masterVol, musicVol, sfxVol;
@@ -18,17 +18,17 @@ public class settings : MonoBehaviour
 
     public void ChangeMasterVolume()
     {
-        mainAudioMixer.SetFloat("MasterVol", masterVol.value);
+        mainAudioMixer.SetFloat("Master", masterVol.value);
     }
 
     public void ChangeMusicVolume()
     {
-        mainAudioMixer.SetFloat("MusicVol", musicVol.value);
+        mainAudioMixer.SetFloat("Music", musicVol.value);
     }
 
     public void ChangeSfxVolume()
     {
-        mainAudioMixer.SetFloat("SfxVol", sfxVol.value);
+        mainAudioMixer.SetFloat("SFX", sfxVol.value);
     }
 
 }
