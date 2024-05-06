@@ -5,11 +5,16 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using TMPro;
 
-public class settingsmenu: MonoBehaviour
+public class settingsmenu : MonoBehaviour
 {
     public TMP_Dropdown graphicsDropdown;
     public Slider masterVol, musicVol, sfxVol;
     public AudioMixer mainAudioMixer;
+
+    private void Start()
+    {
+        LoadSettings(); 
+    }
 
     public void ChangeGraphicsQuality()
     {
@@ -18,17 +23,36 @@ public class settingsmenu: MonoBehaviour
 
     public void ChangeMasterVolume()
     {
-        mainAudioMixer.SetFloat("Master", masterVol.value);
+        float volume = masterVol.value;
+        mainAudioMixer.SetFloat("Master", volume);
+        PlayerPrefs.SetFloat("MasterVolume", volume); 
+        PlayerPrefs.Save(); 
     }
 
     public void ChangeMusicVolume()
     {
-        mainAudioMixer.SetFloat("Music", musicVol.value);
+        float volume = musicVol.value;
+        mainAudioMixer.SetFloat("Music", volume);
+        PlayerPrefs.SetFloat("MusicVolume", volume); 
+        PlayerPrefs.Save(); 
     }
 
     public void ChangeSfxVolume()
     {
-        mainAudioMixer.SetFloat("SFX", sfxVol.value);
+        float volume = sfxVol.value;
+        mainAudioMixer.SetFloat("SFX", volume);
+        PlayerPrefs.SetFloat("SFXVolume", volume); 
+        PlayerPrefs.Save(); 
     }
 
+    private void LoadSettings()
+    {
+        masterVol.value = PlayerPrefs.GetFloat("MasterVolume");
+        musicVol.value = PlayerPrefs.GetFloat("MusicVolume");
+        sfxVol.value = PlayerPrefs.GetFloat("SFXVolume");
+        
+        ChangeMasterVolume();
+        ChangeMusicVolume();
+        ChangeSfxVolume();
+    }
 }
