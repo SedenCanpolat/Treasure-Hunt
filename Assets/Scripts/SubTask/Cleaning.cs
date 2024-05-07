@@ -17,7 +17,7 @@ public class Cleaning : Interactable
 
     private void OnMouseDown() {
         isActive = false;
-        //playerMovement.enabled = false;
+        playerMovement.enabled = false;
     }
 
     private void OnMouseDrag() {
