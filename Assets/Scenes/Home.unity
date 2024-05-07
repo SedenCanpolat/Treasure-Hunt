@@ -4525,6 +4525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingmenu: {fileID: 570738543}
+  playerMovement: {fileID: 355445156}
 --- !u!114 &986470777
 MonoBehaviour:
   m_ObjectHideFlags: 0
