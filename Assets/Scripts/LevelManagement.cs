@@ -9,7 +9,7 @@ public class LevelManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -18,8 +18,13 @@ public class LevelManagement : MonoBehaviour
 
     }
 
-    public void levelMan()
-    {
+    public void ChangeLevelWithTransition(){ 
+        FindObjectOfType<GeneralTransition>().MakeTransition(ChangeLevel);
+    }
+
+    public void ChangeLevel(){
         SceneManager.LoadScene(sceneCount);
     }
+
+
 }

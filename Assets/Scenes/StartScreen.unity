@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 397728887}
   - component: {fileID: 397728886}
   - component: {fileID: 397728889}
-  - component: {fileID: 397728890}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -412,9 +411,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 397728890}
-        m_TargetAssemblyTypeName: GeneralTransition, Assembly-CSharp
-        m_MethodName: makeTransition
+      - m_Target: {fileID: 397728889}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: playSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -426,7 +425,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1451832355}
         m_TargetAssemblyTypeName: LevelManagement, Assembly-CSharp
-        m_MethodName: levelMan
+        m_MethodName: ChangeLevelWithTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -487,19 +486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BSFX: {fileID: 8300000, guid: 8d196ba409423674ab4616d76c70c895, type: 3}
---- !u!114 &397728890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397728884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd6c59fa84a6d543a4ef95060560516, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadCanvas: {fileID: 446282501}
 --- !u!1001 &446282500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -563,13 +549,35 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8776491652479883534, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8776491652479883539, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
---- !u!225 &446282501 stripped
+--- !u!1 &651704897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8776491651214561471, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
+  m_PrefabInstance: {fileID: 446282500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &651704899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651704897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd6c59fa84a6d543a4ef95060560516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadCanvas: {fileID: 1097861421}
+--- !u!225 &1097861421 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8776491652479883539, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
   m_PrefabInstance: {fileID: 446282500}
