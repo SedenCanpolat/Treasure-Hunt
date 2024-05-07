@@ -6,14 +6,11 @@ public class Fridge : MonoBehaviour
 {
     public PlayerMovement playerMovement;
     private Vector2 boundary;
-    private Vector2 resetPosition;
     private bool moving;
-    private bool finish;
-    private bool checkX = false;
-    private bool checkY = false;
+
+
     void Start()
     {
-        resetPosition = this.transform.localPosition;
         boundary = this.transform.parent.localScale;
     }
     void Update()
@@ -22,13 +19,9 @@ public class Fridge : MonoBehaviour
         {
             Vector2 mousePos;
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Debug.Log(boundary.x + boundary.y);
-            //this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
-            //Debug.Log(this.transform.localPosition.x);
-            //Debug.Log(boundary.x / 2);
-            Debug.Log(Mathf.Abs(this.transform.parent.position.x - mousePos.x));
 
-            //this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
+            //Debug.Log(Mathf.Abs(this.transform.parent.position.x - mousePos.x));
+
             if (Mathf.Abs(this.transform.parent.position.x - mousePos.x) <= boundary.x / 2 &&
                 Mathf.Abs(this.transform.parent.position.y - mousePos.y) <= boundary.y / 2)
             {
@@ -39,7 +32,6 @@ public class Fridge : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        //Debug.Log("çalışıyor");
         moving = true;
         playerMovement.enabled = false;
     }
