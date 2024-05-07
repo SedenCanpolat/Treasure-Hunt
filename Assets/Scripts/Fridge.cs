@@ -5,25 +5,41 @@ using UnityEngine;
 public class Fridge : MonoBehaviour
 {
     public PlayerMovement playerMovement;
+    private Vector2 boundary;
+    private Vector2 resetPosition;
     private bool moving;
-
-    // Start is called before the first frame update
+    private bool finish;
+    private bool checkX = false;
+    private bool checkY = false;
     void Start()
     {
-
+        resetPosition = this.transform.localPosition;
+        boundary = this.transform.parent.localScale;
     }
-    // Update is called once per frame
     void Update()
     {
         if (moving)
         {
             Vector2 mousePos;
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
+            // Debug.Log(boundary.x + boundary.y);
+            //this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
+            //Debug.Log(this.transform.localPosition.x);
+            //Debug.Log(boundary.x / 2);
+            Debug.Log(Mathf.Abs(this.transform.parent.position.x - mousePos.x));
+
+            //this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
+            if (Mathf.Abs(this.transform.parent.position.x - mousePos.x) <= boundary.x / 2 &&
+                Mathf.Abs(this.transform.parent.position.y - mousePos.y) <= boundary.y / 2)
+            {
+                this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
+            }
+
         }
     }
     private void OnMouseDown()
     {
+        //Debug.Log("çalışıyor");
         moving = true;
         playerMovement.enabled = false;
     }
