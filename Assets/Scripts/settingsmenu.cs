@@ -24,28 +24,33 @@ public class settingsmenu : MonoBehaviour
     public void ChangeMasterVolume()
     {
         float volume = masterVol.value;
-        mainAudioMixer.SetFloat("Master", volume);
         PlayerPrefs.SetFloat("MasterVolume", volume); 
-        PlayerPrefs.Save(); 
+        PlayerPrefs.Save();
+        volume = Mathf.Log10(volume) * 20;
+        mainAudioMixer.SetFloat("Master", volume);
+         
     }
 
     public void ChangeMusicVolume()
     {
         float volume = musicVol.value;
-        mainAudioMixer.SetFloat("Music", volume);
         PlayerPrefs.SetFloat("MusicVolume", volume); 
-        PlayerPrefs.Save(); 
+        PlayerPrefs.Save();
+        volume = Mathf.Log10(volume) * 20;
+        mainAudioMixer.SetFloat("Music", volume);
+         
     }
 
     public void ChangeSfxVolume()
     {
         float volume = sfxVol.value;
-        mainAudioMixer.SetFloat("SFX", volume);
         PlayerPrefs.SetFloat("SFXVolume", volume); 
         PlayerPrefs.Save(); 
+        volume = Mathf.Log10(volume) * 20;
+        mainAudioMixer.SetFloat("SFX", volume);
     }
 
-    private void LoadSettings()
+    public void LoadSettings()
     {
         masterVol.value = PlayerPrefs.GetFloat("MasterVolume");
         musicVol.value = PlayerPrefs.GetFloat("MusicVolume");
