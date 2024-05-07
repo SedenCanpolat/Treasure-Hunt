@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Holylib.HolySoundEffects;
 using Holylib.Utilities;
-using UnityEngine.PlayerLoop;
 
 public class Transition : Interactable
 {
