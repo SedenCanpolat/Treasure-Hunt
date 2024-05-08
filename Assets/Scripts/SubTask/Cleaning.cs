@@ -21,11 +21,11 @@ public class Cleaning : Interactable
     }
 
     private void OnMouseEnter() {
-        playerMovement.enabled = false;
+        //playerMovement.enabled = false;
     }
 
     private void OnMouseExit() {
-        playerMovement.enabled = true;
+        //playerMovement.enabled = true;
     }
 
     private void OnMouseDrag() {
@@ -41,18 +41,18 @@ public class Cleaning : Interactable
         //isActive = true;
         transform.position = viledaStartPos;
         //playerMovement.enabled = true;
+        print(missionCompleted);
         if(dirtParent.transform.childCount == 0 && missionCompleted == false){
             print("YEYY");
             missionCompleted = true;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter(Collider other) {
         Dirt dirtComp = other.GetComponent<Dirt>();
         if(dirtComp){
             dirtComp.Clean();
         }
         // other.GetComponent<Dirt>()?.Clean();
     }
-
 }
