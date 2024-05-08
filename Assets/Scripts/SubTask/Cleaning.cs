@@ -16,13 +16,21 @@ public class Cleaning : Interactable
     }
 
     private void OnMouseDown() {
-        isActive = false;
+        //isActive = false;
+        //playerMovement.enabled = false;
+    }
+
+    private void OnMouseEnter() {
         playerMovement.enabled = false;
+    }
+
+    private void OnMouseExit() {
+        playerMovement.enabled = true;
     }
 
     private void OnMouseDrag() {
         Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
-        if(mousePos.y < -2.0){
+        if(mousePos.y < 5){
             gameObject.transform.position = mousePos;  
         }
         
@@ -30,9 +38,9 @@ public class Cleaning : Interactable
     }
 
     private void OnMouseUp() {
-        isActive = true;
+        //isActive = true;
         transform.position = viledaStartPos;
-        playerMovement.enabled = true;
+        //playerMovement.enabled = true;
         if(dirtParent.transform.childCount == 0 && missionCompleted == false){
             print("YEYY");
             missionCompleted = true;
