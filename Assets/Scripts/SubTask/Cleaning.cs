@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Holylib.Utilities;
+using Holylib.HolySoundEffects;
 
 
 public class Cleaning : Interactable
@@ -10,6 +11,7 @@ public class Cleaning : Interactable
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] GameObject dirtParent;
     bool missionCompleted;
+    [SerializeField] AudioClip CleaningSFX;
 
     private void Start() {
         viledaStartPos = transform.position;
@@ -18,6 +20,7 @@ public class Cleaning : Interactable
     private void OnMouseDown() {
         //isActive = false;
         //playerMovement.enabled = false;
+        SoundEffectController.PlaySFX(CleaningSFX).SetLoop(true); 
     }
 
     private void OnMouseEnter() {
@@ -31,7 +34,8 @@ public class Cleaning : Interactable
     private void OnMouseDrag() {
         Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
         if(mousePos.y < 5){
-            gameObject.transform.position = mousePos;  
+            gameObject.transform.position = mousePos;
+            
         }
         
         
@@ -41,6 +45,7 @@ public class Cleaning : Interactable
         //isActive = true;
         transform.position = viledaStartPos;
         //playerMovement.enabled = true;
+        SoundEffectController.PlaySFX(CleaningSFX).SetLoop(false).StopSFX();
         print(missionCompleted);
         if(dirtParent.transform.childCount == 0 && missionCompleted == false){
             print("YEYY");
