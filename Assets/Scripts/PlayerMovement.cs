@@ -13,13 +13,17 @@ public class PlayerMovement : MonoBehaviour
     Vector2 lastClickedPos;
     bool moving;
 
+    private int lockCount = 0;
     [SerializeField] AudioClip walkSFX;
     SoundSource walksound;
 
     void Update()
     {
-        if (DialogManager.isActive == true) //if dialogue is open, then character not moving
-            return;
+        //if(lockCount > 0)   return;
+        if(isLocked) return;
+
+        //if (DialogManager.isActive == true) //if dialogue is open, then character not moving
+            //return;
 
         if (Input.GetMouseButtonDown(0) && floorScript.check)
         {
@@ -37,13 +41,45 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            moving = false;
+            CancelMovement();
+        }
+    }
+
+    public bool isLocked{ // getter setter
+        get{
+            return lockCount>0;
+        } 
+        set{
+            if(value == true){
+                lockCount++;
+                CancelMovement();
+            }
+            else{
+                lockCount--;
+            }
+        }
+        // only I can take(get) its value, I cannot put(set) value inside of it 
+    }
+
+
+
+    public void LockMovement(){
+        lockCount++;
+        CancelMovement();
+    }
+
+    public void UnlockMovement(){
+        lockCount--;
+    }
+
+    void CancelMovement(){
+        moving = false;
             floorScript.check = false;
             if (walksound)
             {
                 SoundEffectController.StopSFX(walksound);
                 walksound = null;
             }
-        }
     }
+
 }

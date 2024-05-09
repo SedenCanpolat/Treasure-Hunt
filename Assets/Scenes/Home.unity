@@ -608,6 +608,7 @@ MonoBehaviour:
   dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
+  ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
 --- !u!65 &235331411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2628,6 +2629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 355445156}
   dirtParent: {fileID: 182211219}
+  CleanSFX: {fileID: 0}
 --- !u!61 &977772282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3385,6 +3387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 355445156}
+  MagnetSFX: {fileID: 8300000, guid: 29aa8fb2e94096f47b4b791b13896b20, type: 3}
 --- !u!212 &1370981944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3620,6 +3623,7 @@ MonoBehaviour:
   dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
+  ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
 --- !u!212 &1397823932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3816,6 +3820,7 @@ MonoBehaviour:
   dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
+  ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
 --- !u!65 &1421778939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3944,6 +3949,7 @@ MonoBehaviour:
   dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
+  ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
 --- !u!65 &1489587256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4384,6 +4390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 355445156}
+  MagnetSFX: {fileID: 8300000, guid: 29aa8fb2e94096f47b4b791b13896b20, type: 3}
 --- !u!212 &1817220280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4522,6 +4529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 355445156}
+  MagnetSFX: {fileID: 8300000, guid: 29aa8fb2e94096f47b4b791b13896b20, type: 3}
 --- !u!212 &1829168412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4896,6 +4904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 355445156}
+  MagnetSFX: {fileID: 8300000, guid: 29aa8fb2e94096f47b4b791b13896b20, type: 3}
 --- !u!212 &2042485325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5287,6 +5296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 355445156}
   dirtParent: {fileID: 967609042}
+  CleanSFX: {fileID: 8300000, guid: d79f41ce041247c4bbd5f6c344d2a031, type: 3}
 --- !u!212 &2136685285
 SpriteRenderer:
   m_ObjectHideFlags: 0

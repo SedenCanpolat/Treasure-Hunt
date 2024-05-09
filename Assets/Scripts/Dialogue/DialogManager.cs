@@ -25,7 +25,7 @@ public class DialogManager : MonoBehaviour
         currentActors = actors;
         activeMessage = 0;
         isActive = true;
-        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerMovement>().LockMovement();
 
         DisplayMessage();
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);
@@ -56,14 +56,18 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            Interactable.isActive = true;
-            Debug.Log("Conversation eneded!");
-            backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
-            isActive = false;
-            player.GetComponent<PlayerMovement>().enabled = true;
+            FinishDialog();
         }
         activeMessage++;
 
+    }
+
+    void FinishDialog(){
+        Interactable.isActive = true;
+        Debug.Log("Conversation eneded!");
+        backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
+        isActive = false;
+        player.GetComponent<PlayerMovement>().UnlockMovement();
     }
 
     void AnimateTextColor() //change the text transparency

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class DraggableItem : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class DraggableItem : MonoBehaviour
     private bool moving;
     private bool finish;
     private Vector2 resetPosition;
+
+    [SerializeField] AudioClip ClothSFX;
+
     void Start()
     {
         resetPosition = this.transform.localPosition;
@@ -32,6 +36,7 @@ public class DraggableItem : MonoBehaviour
     {
         if (dialogTrigger.dialogIndex > 0)
         {
+            SoundEffectController.PlaySFX(ClothSFX);
             moving = true;
             playerMovement.enabled = false;
         }
