@@ -47,23 +47,9 @@ public class Fridge : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("a");
-        //col.gameObject.GetComponent<Fridge>().moving = false;
         this.transform.localPosition = new Vector2(resetPosition.x, resetPosition.y);
-        //moving = false;
-        //Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
-
-
 }
-
-//(Collision collision)
-//{
-//    Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-//rigidBody.velocity = vel;
-//rigidBody.angularVelocity = angularVel;
-//transform.position = position;
-//}
 
 
