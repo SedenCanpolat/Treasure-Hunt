@@ -8,12 +8,13 @@ public class Fridge : MonoBehaviour
     public PlayerMovement playerMovement;
     private Vector2 boundary;
     private bool moving;
+    private Vector2 resetPosition;
     [SerializeField] AudioClip MagnetSFX;
-
 
     void Start()
     {
         boundary = this.transform.parent.localScale;
+        resetPosition = this.transform.localPosition;
     }
     void Update()
     {
@@ -34,17 +35,35 @@ public class Fridge : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(1.20f,1.50f);
+        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(1.20f, 1.50f);
         moving = true;
         playerMovement.enabled = false;
     }
     public void OnMouseUp()
     {
-        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(0.90f,1.10f);
+        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(0.90f, 1.10f);
         moving = false;
         playerMovement.enabled = true;
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log("a");
+        //col.gameObject.GetComponent<Fridge>().moving = false;
+        this.transform.localPosition = new Vector2(resetPosition.x, resetPosition.y);
+        //moving = false;
+        //Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
 
 
 }
+
+//(Collision collision)
+//{
+//    Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+//rigidBody.velocity = vel;
+//rigidBody.angularVelocity = angularVel;
+//transform.position = position;
+//}
+
+
