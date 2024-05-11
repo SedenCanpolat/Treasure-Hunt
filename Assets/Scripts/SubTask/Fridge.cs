@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class Fridge : MonoBehaviour
 {
     public PlayerMovement playerMovement;
     private Vector2 boundary;
     private bool moving;
+    [SerializeField] AudioClip MagnetSFX;
 
 
     void Start()
@@ -32,11 +34,13 @@ public class Fridge : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(1.20f,1.50f);
         moving = true;
         playerMovement.enabled = false;
     }
     public void OnMouseUp()
     {
+        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(0.90f,1.10f);
         moving = false;
         playerMovement.enabled = true;
     }
