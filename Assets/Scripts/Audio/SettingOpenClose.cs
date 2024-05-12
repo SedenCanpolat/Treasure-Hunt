@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,9 @@ using UnityEngine;
 public class SettingOpenClose : MonoBehaviour
 {
     public GameObject settingmenu;
-    public PlayerMovement playerMovement;
+    public Action onsettingOpenAction;
+    public Action onsettingCloseAction;
+    
 
     public void Start()
     {
@@ -15,14 +18,16 @@ public class SettingOpenClose : MonoBehaviour
     public void OpenSettingsMenu()
     {
         settingmenu.SetActive(true);
-        playerMovement.enabled = false;
+        if(onsettingOpenAction != null)
+        onsettingOpenAction();
         Time.timeScale = 0;
     }
 
     public void CloseSettingsMenu()
     {
         settingmenu.SetActive(false);
-        playerMovement.enabled = true;
+        if(onsettingCloseAction != null)
+        onsettingCloseAction();
         Time.timeScale = 1;
     }
 }
