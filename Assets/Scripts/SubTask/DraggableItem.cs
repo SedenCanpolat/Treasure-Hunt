@@ -14,6 +14,8 @@ public class DraggableItem : MonoBehaviour
     private Vector2 resetPosition;
 
     [SerializeField] AudioClip ClothSFX;
+    [SerializeField] AudioClip PutSFX;
+    [SerializeField] AudioClip CompleteSFX;
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class DraggableItem : MonoBehaviour
     {
         if (dialogTrigger.dialogIndex > 0)
         {
-            SoundEffectController.PlaySFX(ClothSFX);
+            SoundEffectController.PlaySFX(ClothSFX).RandomPitchRange(0.90f, 1.10f);
             moving = true;
             playerMovement.enabled = false;
         }
@@ -46,6 +48,7 @@ public class DraggableItem : MonoBehaviour
     {
         moving = false;
         playerMovement.enabled = true;
+        float pitchRangeNum = 0.60f;
 
         if (Mathf.Abs(this.transform.position.x - correctForm.transform.position.x) <= 2f &&
             Mathf.Abs(this.transform.position.y - correctForm.transform.position.y) <= 2f)
@@ -53,8 +56,14 @@ public class DraggableItem : MonoBehaviour
             this.transform.position = new Vector2(correctForm.transform.position.x, correctForm.transform.position.y);
             finish = true;
             subTask.clothesNum--;
-            //Debug.Log(clothesNum);
-            if (subTask.clothesNum == 0) dialogTrigger.dialogIndex = 2;
+            pitchRangeNum += 0.20f;
+            SoundEffectController.PlaySFX(PutSFX).SetPitch(pitchRangeNum);
+            
+    
+            if (subTask.clothesNum == 0){
+                SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
+                dialogTrigger.dialogIndex = 2;
+            } 
 
         }
         else
