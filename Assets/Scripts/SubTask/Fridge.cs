@@ -14,7 +14,6 @@ public class Fridge : MonoBehaviour
     void Start()
     {
         boundary = this.transform.parent.localScale;
-        resetPosition = this.transform.localPosition;
     }
     void Update()
     {
@@ -45,6 +44,11 @@ public class Fridge : MonoBehaviour
         moving = false;
         playerMovement.enabled = true;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        resetPosition = this.transform.localPosition;
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         this.transform.localPosition = new Vector2(resetPosition.x, resetPosition.y);
