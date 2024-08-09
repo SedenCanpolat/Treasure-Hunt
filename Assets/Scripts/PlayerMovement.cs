@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 lastClickedPos;
     bool moving;
 
+    public Animator animator;
+
     private int lockCount = 0;
     [SerializeField] AudioClip walkSFX;
     SoundSource walksound;
@@ -20,10 +22,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //if(lockCount > 0)   return;
-        if(isLocked) return;
-
+        if (isLocked)
+        {
+            animator.SetBool("walk", false);
+            return;
+        }
         //if (DialogManager.isActive == true) //if dialogue is open, then character not moving
-            //return;
+        //return;
 
         if (Input.GetMouseButtonDown(0) && floorScript.check)
         {
@@ -32,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (moving && (Vector2)transform.position != lastClickedPos)
         {
+            animator.SetBool("walk", true);
             if (!walksound)
                 walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f, 2.40f).SetLoop(true);
 
@@ -41,20 +47,27 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            moving = false;
             CancelMovement();
         }
     }
 
-    public bool isLocked{ // getter setter
-        get{
-            return lockCount>0;
-        } 
-        set{
-            if(value == true){
+    public bool isLocked
+    {
+        // getter setter
+        get
+        {
+            return lockCount > 0;
+        }
+        set
+        {
+            if (value == true)
+            {
                 lockCount++;
                 CancelMovement();
             }
-            else{
+            else
+            {
                 lockCount--;
             }
         }
@@ -63,23 +76,26 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    public void LockMovement(){
+    public void LockMovement()
+    {
         lockCount++;
         CancelMovement();
     }
 
-    public void UnlockMovement(){
+    public void UnlockMovement()
+    {
         lockCount--;
     }
 
-    void CancelMovement(){
-        moving = false;
-            floorScript.check = false;
-            if (walksound)
-            {
-                SoundEffectController.StopSFX(walksound);
-                walksound = null;
-            }
+    void CancelMovement()
+    {
+        floorScript.check = false;
+        if (walksound)
+        {
+            SoundEffectController.StopSFX(walksound);
+            walksound = null;
+        }
+        animator.SetBool("walk", false);
     }
 
 }
