@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip walkSFX;
     SoundSource walksound;
 
+    private void Start() {
+        FindObjectOfType<SettingOpenClose>().onsettingOpenAction += LockMovement;
+        FindObjectOfType<SettingOpenClose>().onsettingCloseAction += UnlockMovement;
+    }    
+
     void Update()
     {
         //if(lockCount > 0)   return;

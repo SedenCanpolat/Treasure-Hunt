@@ -13,6 +13,8 @@ public class Cleaning : Interactable
     bool missionCompleted;
 
     [SerializeField] AudioClip CleanSFX;
+    [SerializeField] AudioClip CompleteSFX;
+    [SerializeField] AudioClip PutSFX;
     SoundSource cleansource;
 
     private void Start() {
@@ -22,7 +24,7 @@ public class Cleaning : Interactable
     private void OnMouseDown() {
         //isActive = false;
         playerMovement.isLocked = true; // playerMovement.LockMovement();
-        cleansource = SoundEffectController.PlaySFX(CleanSFX).SetLoop(true);
+        cleansource = SoundEffectController.PlaySFX(CleanSFX).SetLoop(true).SetPitch(1.20f);
     }
 
     private void OnMouseEnter() {
@@ -46,10 +48,11 @@ public class Cleaning : Interactable
         SoundEffectController.StopSFX(cleansource);
         transform.position = viledaStartPos;
         playerMovement.UnlockMovement();
-        print(missionCompleted);
+        SoundEffectController.PlaySFX(PutSFX).SetVolume(0.90f);;
         if(dirtParent.transform.childCount == 0 && missionCompleted == false){
             print("YEYY");
             missionCompleted = true;
+            SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
         }
     }
 

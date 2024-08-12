@@ -34,7 +34,7 @@ public class Fridge : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(1.20f, 1.50f);
+        SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(1.30f, 1.60f);
         moving = true;
         playerMovement.enabled = false;
     }

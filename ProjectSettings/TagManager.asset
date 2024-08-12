@@ -57,3 +57,6 @@ TagManager:
   - name: Player
     uniqueID: 1506286267
     locked: 0
+  - name: Image
+    uniqueID: 3892629329
+    locked: 0
