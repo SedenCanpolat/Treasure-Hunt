@@ -24,8 +24,8 @@ public class Fridge : MonoBehaviour
 
             //Debug.Log(Mathf.Abs(this.transform.parent.position.x - mousePos.x));
 
-            if (Mathf.Abs(this.transform.parent.position.x - mousePos.x) <= boundary.x / 2 &&
-                Mathf.Abs(this.transform.parent.position.y - mousePos.y) <= boundary.y / 2)
+            if (Mathf.Abs(this.transform.parent.position.x - mousePos.x) <= boundary.x / 2 - this.transform.localScale.x &&
+                Mathf.Abs(this.transform.parent.position.y - mousePos.y) <= boundary.y / 2 - this.transform.localScale.y)
             {
                 this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y);
             }
