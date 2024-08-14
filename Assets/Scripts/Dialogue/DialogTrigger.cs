@@ -11,6 +11,7 @@ public class DialogTrigger : Interactable
     public Dialogs[] dialogs;
     public bool check = false;
 
+
     public void StartDialogue()
     {
         FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors);

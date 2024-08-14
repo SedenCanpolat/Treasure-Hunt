@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Holylib.HolySoundEffects;
 
 public class DialogManager : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class DialogManager : MonoBehaviour
     public TMP_Text messageText;
     public RectTransform backgroundBox; // for animation
     public GameObject player;
+    [SerializeField] AudioClip DialogSFX;
 
 
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
     public static bool isActive = false; // singleton also can be used
+    
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -26,6 +29,7 @@ public class DialogManager : MonoBehaviour
         activeMessage = 0;
         isActive = true;
         player.GetComponent<PlayerMovement>().LockMovement();
+        
 
         DisplayMessage();
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);
@@ -50,6 +54,7 @@ public class DialogManager : MonoBehaviour
 
     public void NextMessage()
     {
+        
         if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
@@ -59,7 +64,7 @@ public class DialogManager : MonoBehaviour
             FinishDialog();
         }
         activeMessage++;
-
+        SoundEffectController.PlaySFX(DialogSFX).SetVolume(0.06f).SetPitch(Random.Range(0.7f, 1f));
     }
 
     void FinishDialog(){
