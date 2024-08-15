@@ -19,13 +19,6 @@ public class DialogTrigger : Interactable
 
     void OnMouseDown()
     {
-        if (isActive && this.gameObject.name != "Capsule")
-        {
-            Debug.Log(dialogs.Length);
-            Debug.Log(dialogIndex);
-            StartDialogue();
-            if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
-        }
         if (isActive && this.gameObject.name == "Capsule")
         {
             Debug.Log(dialogs.Length);
@@ -35,6 +28,13 @@ public class DialogTrigger : Interactable
             {
                 if (dialogIndex == subTask.task[i].getTask) dialogIndex++;
             }
+        }
+        else if (isActive)
+        {
+            Debug.Log(dialogs.Length);
+            Debug.Log(dialogIndex);
+            StartDialogue();
+            if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
         }
 
     }

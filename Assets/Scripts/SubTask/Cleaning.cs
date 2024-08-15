@@ -7,6 +7,8 @@ using Holylib.HolySoundEffects;
 
 public class Cleaning : Interactable
 {
+    public SubTask subTask;
+    public DialogTrigger dialogTrigger;
     Vector2 viledaStartPos;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] GameObject dirtParent;
@@ -17,48 +19,61 @@ public class Cleaning : Interactable
     [SerializeField] AudioClip PutSFX;
     SoundSource cleansource;
 
-    private void Start() {
+    private void Start()
+    {
         viledaStartPos = transform.position;
     }
 
-    private void OnMouseDown() {
+    private void OnMouseDown()
+    {
         //isActive = false;
         playerMovement.isLocked = true; // playerMovement.LockMovement();
         cleansource = SoundEffectController.PlaySFX(CleanSFX).SetLoop(true).SetPitch(1.20f);
     }
 
-    private void OnMouseEnter() {
+    private void OnMouseEnter()
+    {
         //playerMovement.enabled = false;
     }
 
-    private void OnMouseExit() {
+    private void OnMouseExit()
+    {
         //playerMovement.enabled = true;
     }
 
-    private void OnMouseDrag() {
-        Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
-        if(mousePos.y < 5){
-            gameObject.transform.position = mousePos;  
+    private void OnMouseDrag()
+    {
+        if (dialogTrigger.dialogIndex == subTask.task[2].getTask + 1)
+        {
+            Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
+            if (mousePos.y < 5)
+            {
+                gameObject.transform.position = mousePos;
+            }
         }
-        
     }
 
-    private void OnMouseUp() {
+    private void OnMouseUp()
+    {
         //isActive = true;
         SoundEffectController.StopSFX(cleansource);
         transform.position = viledaStartPos;
         playerMovement.UnlockMovement();
-        SoundEffectController.PlaySFX(PutSFX).SetVolume(0.90f);;
-        if(dirtParent.transform.childCount == 0 && missionCompleted == false){
+        SoundEffectController.PlaySFX(PutSFX).SetVolume(0.90f); ;
+        if (dirtParent.transform.childCount == 0 && missionCompleted == false)
+        {
             print("YEYY");
             missionCompleted = true;
             SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
+            dialogTrigger.dialogIndex++;
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other)
+    {
         Dirt dirtComp = other.GetComponent<Dirt>();
-        if(dirtComp){
+        if (dirtComp)
+        {
             dirtComp.Clean();
         }
         // other.GetComponent<Dirt>()?.Clean();

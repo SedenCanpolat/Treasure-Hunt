@@ -36,7 +36,7 @@ public class DraggableItem : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (dialogTrigger.dialogIndex > 0)
+        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1)
         {
             SoundEffectController.PlaySFX(ClothSFX).RandomPitchRange(0.90f, 1.10f);
             moving = true;
@@ -58,12 +58,13 @@ public class DraggableItem : MonoBehaviour
             subTask.clothesNum--;
             pitchRangeNum += 0.20f;
             SoundEffectController.PlaySFX(PutSFX).SetPitch(pitchRangeNum);
-            
-    
-            if (subTask.clothesNum == 0){
+
+
+            if (subTask.clothesNum == 0)
+            {
                 SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
-                dialogTrigger.dialogIndex = 2;
-            } 
+                dialogTrigger.dialogIndex++;
+            }
 
         }
         else
