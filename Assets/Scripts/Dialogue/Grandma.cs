@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubTask : MonoBehaviour
+public class Grandma : Interactable
 {
-    public int clothesNum;
-    public Task[] task;
-    public int taskNum;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +15,4 @@ public class SubTask : MonoBehaviour
     {
 
     }
-
-
-}
-
-[System.Serializable]
-public class Task
-{
-    public string taskName;
-    public int getTask;
 }

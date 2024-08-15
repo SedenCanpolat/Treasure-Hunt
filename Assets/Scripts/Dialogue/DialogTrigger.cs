@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DialogTrigger : Interactable
 {
-
+    public SubTask subTask;
     public Actor[] actors;
     public int dialogIndex;
     public Dialogs[] dialogs;
@@ -19,12 +19,22 @@ public class DialogTrigger : Interactable
 
     void OnMouseDown()
     {
-        if (isActive)
+        if (isActive && this.gameObject.name != "Capsule")
         {
             Debug.Log(dialogs.Length);
             Debug.Log(dialogIndex);
             StartDialogue();
             if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
+        }
+        if (isActive && this.gameObject.name == "Capsule")
+        {
+            Debug.Log(dialogs.Length);
+            Debug.Log(dialogIndex);
+            StartDialogue();
+            for (int i = 0; i < subTask.taskNum; i++)
+            {
+                if (dialogIndex == subTask.task[i].getTask) dialogIndex++;
+            }
         }
 
     }
