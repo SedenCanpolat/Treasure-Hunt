@@ -43,6 +43,7 @@ public class Cleaning : Interactable
 
     private void OnMouseDrag()
     {
+        //Görev alınmadan başlamaması için kontrol
         if (dialogTrigger.dialogIndex == subTask.task[2].getTask + 1)
         {
             Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
@@ -65,6 +66,7 @@ public class Cleaning : Interactable
             print("YEYY");
             missionCompleted = true;
             SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
+            //Bir sonraki göreve geçmesi için
             dialogTrigger.dialogIndex++;
         }
     }
