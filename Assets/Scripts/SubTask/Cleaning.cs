@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Holylib.Utilities;
 using Holylib.HolySoundEffects;
+using UnityEditor.Localization.Plugins.Google;
 
 
 public class Cleaning : Interactable
@@ -19,16 +20,26 @@ public class Cleaning : Interactable
     [SerializeField] AudioClip PutSFX;
     SoundSource cleansource;
 
+
     private void Start()
     {
         viledaStartPos = transform.position;
     }
 
+    private bool isTaskActive()
+    {
+        return dialogTrigger.dialogIndex == subTask.task[2].getTask + 1;
+    }
+
     private void OnMouseDown()
     {
         //isActive = false;
-        playerMovement.isLocked = true; // playerMovement.LockMovement();
-        cleansource = SoundEffectController.PlaySFX(CleanSFX).SetLoop(true).SetPitch(1.20f);
+        if (isTaskActive())
+        {
+            playerMovement.isLocked = true; // playerMovement.LockMovement();
+            cleansource = SoundEffectController.PlaySFX(CleanSFX).SetLoop(true).SetPitch(1.20f);
+
+        }
     }
 
     private void OnMouseEnter()
@@ -43,8 +54,7 @@ public class Cleaning : Interactable
 
     private void OnMouseDrag()
     {
-        //Görev alınmadan başlamaması için kontrol
-        if (dialogTrigger.dialogIndex == subTask.task[2].getTask + 1)
+        if (isTaskActive())
         {
             Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
             if (mousePos.y < 5)
@@ -56,18 +66,20 @@ public class Cleaning : Interactable
 
     private void OnMouseUp()
     {
-        //isActive = true;
-        SoundEffectController.StopSFX(cleansource);
-        transform.position = viledaStartPos;
-        playerMovement.UnlockMovement();
-        SoundEffectController.PlaySFX(PutSFX).SetVolume(0.90f); ;
-        if (dirtParent.transform.childCount == 0 && missionCompleted == false)
+        if (isTaskActive())
         {
-            print("YEYY");
-            missionCompleted = true;
-            SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
-            //Bir sonraki göreve geçmesi için
-            dialogTrigger.dialogIndex++;
+            //isActive = true;
+            SoundEffectController.StopSFX(cleansource);
+            transform.position = viledaStartPos;
+            playerMovement.UnlockMovement();
+            SoundEffectController.PlaySFX(PutSFX).SetVolume(0.90f); ;
+            if (dirtParent.transform.childCount == 0 && missionCompleted == false)
+            {
+                print("YEYY");
+                missionCompleted = true;
+                SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
+                dialogTrigger.dialogIndex++;
+            }
         }
     }
 
