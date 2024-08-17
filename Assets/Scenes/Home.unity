@@ -1562,8 +1562,8 @@ RectTransform:
   m_GameObject: {fileID: 482478610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1959293959}
   - {fileID: 2049184415}
@@ -1861,7 +1861,7 @@ Transform:
   m_GameObject: {fileID: 556706929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.47, y: -0.02, z: 0.07947456}
-  m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 0.90000004}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1495608596}
@@ -3541,7 +3541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -3575,7 +3575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1128984396
 Transform:
   m_ObjectHideFlags: 0
@@ -4672,6 +4672,7 @@ GameObject:
   - component: {fileID: 1400040294}
   - component: {fileID: 1400040295}
   - component: {fileID: 1400040296}
+  - component: {fileID: 1400040297}
   m_Layer: 0
   m_Name: babaKoli
   m_TagString: Untagged
@@ -4786,6 +4787,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 8228f5f342c467b4bbe4c1fddd8ee3d9, type: 3}
   ImageOpeningSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
+--- !u!114 &1400040297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400040291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  actors:
+  - name: Marcus
+    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
+  dialogIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: This is the pitcure of my father.
+  check: 0
 --- !u!224 &1409369721 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
