@@ -19,7 +19,7 @@ public class Cleaning : Interactable
     [SerializeField] AudioClip CompleteSFX;
     [SerializeField] AudioClip PutSFX;
     SoundSource cleansource;
-   
+
 
     private void Start()
     {
@@ -34,10 +34,11 @@ public class Cleaning : Interactable
     private void OnMouseDown()
     {
         //isActive = false;
-        if (isTaskActive()){
+        if (isTaskActive())
+        {
             playerMovement.isLocked = true; // playerMovement.LockMovement();
             cleansource = SoundEffectController.PlaySFX(CleanSFX).SetLoop(true).SetPitch(1.20f);
-            
+
         }
     }
 
@@ -52,19 +53,21 @@ public class Cleaning : Interactable
     }
 
     private void OnMouseDrag()
-    {   
-        if (isTaskActive()){
+    {
+        if (isTaskActive())
+        {
             Vector2 mousePos = HolyUtilities.GetMouseWorldPos();
             if (mousePos.y < 5)
             {
                 gameObject.transform.position = mousePos;
             }
-        }    
+        }
     }
 
     private void OnMouseUp()
     {
-        if (isTaskActive()){
+        if (isTaskActive())
+        {
             //isActive = true;
             SoundEffectController.StopSFX(cleansource);
             transform.position = viledaStartPos;
