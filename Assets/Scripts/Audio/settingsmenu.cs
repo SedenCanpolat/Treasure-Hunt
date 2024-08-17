@@ -13,7 +13,7 @@ public class settingsmenu : MonoBehaviour
 
     private void Start()
     {
-        LoadSettings(); 
+        LoadSettings();
     }
 
     public void ChangeGraphicsQuality()
@@ -27,7 +27,7 @@ public class settingsmenu : MonoBehaviour
         PlayerPrefs.SetFloat("MasterVolume", volume); 
         PlayerPrefs.Save();
         volume = Mathf.Log10(volume) * 20;
-        mainAudioMixer.SetFloat("Master", volume);
+        mainAudioMixer.SetFloat("MasterVolume", volume);
          
     }
 
@@ -37,7 +37,7 @@ public class settingsmenu : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", volume); 
         PlayerPrefs.Save();
         volume = Mathf.Log10(volume) * 20;
-        mainAudioMixer.SetFloat("Music", volume);
+        mainAudioMixer.SetFloat("MusicVolume", volume);
          
     }
 
@@ -47,7 +47,7 @@ public class settingsmenu : MonoBehaviour
         PlayerPrefs.SetFloat("SFXVolume", volume); 
         PlayerPrefs.Save(); 
         volume = Mathf.Log10(volume) * 20;
-        mainAudioMixer.SetFloat("SFX", volume);
+        mainAudioMixer.SetFloat("SFXVolume", volume);
     }
 
     public void LoadSettings()

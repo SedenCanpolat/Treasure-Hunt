@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManagement : MonoBehaviour
+public class LevelManagement : MonoBehaviour // sigleton YAP
 {
     public int sceneCount = 1;
     // Start is called before the first frame update
