@@ -7,10 +7,12 @@ using Holylib.HolySoundEffects;
 
 public class ChestSubtask : Interactable
 {
+    public bool tasksDone = false;
     [SerializeField] Sprite lockImg;
     [SerializeField] Sprite mapImg;
     [SerializeField] AudioClip ImageOpeningSFX;
 
+    public SceneMan sceneMan;
     public SubTask subTask;
     public DialogTrigger dialogTrigger;
     void OnMouseDown()
@@ -25,7 +27,11 @@ public class ChestSubtask : Interactable
         {
             SoundEffectController.PlaySFX(ImageOpeningSFX);
             Invoke("MapImageOpening", 1f);
-            if (dialogTrigger.dialogIndex == subTask.task[3].getTask + 1) dialogTrigger.dialogIndex++;
+            if (dialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
+            {
+                dialogTrigger.dialogIndex++;
+                tasksDone = true;
+            }
         }
     }
 
