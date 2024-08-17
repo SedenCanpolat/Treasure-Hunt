@@ -247,9 +247,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8515adfadd65d184696340d8d04c86ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksDone: 0
   lockImg: {fileID: 21300000, guid: 4f5a12d7d10e4654f95cb4cafb944c6c, type: 3}
   mapImg: {fileID: 21300000, guid: 1db0862098c061a4b9517a883c96b912, type: 3}
   ImageOpeningSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
+  sceneMan: {fileID: 0}
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
 --- !u!1 &156137798
@@ -5522,6 +5524,7 @@ GameObject:
   - component: {fileID: 1613437465}
   - component: {fileID: 1613437464}
   - component: {fileID: 1613437462}
+  - component: {fileID: 1613437466}
   m_Layer: 0
   m_Name: HomeDoor
   m_TagString: Untagged
@@ -5644,6 +5647,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1613437466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613437460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7124873d70eb97458117eab7c64379c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMan: {fileID: 1830460540}
+  chestSubtask: {fileID: 7429923}
 --- !u!1 &1768937246
 GameObject:
   m_ObjectHideFlags: 0
@@ -6375,8 +6392,8 @@ MonoBehaviour:
   - taskName: Open the chest
     getTask: 6
   - taskName: Go outside
-    getTask: 6
-  taskNum: 4
+    getTask: 8
+  taskNum: 5
 --- !u!114 &1830460540
 MonoBehaviour:
   m_ObjectHideFlags: 0
