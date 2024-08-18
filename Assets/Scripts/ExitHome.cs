@@ -1,26 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Holylib.HolySoundEffects;
 
 public class ExitHome : MonoBehaviour
 {
     public SceneMan sceneMan;
     public ChestSubtask chestSubtask;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public AudioClip ExitHomeSFX;
+   
     void OnMouseDown()
     {
         if (chestSubtask.tasksDone == true)
         {
+            SoundEffectController.PlaySFX(ExitHomeSFX);
             sceneMan.ChangeScene(2);
         }
 

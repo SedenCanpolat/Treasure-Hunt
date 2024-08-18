@@ -250,8 +250,8 @@ MonoBehaviour:
   tasksDone: 0
   lockImg: {fileID: 21300000, guid: 4f5a12d7d10e4654f95cb4cafb944c6c, type: 3}
   mapImg: {fileID: 21300000, guid: 1db0862098c061a4b9517a883c96b912, type: 3}
-  ImageOpeningSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
-  sceneMan: {fileID: 0}
+  LockSFX: {fileID: 8300000, guid: 5402efbb3926db542bc097c2fcf1614d, type: 3}
+  MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
 --- !u!1 &156137798
@@ -3513,7 +3513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1027228965
 Transform:
   m_ObjectHideFlags: 0
@@ -3615,7 +3615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -3890,8 +3890,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 555310707
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ef13dac5b9403344b3fead246babe4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5995,6 +5995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneMan: {fileID: 1830460540}
   chestSubtask: {fileID: 7429923}
+  ExitHomeSFX: {fileID: 8300000, guid: c12d228a2c75cd24f9afc49611cd343c, type: 3}
 --- !u!1 &1768937246
 GameObject:
   m_ObjectHideFlags: 0
@@ -8213,7 +8214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -2.59
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_LocalPosition.z

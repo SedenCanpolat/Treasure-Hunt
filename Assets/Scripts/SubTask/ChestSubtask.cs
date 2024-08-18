@@ -10,23 +10,25 @@ public class ChestSubtask : Interactable
     public bool tasksDone = false;
     [SerializeField] Sprite lockImg;
     [SerializeField] Sprite mapImg;
-    [SerializeField] AudioClip ImageOpeningSFX;
+    [SerializeField] AudioClip LockSFX;
+    [SerializeField] AudioClip MapSFX;
 
-    public SceneMan sceneMan;
     public SubTask subTask;
     public DialogTrigger dialogTrigger;
     void OnMouseDown()
     {
         if (isActive && !HolyUtilities.isOnUI() && dialogTrigger.dialogIndex < subTask.task[3].getTask + 1)
         {
-            SoundEffectController.PlaySFX(ImageOpeningSFX);
-            Invoke("LockImageOpening", 1f);
+            SoundEffectController.PlaySFX(LockSFX);
+            //Invoke("LockImageOpening", 1f);
+            LockImageOpening();
             if (dialogTrigger.dialogIndex == subTask.task[1].getTask + 1) dialogTrigger.dialogIndex++;
         }
         else if (isActive && !HolyUtilities.isOnUI())
         {
-            SoundEffectController.PlaySFX(ImageOpeningSFX);
-            Invoke("MapImageOpening", 1f);
+            SoundEffectController.PlaySFX(MapSFX).SetVolume(0.5f);
+            //Invoke("MapImageOpening", 1f);
+            MapImageOpening();
             if (dialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
             {
                 dialogTrigger.dialogIndex++;
