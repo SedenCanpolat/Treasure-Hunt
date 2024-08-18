@@ -2631,8 +2631,7 @@ GameObject:
   - component: {fileID: 1962128703}
   - component: {fileID: 1962128702}
   - component: {fileID: 1962128701}
-  - component: {fileID: 1962128700}
-  - component: {fileID: 1962128705}
+  - component: {fileID: 1962128706}
   m_Layer: 5
   m_Name: 'RButton '
   m_TagString: Untagged
@@ -2661,18 +2660,6 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: -216}
   m_SizeDelta: {x: 204.54675, y: 84.445984}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1962128700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962128698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db85160e32fd744499b59834d687aa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1962128701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2742,7 +2729,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1962128700}
+      - m_Target: {fileID: 1962128706}
         m_TargetAssemblyTypeName: Quit, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -2792,7 +2779,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962128698}
   m_CullTransparentMesh: 1
---- !u!114 &1962128705
+--- !u!114 &1962128706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2801,7 +2788,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962128698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f803e5f52986fd4fa9b3c2f3effe592, type: 3}
+  m_Script: {fileID: 11500000, guid: 9db85160e32fd744499b59834d687aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 0

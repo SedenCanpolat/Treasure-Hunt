@@ -17,8 +17,12 @@ public class DialogTrigger : Interactable
         FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors);
     }
 
-    void OnMouseDown()
+    protected virtual void OnMouseDown()
     {
+        TriggerDialog();
+    }
+
+    protected virtual void TriggerDialog(){
         if (isActive && this.gameObject.name == "Capsule")
         {
             Debug.Log(dialogs.Length);
@@ -36,7 +40,6 @@ public class DialogTrigger : Interactable
             StartDialogue();
             if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
         }
-
     }
 }
 

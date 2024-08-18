@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 397728887}
   - component: {fileID: 397728886}
   - component: {fileID: 397728889}
+  - component: {fileID: 397728890}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -587,14 +588,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1451832355}
-        m_TargetAssemblyTypeName: LevelManagement, Assembly-CSharp
-        m_MethodName: ChangeLevelWithTransition
-        m_Mode: 1
+      - m_Target: {fileID: 397728890}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -650,6 +651,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BSFX: {fileID: 8300000, guid: 8d196ba409423674ab4616d76c70c895, type: 3}
+--- !u!114 &397728890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397728884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3921f79a9b66cde469698e92bdd259bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &446282500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1181,7 +1194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1225461098
 Transform:
   m_ObjectHideFlags: 0
@@ -1365,7 +1378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f803e5f52986fd4fa9b3c2f3effe592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCount: 1
 --- !u!1 &1489158063
 GameObject:
   m_ObjectHideFlags: 0

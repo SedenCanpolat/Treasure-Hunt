@@ -3,27 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManagement : MonoBehaviour // sigleton YAP
+public class LevelManagement : MonoBehaviour 
 {
-    public int sceneCount = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public static LevelManagement instance;
+    private int _sceneIndex;
+
+
+    private void Awake() {
+        FindObjectOfType<GeneralTransition>().SceneChangend();
+        if (instance != null && instance != this) 
+        { 
+            Destroy(this);
+        } 
+        else{ 
+            instance = this; 
+        } 
+    }
     
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ChangeLevelWithTransition(){ 
+    public void ChangeLevelWithTransition(int sceneIndex){ 
+        _sceneIndex = sceneIndex;
         FindObjectOfType<GeneralTransition>().MakeTransition(ChangeLevel);
     }
 
-    public void ChangeLevel(){
-        SceneManager.LoadScene(sceneCount);
+    void ChangeLevel(){
+        SceneManager.LoadScene(_sceneIndex);
     }
 
 

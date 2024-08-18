@@ -8,6 +8,8 @@ public class SedenDeneme : MonoBehaviour
     private int currentSceneIndex = 0;
     public GameObject[] sceneArr; 
 
+    // if(FindAnyObjectByType<OpenImageCanvas>()?.isImageActive == true) // if OpenImageCanvas exists and is active
+
      void OnMouseDown(){ // needs collider for interaction
         //if(gameObject.tag == "Door"){ 
             // burada olmasina gerek yok cunku zaten bu script door un icinde

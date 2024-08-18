@@ -18,8 +18,7 @@ public class DialogManager : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
-    public static bool isActive = false; // singleton also can be used
-    
+    public static bool isActive = false; // singleton also can be used    
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -29,7 +28,6 @@ public class DialogManager : MonoBehaviour
         activeMessage = 0;
         isActive = true;
         player.GetComponent<PlayerMovement>().LockMovement();
-        
 
         DisplayMessage();
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);

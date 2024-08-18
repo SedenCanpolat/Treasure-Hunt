@@ -10,7 +10,7 @@ public class DialogBeginning : MonoBehaviour
     
     void Start()
     {
-        FindObjectOfType<GeneralTransition>().SceneChangend();
+        
         SoundEffectController.PlaySFX(BirdSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
         trigger.StartDialogue();
     }

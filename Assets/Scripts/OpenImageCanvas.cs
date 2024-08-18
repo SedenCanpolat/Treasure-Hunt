@@ -5,20 +5,23 @@ using Holylib.Utilities;
 using UnityEngine.UI;
 using Holylib.HolySoundEffects;
 
-public class OpenImageCanvas : Interactable
+public class OpenImageCanvas : DialogTrigger
 {
     [SerializeField] Sprite sprite;
     [SerializeField] AudioClip ImageOpeningSFX;
-    void OnMouseDown(){
+    public bool isImageActive = false;
+    protected override void OnMouseDown(){ // inheritance
          if(isActive && !HolyUtilities.isOnUI()){
-            SoundEffectController.PlaySFX(ImageOpeningSFX);
-            Invoke("ImageOpening", 1f);
-                       
+            if (ImageOpeningSFX != null) {
+                SoundEffectController.PlaySFX(ImageOpeningSFX);
+            }
+            Invoke("ImageOpening", 1f);           
         }
     }
 
-    void ImageOpening(){
+    public void ImageOpening(){
         ImageManager.instance.OpenImageCanvas(sprite); 
+        TriggerDialog();
     }
 
 }
