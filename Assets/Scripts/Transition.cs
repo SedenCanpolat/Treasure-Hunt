@@ -23,15 +23,19 @@ public class Transition : Interactable
     }
 
     void OnMouseDown(){
+        UseStairs();
+
+    } 
+
+    public void UseStairs(){
         if(isActive && !HolyUtilities.isOnUI()){
             SoundEffectController.PlaySFX(StairSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
             LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
             LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
         }
+    }
 
-    } 
-
-    void SceneChangend(){
+    public void SceneChangend(){
         SceneMovement.instance.changeScene(roomId);        
         player.transform.position = supposedPosition;
         LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(0f, time);

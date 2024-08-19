@@ -10,8 +10,10 @@ public class OpenImageCanvas : DialogTrigger
     [SerializeField] Sprite sprite;
     [SerializeField] AudioClip ImageOpeningSFX;
     public bool isImageActive = false;
+    
     protected override void OnMouseDown(){ // inheritance
          if(isActive && !HolyUtilities.isOnUI()){
+            
             if (ImageOpeningSFX != null) {
                 SoundEffectController.PlaySFX(ImageOpeningSFX);
             }
