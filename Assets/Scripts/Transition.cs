@@ -29,9 +29,11 @@ public class Transition : Interactable
 
     public void UseStairs(){
         if(isActive && !HolyUtilities.isOnUI()){
-            SoundEffectController.PlaySFX(StairSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
-            LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
-            LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
+            if(!ImageManager.instance.isImageActive){                
+                SoundEffectController.PlaySFX(StairSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
+                LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
+                LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
+            }
         }
     }
 

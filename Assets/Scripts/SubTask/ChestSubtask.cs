@@ -27,15 +27,15 @@ public class ChestSubtask : Interactable
             SoundEffectController.PlaySFX(LockSFX);
             //Invoke("LockImageOpening", 1f);
             //LockImageOpening();
-            lockImg.SetActive(true);
+            ImageInSceneOpening(lockImg);
             if (dialogTrigger.dialogIndex == subTask.task[1].getTask + 1) dialogTrigger.dialogIndex++;
         }
         else if (isActive && !HolyUtilities.isOnUI())
         {
             SoundEffectController.PlaySFX(MapSFX).SetVolume(0.4f);
             //Invoke("MapImageOpening", 1f);
-            lockImg.SetActive(false);
-            unlockImg.SetActive(true);
+            ImageInSceneClosing(lockImg);
+            ImageInSceneOpening(unlockImg);
             MapImageOpening();
             if (dialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
             {
@@ -52,6 +52,16 @@ public class ChestSubtask : Interactable
     void MapImageOpening()
     {
         ImageManager.instance.OpenImageCanvas(mapImg);
+    }
+
+    void ImageInSceneOpening(GameObject image)
+    {
+        image.SetActive(true);
+    }
+
+    void ImageInSceneClosing(GameObject image)
+    {
+        image.SetActive(false);
     }
 
 }

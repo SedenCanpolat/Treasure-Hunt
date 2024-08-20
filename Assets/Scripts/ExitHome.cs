@@ -15,7 +15,7 @@ public class ExitHome : MonoBehaviour
         if (chestSubtask.tasksDone == true)
         {
             SoundEffectController.PlaySFX(ExitHomeSFX);
-            Invoke("ChangeScene", 1f);
+            Invoke("ChangeScene", 1.5f);
             
         }
     }
