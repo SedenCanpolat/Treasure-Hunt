@@ -9,6 +9,7 @@ public class ExitHome : MonoBehaviour
     public ChestSubtask chestSubtask;
 
     public AudioClip ExitHomeSFX;
+    
    
     void OnMouseDown()
     {
@@ -23,5 +24,7 @@ public class ExitHome : MonoBehaviour
     void ChangeScene()
     {
         sceneMan.ChangeScene(2);
+        //SceneChanger sceneChanger = GetComponent<SceneChanger>();
+        //sceneChanger.ChangeScene(2); ??
     }
 }
