@@ -24,8 +24,6 @@ public class ExitHome : MonoBehaviour
     void ChangeScene()
     {
         sceneMan.ChangeScene(2);
-        //SceneChanger sceneChanger = GetComponent<SceneChanger>();
-        //sceneChanger.ChangeScene(2); ??
         //LevelManagement.instance.ChangeLevelWithTransition(2);
 
     }
