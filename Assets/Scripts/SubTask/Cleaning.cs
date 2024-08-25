@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Holylib.Utilities;
 using Holylib.HolySoundEffects;
-using UnityEditor.Localization.Plugins.Google;
 
 
 public class Cleaning : Interactable
