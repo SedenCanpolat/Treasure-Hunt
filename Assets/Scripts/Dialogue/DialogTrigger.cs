@@ -32,10 +32,12 @@ public class DialogTrigger : Interactable
         }
         else if (isActive)
         {
-            Debug.Log(dialogs.Length);
-            Debug.Log(dialogIndex);
-            StartDialogue();
-            if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
+            if(FindAnyObjectByType<OpenImageCanvas>().opened == false){
+                Debug.Log(dialogs.Length);
+                Debug.Log(dialogIndex);
+                StartDialogue();
+                if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
+            }
         }
     }
 }

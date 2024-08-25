@@ -34,6 +34,7 @@ public class ImageManager : MonoBehaviour
         isImageActive = false;
         FindAnyObjectByType<PlayerMovement>().enabled = true;
         //FindAnyObjectByType<PlayerMovement>().isLocked = false;
+        FindFirstObjectByType<OpenImageCanvas>().opened = false;
     }
 
 }

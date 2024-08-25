@@ -6,6 +6,7 @@ public class OpenImageCanvas : DialogTrigger
 {
     [SerializeField] Sprite sprite;
     [SerializeField] AudioClip ImageOpeningSFX;
+    public bool opened = false;
     
     
     protected override void OnMouseDown(){ // inheritance
@@ -20,8 +21,8 @@ public class OpenImageCanvas : DialogTrigger
 
     public void ImageOpening(){
         ImageManager.instance.OpenImageCanvas(sprite); 
-        
         TriggerDialog();
+        opened = true;
     }
 
 
