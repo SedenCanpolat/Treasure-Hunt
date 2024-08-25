@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Holylib.Utilities;
-using UnityEngine.UI;
 using Holylib.HolySoundEffects;
 
 public class OpenImageCanvas : DialogTrigger

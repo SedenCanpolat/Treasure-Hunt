@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Holylib.HolySoundEffects;
-using UnityEngine.UI;
+
 
 public class ButtonSFX : MonoBehaviour
 {
