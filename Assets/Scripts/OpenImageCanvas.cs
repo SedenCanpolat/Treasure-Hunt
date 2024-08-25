@@ -23,7 +23,14 @@ public class OpenImageCanvas : DialogTrigger
 
     public void ImageOpening(){
         ImageManager.instance.OpenImageCanvas(sprite); 
+        FindAnyObjectByType<PlayerMovement>().isLocked = true;
+        
         TriggerDialog();
+    }
+
+    public PlayerMovement playerMovement;
+    private void Awake() {
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
     }
 
 }
