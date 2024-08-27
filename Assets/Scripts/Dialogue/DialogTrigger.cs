@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DialogTrigger : Interactable
 {
+    public ExitHome exitHome;
+    public bool tasksDone = false;
     public SubTask subTask;
     public Actor[] actors;
     public int dialogIndex;
@@ -19,24 +21,45 @@ public class DialogTrigger : Interactable
         TriggerDialog();
     }
 
-    protected virtual void TriggerDialog(){
+    protected virtual void TriggerDialog()
+    {
         if (isActive && this.gameObject.name == "Capsule")
         {
-            Debug.Log(dialogs.Length);
-            Debug.Log(dialogIndex);
+            //Debug.Log(dialogs.Length);
+            //Debug.Log(dialogIndex);
             StartDialogue();
             for (int i = 0; i < subTask.taskNum; i++)
             {
                 if (dialogIndex == subTask.task[i].getTask) dialogIndex++;
             }
+            Debug.Log("control: ");
+            Debug.Log(tasksDone);
+            if (dialogIndex >= subTask.task[subTask.taskNum - 1].getTask)
+            {
+                subTask.allTasksDone = true;
+                Debug.Log("control: ");
+                Debug.Log(tasksDone);
+            }
+
+        }
+        else if (isActive && this.gameObject.name == "HomeDoor")
+        {
+            //Debug.Log(dialogs.Length);
+            //Debug.Log(dialogIndex);
+            StartDialogue();
+            if (subTask.allTasksDone == true)
+            {
+                dialogIndex = 1;
+                exitHome.ChangeScene();
+            }
         }
         else if (isActive)
         {
             //if(FindAnyObjectByType<OpenImageCanvas>().opened == false){
-                Debug.Log(dialogs.Length);
-                Debug.Log(dialogIndex);
-                StartDialogue();
-                if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
+            //Debug.Log(dialogs.Length);
+            //Debug.Log(dialogIndex);
+            StartDialogue();
+            if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
             //}
         }
     }

@@ -30,7 +30,7 @@ public class DialogManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().LockMovement();
 
         DisplayMessage();
-        Debug.Log("Started conversation! Loaded messages: " + messages.Length);
+        //Debug.Log("Started conversation! Loaded messages: " + messages.Length);
 
         backgroundBox.LeanScale(Vector3.one, 0.5f).setEaseInExpo(); //open dialogue
     }
@@ -52,7 +52,7 @@ public class DialogManager : MonoBehaviour
 
     public void NextMessage()
     {
-        
+
         if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
@@ -65,9 +65,10 @@ public class DialogManager : MonoBehaviour
         SoundEffectController.PlaySFX(DialogSFX).SetVolume(0.06f).SetPitch(Random.Range(0.7f, 1f));
     }
 
-    void FinishDialog(){
+    void FinishDialog()
+    {
         Interactable.isActive = true;
-        Debug.Log("Conversation eneded!");
+        //Debug.Log("Conversation eneded!");
         backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
         isActive = false;
         player.GetComponent<PlayerMovement>().UnlockMovement();

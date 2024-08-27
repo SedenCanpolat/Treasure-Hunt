@@ -4,24 +4,26 @@ using Holylib.HolySoundEffects;
 public class ExitHome : MonoBehaviour
 {
     public SceneMan sceneMan;
-    public ChestSubtask chestSubtask;
+    //public DialogTrigger dialogTrigger;
 
     public AudioClip ExitHomeSFX;
-    
-   
+
+
     void OnMouseDown()
     {
-        if (chestSubtask.tasksDone == true)
-        {
-            SoundEffectController.PlaySFX(ExitHomeSFX);
-            Invoke("ChangeScene", 1.5f);
-            
-        }
+        //if (dialogTrigger.tasksDone == true)
+        //{
+        //     SoundEffectController.PlaySFX(ExitHomeSFX);
+        //    Invoke("ChangeScene", 1.5f);
+
+        //}
     }
 
-    void ChangeScene()
+    public void ChangeScene()
     {
         sceneMan.ChangeScene(2);
+        SoundEffectController.PlaySFX(ExitHomeSFX);
+        Invoke("ChangeScene", 1.5f);
         //LevelManagement.instance.ChangeLevelWithTransition(2);
 
     }

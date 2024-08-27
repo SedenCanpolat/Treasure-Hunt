@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SubTask : MonoBehaviour
 {
+    public bool allTasksDone = false;
     public int clothesNum;
     public Task[] task;
     public int taskNum;

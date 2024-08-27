@@ -965,6 +965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors: []
   dialogIndex: 0
@@ -2008,6 +2010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 1830460539}
   actors:
   - name: Grandma
@@ -2173,6 +2177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Marcus
@@ -2307,6 +2313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Marcus
@@ -2597,6 +2605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Grandma
@@ -2968,7 +2978,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subTask: {fileID: 0}
+  exitHome: {fileID: 0}
+  tasksDone: 0
+  subTask: {fileID: 1830460539}
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
@@ -3559,6 +3571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Marcus
@@ -4303,6 +4317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Marcus
@@ -5270,6 +5286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd631273baab4947aeb14d73f40e45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Marcus
@@ -5282,6 +5300,7 @@ MonoBehaviour:
   check: 0
   sprite: {fileID: 21300000, guid: 43bfb8654b78e124cac0147098ad75f3, type: 3}
   ImageOpeningSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
+  opened: 0
 --- !u!60 &1400040297
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6014,6 +6033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Marcus
@@ -6214,7 +6235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subTask: {fileID: 0}
+  exitHome: {fileID: 1613437466}
+  tasksDone: 0
+  subTask: {fileID: 1830460539}
   actors:
   - name: Marcus
     sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
@@ -6292,7 +6315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneMan: {fileID: 1830460540}
-  chestSubtask: {fileID: 7429923}
   ExitHomeSFX: {fileID: 8300000, guid: c12d228a2c75cd24f9afc49611cd343c, type: 3}
 --- !u!1 &1656284541
 GameObject:
@@ -7130,6 +7152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitHome: {fileID: 0}
+  tasksDone: 0
   subTask: {fileID: 0}
   actors:
   - name: Grandma
@@ -7182,6 +7206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e431ffeeeae588b4698f76a64b39c294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allTasksDone: 0
   clothesNum: 4
   task:
   - taskName: Fridge
