@@ -32,13 +32,13 @@ public class DialogTrigger : Interactable
             {
                 if (dialogIndex == subTask.task[i].getTask) dialogIndex++;
             }
-            Debug.Log("control: ");
-            Debug.Log(tasksDone);
+            //Debug.Log("control: ");
+            //Debug.Log(tasksDone);
             if (dialogIndex >= subTask.task[subTask.taskNum - 1].getTask)
             {
                 subTask.allTasksDone = true;
-                Debug.Log("control: ");
-                Debug.Log(tasksDone);
+                //Debug.Log("control: ");
+                //Debug.Log(tasksDone);
             }
 
         }
@@ -46,12 +46,17 @@ public class DialogTrigger : Interactable
         {
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
-            StartDialogue();
-            if (subTask.allTasksDone == true)
+
+            if (dialogIndex == 1)
             {
-                dialogIndex = 1;
                 exitHome.ChangeScene();
             }
+            else if (subTask.allTasksDone == true && dialogIndex == 0)
+            {
+                dialogIndex++;
+            }
+            StartDialogue();
+            Debug.Log(dialogIndex);
         }
         else if (isActive)
         {
