@@ -9,6 +9,7 @@ public class DialogTrigger : Interactable
     public int dialogIndex;
     public Dialogs[] dialogs;
     public bool check = false;
+    public float oran;
 
 
     public void StartDialogue()
@@ -25,6 +26,8 @@ public class DialogTrigger : Interactable
     {
         if (isActive && this.gameObject.name == "Capsule")
         {
+            //gameObject.LeanRotateAround(Vector3.left + Vector3.forward + Vector3.right, 20f, 0.3f).setLoopPingPong();
+            gameObject.LeanScale(new Vector3(oran, oran, oran), 0.7f).setLoopPingPong();
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue();
