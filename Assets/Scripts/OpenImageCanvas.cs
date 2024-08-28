@@ -15,14 +15,22 @@ public class OpenImageCanvas : DialogTrigger
             if (ImageOpeningSFX != null) {
                 SoundEffectController.PlaySFX(ImageOpeningSFX);
             }
-            Invoke("ImageOpening", 1f);           
+            Invoke("ImageOpening", 1f);        
         }
     }
 
     public void ImageOpening(){
-        ImageManager.instance.OpenImageCanvas(sprite); 
-        TriggerDialog();
+        ImageManager.instance.OpenImageCanvas(sprite);
+        /* 
+        if(ImageManager.instance.isImageActive == false){
+            opened = false;
+            
+        }
         opened = true;
+        Debug.Log("Image Opened");
+       */ 
+        TriggerDialog();
+        
     }
 
 

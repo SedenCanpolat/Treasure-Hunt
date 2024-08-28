@@ -13,12 +13,13 @@ public class DialogManager : MonoBehaviour
     public RectTransform backgroundBox; // for animation
     public GameObject player;
     [SerializeField] AudioClip DialogSFX;
+    private LeanBreathing leanBreathing;
 
 
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
-    public static bool isActive = false; // singleton also can be used    
+    public static bool isActive = false; // singleton also can be used   
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -72,6 +73,9 @@ public class DialogManager : MonoBehaviour
         backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
         isActive = false;
         player.GetComponent<PlayerMovement>().UnlockMovement();
+        if(leanBreathing != null){
+            leanBreathing.StopBreathing();
+        }
     }
 
     void AnimateTextColor() //change the text transparency
@@ -85,6 +89,7 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero; //dialoguebox dont open in the start
+        leanBreathing = FindObjectOfType<LeanBreathing>();
     }
 
     // Update is called once per frame

@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class DialogTrigger : Interactable
@@ -9,8 +10,13 @@ public class DialogTrigger : Interactable
     public int dialogIndex;
     public Dialogs[] dialogs;
     public bool check = false;
-    public float oran;
+    
 
+    private OpenImageCanvas openImageCanvas;
+
+    private void Start() {
+        openImageCanvas = FindObjectOfType<OpenImageCanvas>();
+    }
 
     public void StartDialogue()
     {
@@ -20,14 +26,29 @@ public class DialogTrigger : Interactable
     protected virtual void OnMouseDown()
     {
         TriggerDialog();
+        /*
+        if (openImageCanvas == null)
+        {
+            Debug.Log("OpenImageCanvas is null");
+            TriggerDialog();
+        }
+        if(openImageCanvas != null && openImageCanvas.opened == false)
+        {
+            TriggerDialog();
+        }
+        if(openImageCanvas != null && ImageManager.instance.isImageActive == false)
+        {
+            TriggerDialog();
+        }
+        */
+        
     }
 
     protected virtual void TriggerDialog()
     {
         if (isActive && this.gameObject.name == "Capsule")
         {
-            //gameObject.LeanRotateAround(Vector3.left + Vector3.forward + Vector3.right, 20f, 0.3f).setLoopPingPong();
-            gameObject.LeanScale(new Vector3(oran, oran, oran), 0.7f).setLoopPingPong();
+            GetComponent<LeanBreathing>().StartBreathing();
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue();
@@ -44,6 +65,7 @@ public class DialogTrigger : Interactable
                 //Debug.Log(tasksDone);
             }
 
+            
         }
         else if (isActive && this.gameObject.name == "HomeDoor")
         {
@@ -63,12 +85,12 @@ public class DialogTrigger : Interactable
         }
         else if (isActive)
         {
-            //if(FindAnyObjectByType<OpenImageCanvas>().opened == false){
+            
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue();
             if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
-            //}
+            
         }
     }
 }
