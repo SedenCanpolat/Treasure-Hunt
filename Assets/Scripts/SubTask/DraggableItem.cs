@@ -38,14 +38,14 @@ public class DraggableItem : MonoBehaviour
         {
             SoundEffectController.PlaySFX(ClothSFX).RandomPitchRange(0.90f, 1.10f);
             moving = true;
-            playerMovement.enabled = false;
+            playerMovement.isLocked = true; ;
         }
     }
 
     public void OnMouseUp()
     {
         moving = false;
-        playerMovement.enabled = true;
+        playerMovement.UnlockMovement();
         float pitchRangeNum = 0.60f;
 
         if (Mathf.Abs(this.transform.position.x - correctForm.transform.position.x) <= 2f &&
