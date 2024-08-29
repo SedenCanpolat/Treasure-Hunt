@@ -7989,6 +7989,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: floorScript
       value: 
       objectReference: {fileID: 924427895}
