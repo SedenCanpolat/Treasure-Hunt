@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class cursorController : MonoBehaviour
 {
-    public Texture2D cursorDefault;    // Varsayılan imleç
-    public Texture2D cursorHover;      // Üzerine gelindiğinde değişecek imleç
+    public Texture2D cursorDefault;   
+    public Texture2D cursorHover;      
 
     private void Awake()
     {
