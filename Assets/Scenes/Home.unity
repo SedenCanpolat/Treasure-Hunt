@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 7429919}
   - component: {fileID: 7429921}
   - component: {fileID: 7429923}
+  - component: {fileID: 7429924}
   m_Layer: 0
   m_Name: haritaKoli
   m_TagString: Untagged
@@ -257,6 +258,20 @@ MonoBehaviour:
   MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
   subTask: {fileID: 1830460539}
   dialogTrigger: {fileID: 556706934}
+--- !u!114 &7429924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &156137798
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +611,7 @@ GameObject:
   - component: {fileID: 235331408}
   - component: {fileID: 235331411}
   - component: {fileID: 235331412}
+  - component: {fileID: 235331413}
   m_Layer: 0
   m_Name: clothes_3
   m_TagString: Untagged
@@ -714,6 +730,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &235331413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235331404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &309126190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1193,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2ac1daf83f7f94593862b7fd63a0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &355445161
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355445155}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -287352679
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &366841272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1751,6 +1833,7 @@ GameObject:
   - component: {fileID: 556706932}
   - component: {fileID: 556706934}
   - component: {fileID: 556706935}
+  - component: {fileID: 556706936}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1961,6 +2044,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rate: 0.82
+--- !u!114 &556706936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556706929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &606434943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +2070,7 @@ GameObject:
   - component: {fileID: 606434947}
   - component: {fileID: 606434945}
   - component: {fileID: 606434948}
+  - component: {fileID: 606434949}
   m_Layer: 0
   m_Name: Koli (1)
   m_TagString: Untagged
@@ -2098,6 +2196,20 @@ MonoBehaviour:
       message: Nothing is interesting here.
   check: 0
   WaitSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
+--- !u!114 &606434949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606434943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &643188025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2222,7 @@ GameObject:
   - component: {fileID: 643188030}
   - component: {fileID: 643188029}
   - component: {fileID: 643188027}
+  - component: {fileID: 643188031}
   m_Layer: 0
   m_Name: OyuncakKutusu
   m_TagString: Untagged
@@ -2234,6 +2347,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &643188031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643188025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &671708214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2749,6 +2876,7 @@ GameObject:
   - component: {fileID: 839403629}
   - component: {fileID: 839403631}
   - component: {fileID: 839403630}
+  - component: {fileID: 839403632}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -2873,6 +3001,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.701931, y: 4.180156}
   m_EdgeRadius: 0
+--- !u!114 &839403632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839403627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &846222826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,7 +3040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846222826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.44, y: -2.6, z: -0.05428692}
+  m_LocalPosition: {x: 5.61, y: -4.17, z: -0.05428692}
   m_LocalScale: {x: 1.1, y: 1.0266666, z: 0.73333335}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2956,7 +3098,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &900929684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,7 +3650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1027228965
 Transform:
   m_ObjectHideFlags: 0
@@ -3644,7 +3786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1128984396
 Transform:
   m_ObjectHideFlags: 0
@@ -3881,6 +4023,20 @@ PolygonCollider2D:
       - {x: 8.51, y: -3.34}
       - {x: 8.53, y: -3.32}
       - {x: 8.53, y: -3.28}
+--- !u!114 &1204632315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204632307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1236688998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8776491651774563780, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
@@ -4051,6 +4207,20 @@ PolygonCollider2D:
       - {x: 4.44, y: -3.01}
       - {x: 4.49, y: -2.86}
       - {x: 4.74, y: -1.81}
+--- !u!114 &1255006740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255006733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1274205134
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,6 +4233,7 @@ GameObject:
   - component: {fileID: 1274205136}
   - component: {fileID: 1274205139}
   - component: {fileID: 1274205137}
+  - component: {fileID: 1274205140}
   m_Layer: 0
   m_Name: Bookcase
   m_TagString: Untagged
@@ -4187,6 +4358,20 @@ MonoBehaviour:
     - actorId: 0
       message: I've read these books already.
   check: 0
+--- !u!114 &1274205140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274205134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1328471452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4337,6 +4522,7 @@ GameObject:
   - component: {fileID: 1370981947}
   - component: {fileID: 1370981948}
   - component: {fileID: 1370981949}
+  - component: {fileID: 1370981950}
   m_Layer: 0
   m_Name: magnet_3
   m_TagString: Untagged
@@ -4512,6 +4698,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.7420416, y: 6.740143}
   m_EdgeRadius: 0
+--- !u!114 &1370981950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370981941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1001 &1381327703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4720,6 +4920,20 @@ PolygonCollider2D:
       - {x: 1.61, y: -2.9099998}
       - {x: 9.599999, y: 5.37}
       - {x: 9.599999, y: 5.4}
+--- !u!114 &1381327711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373503140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1397823928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,6 +4947,7 @@ GameObject:
   - component: {fileID: 1397823931}
   - component: {fileID: 1397823934}
   - component: {fileID: 1397823935}
+  - component: {fileID: 1397823936}
   m_Layer: 0
   m_Name: clothes_1 (1)
   m_TagString: Untagged
@@ -4851,6 +5066,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1397823936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397823928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1400040291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4864,6 +5093,7 @@ GameObject:
   - component: {fileID: 1400040295}
   - component: {fileID: 1400040296}
   - component: {fileID: 1400040297}
+  - component: {fileID: 1400040298}
   m_Layer: 0
   m_Name: babaKoli
   m_TagString: Untagged
@@ -5088,6 +5318,20 @@ PolygonCollider2D:
       - {x: 0.645, y: -1.555}
       - {x: 1.165, y: -1.555}
       - {x: 1.175, y: -1.545}
+--- !u!114 &1400040298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400040291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!224 &1409369721 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
@@ -5117,6 +5361,7 @@ GameObject:
   - component: {fileID: 1421778936}
   - component: {fileID: 1421778939}
   - component: {fileID: 1421778940}
+  - component: {fileID: 1421778941}
   m_Layer: 0
   m_Name: clothes_1
   m_TagString: Untagged
@@ -5235,6 +5480,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1421778941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421778932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1489587249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,6 +5507,7 @@ GameObject:
   - component: {fileID: 1489587253}
   - component: {fileID: 1489587256}
   - component: {fileID: 1489587257}
+  - component: {fileID: 1489587258}
   m_Layer: 0
   m_Name: clothes_2
   m_TagString: Untagged
@@ -5366,6 +5626,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1489587258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489587249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1495608593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5579,6 +5853,7 @@ GameObject:
   - component: {fileID: 1600279833}
   - component: {fileID: 1600279836}
   - component: {fileID: 1600279837}
+  - component: {fileID: 1600279838}
   m_Layer: 0
   m_Name: Koli
   m_TagString: Untagged
@@ -5667,7 +5942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -287352679
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 56f35166a87c43c46b5327218d05b9e0, type: 3}
   m_Color: {r: 0.9811321, g: 0.8868674, b: 0.7821289, a: 1}
   m_FlipX: 0
@@ -5769,6 +6044,20 @@ MonoBehaviour:
       message: This is empty.
   check: 0
   WaitSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
+--- !u!114 &1600279838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600279831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1613437460
 GameObject:
   m_ObjectHideFlags: 0
@@ -5782,6 +6071,7 @@ GameObject:
   - component: {fileID: 1613437464}
   - component: {fileID: 1613437462}
   - component: {fileID: 1613437466}
+  - component: {fileID: 1613437467}
   m_Layer: 0
   m_Name: HomeDoor
   m_TagString: Untagged
@@ -5923,6 +6213,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneMan: {fileID: 1830460540}
   ExitHomeSFX: {fileID: 8300000, guid: c12d228a2c75cd24f9afc49611cd343c, type: 3}
+--- !u!114 &1613437467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613437460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1656284541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,6 +6444,7 @@ GameObject:
   - component: {fileID: 1817220283}
   - component: {fileID: 1817220284}
   - component: {fileID: 1817220285}
+  - component: {fileID: 1817220286}
   m_Layer: 0
   m_Name: magnet_1
   m_TagString: Untagged
@@ -6315,6 +6620,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.765862, y: 9.778174}
   m_EdgeRadius: 0
+--- !u!114 &1817220286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817220277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1829168409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6330,6 +6649,7 @@ GameObject:
   - component: {fileID: 1829168415}
   - component: {fileID: 1829168417}
   - component: {fileID: 1829168418}
+  - component: {fileID: 1829168419}
   m_Layer: 0
   m_Name: magnet_2
   m_TagString: Untagged
@@ -6522,6 +6842,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.455654, y: 7.417241}
   m_EdgeRadius: 0
+--- !u!114 &1829168419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829168409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &1830460532
 GameObject:
   m_ObjectHideFlags: 0
@@ -7056,6 +7390,7 @@ GameObject:
   - component: {fileID: 2042485327}
   - component: {fileID: 2042485329}
   - component: {fileID: 2042485330}
+  - component: {fileID: 2042485331}
   m_Layer: 0
   m_Name: magnet_4
   m_TagString: Untagged
@@ -7203,6 +7538,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.292139, y: 7.670661}
   m_EdgeRadius: 0
+--- !u!114 &2042485331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042485322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!1 &2065697889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 307655319281533827, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
+  m_PrefabInstance: {fileID: 366841272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2065697893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065697889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!1 &2074639615
 GameObject:
   m_ObjectHideFlags: 0
@@ -7442,6 +7810,7 @@ GameObject:
   - component: {fileID: 2136685283}
   - component: {fileID: 2136685282}
   - component: {fileID: 2136685286}
+  - component: {fileID: 2136685287}
   m_Layer: 0
   m_Name: Vileda
   m_TagString: Untagged
@@ -7491,8 +7860,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3499999, y: 3.3335752, z: 0.2}
-  m_Center: {x: 0, y: -0.031170512, z: 0}
+  m_Size: {x: 0.6292408, y: 3.2324917, z: 0.2}
+  m_Center: {x: -0.06673663, y: 0.019371124, z: 0}
 --- !u!114 &2136685284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7576,6 +7945,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2136685287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136685280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
 --- !u!225 &2143075505 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8776491652479883539, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
