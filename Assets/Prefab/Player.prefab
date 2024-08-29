@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorScript: {fileID: 0}
-  speed: 10
+  speed: 8
   xRange: 7.27
   yRange: -2.41
   animator: {fileID: 355445160}
