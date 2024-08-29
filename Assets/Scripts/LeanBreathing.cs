@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class LeanBreathing : MonoBehaviour
 {
-    public float oran;
+    [SerializeField] float rate;
     public void StartBreathing()
     {
-        Debug.Log("Breathing");
         LeanTween.cancel(gameObject);
         gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f); 
-        gameObject.LeanScale(new Vector3(oran, oran, oran), 0.7f).setLoopPingPong();
+        gameObject.LeanScale(new Vector3(rate, rate, rate), 0.7f).setLoopPingPong();
         
     }
 
      public void StopBreathing()
     {
-        Debug.Log("Stopped Breathing");
         LeanTween.cancel(gameObject);  
     }
 }
