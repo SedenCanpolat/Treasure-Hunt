@@ -7,7 +7,6 @@ public class SubTask : MonoBehaviour
     public Task[] task;
     public int taskNum;
 
-    // Start is called before the first frame update
     void Start()
     {
 

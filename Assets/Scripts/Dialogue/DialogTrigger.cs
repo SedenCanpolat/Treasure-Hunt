@@ -9,11 +9,12 @@ public class DialogTrigger : Interactable
     public int dialogIndex;
     public Dialogs[] dialogs;
     public bool check = false;
-    
+
 
     private OpenImageCanvas openImageCanvas;
 
-    private void Start() {
+    private void Start()
+    {
         openImageCanvas = FindObjectOfType<OpenImageCanvas>();
     }
 
@@ -40,7 +41,7 @@ public class DialogTrigger : Interactable
             TriggerDialog();
         }
         */
-        
+
     }
 
     protected virtual void TriggerDialog()
@@ -64,7 +65,7 @@ public class DialogTrigger : Interactable
                 //Debug.Log(tasksDone);
             }
 
-            
+
         }
         else if (isActive && this.gameObject.name == "HomeDoor")
         {
@@ -84,12 +85,11 @@ public class DialogTrigger : Interactable
         }
         else if (isActive)
         {
-            
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue();
             if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
-            
+
         }
     }
 }
