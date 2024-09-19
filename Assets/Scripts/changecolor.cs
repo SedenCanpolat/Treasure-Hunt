@@ -13,6 +13,7 @@ public class changecolor : MonoBehaviour
 
     void OnMouseEnter()
     {
+        //if(TaskManager.instance.colo)
         Color secondColor = new Color(0.3f, 0.3f, 0.3f, 0.5f); //transparent color
 
         rend.material.color = originalColor + secondColor;
