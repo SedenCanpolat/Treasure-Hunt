@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 7429921}
   - component: {fileID: 7429923}
   - component: {fileID: 7429924}
+  - component: {fileID: 7429925}
   m_Layer: 0
   m_Name: haritaKoli
   m_TagString: Untagged
@@ -257,7 +258,7 @@ MonoBehaviour:
   LockSFX: {fileID: 8300000, guid: 5402efbb3926db542bc097c2fcf1614d, type: 3}
   MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
   subTask: {fileID: 1830460539}
-  dialogTrigger: {fileID: 556706934}
+  DialogTrigger: {fileID: 556706934}
 --- !u!114 &7429924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +273,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &7429925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subTask: {fileID: 1830460539}
+  check: 0
+--- !u!1 &126587057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126587059}
+  - component: {fileID: 126587058}
+  m_Layer: 0
+  m_Name: TaskManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &126587058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126587057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23786e97cf946cc46b95cf88f977b58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  task:
+  - taskName: Clothes
+    onMission: 0
+    inMission: 1
+    afterMission: 2
+    isTaskDone: 0
+    enableScript: 0
+  - taskName: Look at the chest
+    onMission: 2
+    inMission: 3
+    afterMission: 4
+    isTaskDone: 0
+    enableScript: 0
+  - taskName: Clean
+    onMission: 4
+    inMission: 5
+    afterMission: 6
+    isTaskDone: 0
+    enableScript: 0
+  - taskName: Open the chest
+    onMission: 6
+    inMission: 7
+    afterMission: 8
+    isTaskDone: 0
+    enableScript: 0
+  - taskName: Go outside
+    onMission: 8
+    inMission: 9
+    afterMission: 10
+    isTaskDone: 0
+    enableScript: 0
+  player: {fileID: 355445155}
+  taskId: 0
+  exitHome: {fileID: 1613437466}
+--- !u!4 &126587059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126587057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &156137798
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &235331413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,6 +1464,10 @@ PrefabInstance:
       value: 1.3965306
       objectReference: {fileID: 0}
     - target: {fileID: 307655319281533831, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 307655319281533831, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: m_Offset.x
       value: 6.486753
       objectReference: {fileID: 0}
@@ -1412,7 +1511,8 @@ PrefabInstance:
       propertyPath: supposedThisPosition.y
       value: -4.07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 307655319281533831, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
 --- !u!4 &366841273 stripped
 Transform:
@@ -3700,7 +3800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1027228965
 Transform:
   m_ObjectHideFlags: 0
@@ -3853,7 +3953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1128984396
 Transform:
   m_ObjectHideFlags: 0
@@ -3872,31 +3972,296 @@ Transform:
   - {fileID: 1381327704}
   - {fileID: 321351254}
   - {fileID: 1495608596}
+  - {fileID: 1160312877}
   m_Father: {fileID: 550238765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1139595912 stripped
+--- !u!1 &1130467628
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 406104815, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-  m_PrefabInstance: {fileID: 8009142610385908682}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1139595915
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130467629}
+  - component: {fileID: 1130467635}
+  - component: {fileID: 1130467634}
+  - component: {fileID: 1130467633}
+  - component: {fileID: 1130467632}
+  - component: {fileID: 1130467631}
+  - component: {fileID: 1130467630}
+  m_Layer: 0
+  m_Name: ' 1'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1130467629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130467628}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.47, y: -0.02, z: 0.07947456}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1160312877}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130467630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139595912}
+  m_GameObject: {fileID: 1130467628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd6806de13ed164c903dd8c43b0f798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tasksDone: 0
+  actors:
+  - name: Grandma
+    sprite: {fileID: 21300000, guid: d71b1fb06aa419a47a3a9c49d4eed6fe, type: 3}
+  - name: Marcus
+    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
+  dialogIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: Did you tidy your room before coming here?
+    - actorId: 1
+      message: I didn't.
+    - actorId: 1
+      message: ' I don''t want to do, it''s very boring.'
+    - actorId: 0
+      message: 'Still you should do it. '
+    - actorId: 0
+      message: It won't take 5 minutes.
+    - actorId: 0
+      message: So go and tidy your room.
+  - dialog:
+    - actorId: 0
+      message: You should tidy your room.
+    - actorId: 0
+      message: Go and tidy your room.
+  - dialog:
+    - actorId: 1
+      message: I tidied my room.
+    - actorId: 1
+      message: It's so boring!
+    - actorId: 1
+      message: I do same things everyday!
+    - actorId: 0
+      message: Hmm.
+    - actorId: 0
+      message: 'Then, I have an offer for you. '
+    - actorId: 0
+      message: There might be things in the basement that may interest you.
+    - actorId: 0
+      message: Your father's remaining belongings are in the basement.
+    - actorId: 0
+      message: Why don't you go and have a look?
+  - dialog:
+    - actorId: 0
+      message: Why don't you go and have a look at the basement?
+  - dialog:
+    - actorId: 1
+      message: I've found a chest grandma!
+    - actorId: 1
+      message: In the basement!
+    - actorId: 1
+      message: But it has a lock!
+    - actorId: 1
+      message: Do you know where its key is?
+    - actorId: 0
+      message: I may have.
+    - actorId: 0
+      message: But you should mop the floors before I give you the key.
+    - actorId: 1
+      message: Can't you just give it to me?
+    - actorId: 0
+      message: No, you should mop the floors first.
+  - dialog:
+    - actorId: 0
+      message: You should mop the floors first.
+  - dialog:
+    - actorId: 0
+      message: Here you go.
+    - actorId: 1
+      message: Hooray!
+    - actorId: 1
+      message: Now I can learn what's inside of the chest!
+  - dialog:
+    - actorId: 0
+      message: You should open the chest
+  - dialog:
+    - actorId: 0
+      message: Did you find out what was in the chest?
+    - actorId: 1
+      message: Yes!
+    - actorId: 1
+      message: But it's a secret!
+    - actorId: 1
+      message: Can I go out and play now, grandma?
+    - actorId: 0
+      message: Okay, but don't be late!
+  - dialog:
+    - actorId: 0
+      message: Are you still here?
+    - actorId: 0
+      message: Go and play outside.
+  doesSubtaskExist: 1
+--- !u!114 &1130467631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130467628}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 365d3996408af4448908a9e043b12933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1130467632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130467628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca653c4c4d3b1346a176dff6cf23d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
+  cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &1130467633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130467628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ab867565c13d140a5467ad83703e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 0.82
+--- !u!70 &1130467634
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130467628}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00707075, y: 0.072366595}
+  m_Size: {x: 2.2597256, y: 7.2316265}
+  m_Direction: 0
+--- !u!212 &1130467635
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130467628}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -957461683
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a8d2db6b291e8aa489f5e7336c973bf9, type: 3}
+  m_Color: {r: 0.8962264, g: 0.41992995, b: 0.41992995, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &1149360746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 307655319281533825, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
   m_PrefabInstance: {fileID: 307655320430762475}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160312876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160312877}
+  m_Layer: 0
+  m_Name: RED Grandma (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1160312877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160312876}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.85, y: -1.9, z: -0.07947456}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1130467629}
+  m_Father: {fileID: 1128984396}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186085688
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,6 +5126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &1370981947
 Rigidbody2D:
   serializedVersion: 4
@@ -5204,6 +5571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &1397823936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5618,6 +5987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &1421778941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5781,6 +6152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &1489587258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6223,10 +6596,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1613437461}
   - component: {fileID: 1613437465}
-  - component: {fileID: 1613437464}
   - component: {fileID: 1613437462}
   - component: {fileID: 1613437466}
   - component: {fileID: 1613437467}
+  - component: {fileID: 1613437469}
   m_Layer: 0
   m_Name: HomeDoor
   m_TagString: Untagged
@@ -6275,33 +6648,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0537882, y: 4.7035894}
   m_EdgeRadius: 0
---- !u!114 &1613437464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613437460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitHome: {fileID: 1613437466}
-  tasksDone: 0
-  subTask: {fileID: 1830460539}
-  actors:
-  - name: Marcus
-    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
-  dialogIndex: 0
-  dialogs:
-  - dialog:
-    - actorId: 0
-      message: I can't go out.
-  - dialog:
-    - actorId: 0
-      message: 'Now I can find the treasure! '
-  check: 0
 --- !u!212 &1613437465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6382,6 +6728,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &1613437469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613437460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitHome: {fileID: 1613437466}
+  tasksDone: 0
+  subTask: {fileID: 1830460539}
+  actors:
+  - name: Marcus
+    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
+  dialogIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: I can't go out.
+  - dialog:
+    - actorId: 0
+      message: 'Now I can find the treasure! '
+  check: 0
 --- !u!1 &1656284541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6717,6 +7090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &1817220283
 Rigidbody2D:
   serializedVersion: 4
@@ -6922,6 +7297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &1829168415
 Rigidbody2D:
   serializedVersion: 4
@@ -7496,6 +7873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!212 &1999730678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7663,6 +8042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &2042485329
 Rigidbody2D:
   serializedVersion: 4
@@ -7743,6 +8124,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!65 &2065697897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065697889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7439861, y: 1.8169389, z: 0.2}
+  m_Center: {x: 6.568118, y: -2.1213214, z: 0}
 --- !u!1 &2074639615
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,6 +8511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &2136685287
 MonoBehaviour:
   m_ObjectHideFlags: 0

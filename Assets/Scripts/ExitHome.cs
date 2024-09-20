@@ -11,6 +11,7 @@ public class ExitHome : MonoBehaviour
 
     void OnMouseDown()
     {
+
         //if (dialogTrigger.tasksDone == true)
         //{
         //     SoundEffectController.PlaySFX(ExitHomeSFX);

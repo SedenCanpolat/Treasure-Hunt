@@ -42,6 +42,7 @@ public class Cleaning : Interactable
     private void OnMouseEnter()
     {
         //playerMovement.enabled = false;
+        GetComponent<changecolor>().ColorChange();
     }
 
     private void OnMouseExit()
@@ -75,7 +76,8 @@ public class Cleaning : Interactable
                 print("YEYY");
                 missionCompleted = true;
                 SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
-                dialogTrigger.dialogIndex++;
+                dialogTrigger.dialogIndex ++;
+                GetComponent<changecolor>().NotColorChange();
             }
         }
     }

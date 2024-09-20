@@ -3,6 +3,7 @@ using Holylib.HolySoundEffects;
 
 public class DraggableItem : MonoBehaviour
 {
+
     public SubTask subTask;
     public DialogTrigger dialogTrigger;
     public PlayerMovement playerMovement;
@@ -32,13 +33,19 @@ public class DraggableItem : MonoBehaviour
             }
         }
     }
+
+    private void OnMouseEnter() {
+        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1){
+            GetComponent<changecolor>().ColorChange();
+        }
+    }
+
     private void OnMouseDown()
     {
-        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1)
-        {
+        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1){
             SoundEffectController.PlaySFX(ClothSFX).RandomPitchRange(0.90f, 1.10f);
             moving = true;
-            playerMovement.isLocked = true; ;
+            playerMovement.isLocked = true;
         }
     }
 
@@ -62,8 +69,8 @@ public class DraggableItem : MonoBehaviour
             {
                 SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);
                 dialogTrigger.dialogIndex++;
+                GetComponent<changecolor>().NotColorChange();
             }
-
         }
         else
         {
