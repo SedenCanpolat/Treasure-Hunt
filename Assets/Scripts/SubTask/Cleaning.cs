@@ -42,7 +42,9 @@ public class Cleaning : Interactable
     private void OnMouseEnter()
     {
         //playerMovement.enabled = false;
-        GetComponent<changecolor>().ColorChange();
+        if (isTaskActive()){
+            GetComponent<changecolor>().ColorChange();
+        }
     }
 
     private void OnMouseExit()
