@@ -4,6 +4,8 @@ public class changecolor : MonoBehaviour
 {
     private Color originalColor;
     private Renderer rend;
+    public SubTask subTask;
+    public bool check;
 
     void Start()
     {
@@ -11,12 +13,22 @@ public class changecolor : MonoBehaviour
         originalColor = rend.material.color;
     }
 
+    public bool ColorChange(){
+        return check = true;
+    }
+
+    public bool NotColorChange(){
+        return check = false;
+    }
+
     void OnMouseEnter()
     {
-        //if(TaskManager.instance.colo)
-        Color secondColor = new Color(0.3f, 0.3f, 0.3f, 0.5f); //transparent color
+        if(check){
+            Color secondColor = new Color(0.3f, 0.3f, 0.3f, 0.5f); //transparent color
 
-        rend.material.color = originalColor + secondColor;
+            rend.material.color = originalColor + secondColor;
+        }
+        
     }
     void OnMouseExit()
     {

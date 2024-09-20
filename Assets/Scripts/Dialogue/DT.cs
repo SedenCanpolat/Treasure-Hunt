@@ -8,8 +8,7 @@ public class DT : Interactable
     public int dialogIndex;
     public Dialogs[] dialogs;
     
-    public bool doesSubtaskExist = false;
-    
+    public bool doesSubtaskExist = false;    
 
 
     private OpenImageCanvas openImageCanvas;
@@ -33,8 +32,10 @@ public class DT : Interactable
     {
         if (isActive && doesSubtaskExist)
         {
+
             dialogIndex = TaskManager.instance.finishTaskControl(dialogIndex);
             GetComponent<LeanBreathing>().StartBreathing();
+            Debug.Log("DT: " + dialogIndex);
             StartDialogue();
             dialogIndex = TaskManager.instance.getTaskControl(dialogIndex);
 

@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Pipeline;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class TaskManager : MonoBehaviour
@@ -9,8 +7,8 @@ public class TaskManager : MonoBehaviour
     public static TaskManager instance;
     public Task[] task;
     [SerializeField] GameObject player;
-    
     public int taskId;
+    public ExitHome exitHome;
 
     private void Awake() {
         if (instance != null && instance != this) 
@@ -24,25 +22,16 @@ public class TaskManager : MonoBehaviour
 
     void Start()
     {
-        
 
-    }
-
-    public int findTaskNum(int dialogIndex){
-        for(int i=0; i<task.Length; i++){
-            Debug.Log("dialogindex:" + dialogIndex + "" + "onMission:" + task[i].onMission);
-            if(task[i].onMission == dialogIndex){
-                return i;
-            }   
-        }
-        return dialogIndex;
     }
 
     public int getTaskControl(int dialogIndex){
-        int thisTask = findTaskNum(dialogIndex);
-        dialogIndex = task[thisTask].inMission; // ++
-        //task[thisTask].enableScript = true;
-        taskId = thisTask;
+       for(int i=0; i<task.Length; i++){
+            if(task[i].onMission == dialogIndex){
+                Debug.Log("dialogindex:" + dialogIndex + "" + "onMission:" + task[i].onMission + "inMission" + task[i].inMission);
+                dialogIndex = task[i].inMission;
+            }   
+        }
         return dialogIndex;
         //colorChanged = true;
     }
@@ -50,11 +39,18 @@ public class TaskManager : MonoBehaviour
    
 
     public int finishTaskControl(int dialogIndex){
-        int thisTask = findTaskNum(dialogIndex);
-        if(task[thisTask].isTaskDone){
-            dialogIndex = task[thisTask].afterMission;
-            //task[thisTask].enableScript = false;
+        for(int i=0; i<task.Length; i++){
+            if(task[i].onMission == dialogIndex || task[i].inMission == dialogIndex ){
+                if(task[i].isTaskDone){
+                    dialogIndex = task[i].afterMission;
+
+                }
+            }
+            if(task[task.Length - 1].isTaskDone){
+                exitHome.ChangeScene();
+            }
         }
+        Debug.Log("finish:" + dialogIndex);
         return dialogIndex;
     }
 
@@ -66,11 +62,7 @@ public class TaskManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().UnlockMovement();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     [System.Serializable]
     public class Task
@@ -81,8 +73,7 @@ public class TaskManager : MonoBehaviour
         public int afterMission;
         public bool isTaskDone;
         public bool enableScript;
-        //public bool colorChanged;
-        
+        //public bool colorChanged;        
 
     }
 

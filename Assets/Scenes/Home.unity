@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 7429921}
   - component: {fileID: 7429923}
   - component: {fileID: 7429924}
+  - component: {fileID: 7429925}
   m_Layer: 0
   m_Name: haritaKoli
   m_TagString: Untagged
@@ -257,7 +258,7 @@ MonoBehaviour:
   LockSFX: {fileID: 8300000, guid: 5402efbb3926db542bc097c2fcf1614d, type: 3}
   MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
   subTask: {fileID: 1830460539}
-  dialogTrigger: {fileID: 556706934}
+  DialogTrigger: {fileID: 556706934}
 --- !u!114 &7429924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +273,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &7429925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subTask: {fileID: 1830460539}
+  check: 0
 --- !u!1 &126587057
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &126587058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,8 +329,27 @@ MonoBehaviour:
     afterMission: 4
     isTaskDone: 0
     enableScript: 0
+  - taskName: Clean
+    onMission: 4
+    inMission: 5
+    afterMission: 6
+    isTaskDone: 0
+    enableScript: 0
+  - taskName: Open the chest
+    onMission: 6
+    inMission: 7
+    afterMission: 8
+    isTaskDone: 0
+    enableScript: 0
+  - taskName: Go outside
+    onMission: 8
+    inMission: 9
+    afterMission: 10
+    isTaskDone: 0
+    enableScript: 0
   player: {fileID: 355445155}
   taskId: 0
+  exitHome: {fileID: 1613437466}
 --- !u!4 &126587059
 Transform:
   m_ObjectHideFlags: 0
@@ -758,7 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
-  dT: {fileID: 1130467630}
+  dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
   ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
@@ -789,6 +823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &235331413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,6 +1464,10 @@ PrefabInstance:
       value: 1.3965306
       objectReference: {fileID: 0}
     - target: {fileID: 307655319281533831, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 307655319281533831, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: m_Offset.x
       value: 6.486753
       objectReference: {fileID: 0}
@@ -1471,7 +1511,8 @@ PrefabInstance:
       propertyPath: supposedThisPosition.y
       value: -4.07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 307655319281533831, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
 --- !u!4 &366841273 stripped
 Transform:
@@ -4165,12 +4206,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1160312877}
   m_Layer: 0
-  m_Name: Grandma (1)
+  m_Name: RED Grandma (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1160312877
 Transform:
   m_ObjectHideFlags: 0
@@ -4357,8 +4398,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2365336, y: 1.5156479, z: 0.2}
-  m_Center: {x: 6.5728016, y: -2.5163202, z: 0}
+  m_Size: {x: 3.5981426, y: 3.1294072, z: 0.2}
+  m_Center: {x: 6.9005966, y: -1.9111603, z: 0}
 --- !u!1 &1236688998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8776491651774563780, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
@@ -4945,6 +4986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &1370981947
 Rigidbody2D:
   serializedVersion: 4
@@ -5305,7 +5348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
-  dT: {fileID: 1130467630}
+  dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
   ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
@@ -5388,6 +5431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &1397823936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5771,7 +5816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
-  dT: {fileID: 1130467630}
+  dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
   ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
@@ -5802,6 +5847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &1421778941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5917,7 +5964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
-  dT: {fileID: 1130467630}
+  dialogTrigger: {fileID: 556706934}
   playerMovement: {fileID: 355445156}
   correctForm: {fileID: 846222826}
   ClothSFX: {fileID: 8300000, guid: 2ecd86c21fe99444083bd76636e221f6, type: 3}
@@ -5948,6 +5995,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &1489587258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5977,7 +6026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1495608596
 Transform:
   m_ObjectHideFlags: 0
@@ -6390,10 +6439,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1613437461}
   - component: {fileID: 1613437465}
-  - component: {fileID: 1613437464}
   - component: {fileID: 1613437462}
   - component: {fileID: 1613437466}
   - component: {fileID: 1613437467}
+  - component: {fileID: 1613437469}
   m_Layer: 0
   m_Name: HomeDoor
   m_TagString: Untagged
@@ -6442,33 +6491,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0537882, y: 4.7035894}
   m_EdgeRadius: 0
---- !u!114 &1613437464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613437460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitHome: {fileID: 1613437466}
-  tasksDone: 0
-  subTask: {fileID: 1830460539}
-  actors:
-  - name: Marcus
-    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
-  dialogIndex: 0
-  dialogs:
-  - dialog:
-    - actorId: 0
-      message: I can't go out.
-  - dialog:
-    - actorId: 0
-      message: 'Now I can find the treasure! '
-  check: 0
 --- !u!212 &1613437465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6549,6 +6571,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &1613437469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613437460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitHome: {fileID: 1613437466}
+  tasksDone: 0
+  subTask: {fileID: 1830460539}
+  actors:
+  - name: Marcus
+    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
+  dialogIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: I can't go out.
+  - dialog:
+    - actorId: 0
+      message: 'Now I can find the treasure! '
+  check: 0
 --- !u!1 &1656284541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6867,6 +6916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &1817220283
 Rigidbody2D:
   serializedVersion: 4
@@ -7072,6 +7123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &1829168415
 Rigidbody2D:
   serializedVersion: 4
@@ -7646,6 +7699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!212 &1999730678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7813,6 +7868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!50 &2042485329
 Rigidbody2D:
   serializedVersion: 4
@@ -7893,6 +7950,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!65 &2065697897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065697889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7439861, y: 1.8169389, z: 0.2}
+  m_Center: {x: 6.568118, y: -2.1213214, z: 0}
 --- !u!1 &2074639615
 GameObject:
   m_ObjectHideFlags: 0
@@ -8267,6 +8337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adbfb5b1914c04996d1063c1e71fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subTask: {fileID: 0}
+  check: 0
 --- !u!114 &2136685287
 MonoBehaviour:
   m_ObjectHideFlags: 0

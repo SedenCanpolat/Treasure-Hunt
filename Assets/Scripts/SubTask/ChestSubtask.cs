@@ -12,20 +12,24 @@ public class ChestSubtask : Interactable
     [SerializeField] AudioClip MapSFX;
 
     public SubTask subTask;
-    public DialogTrigger dialogTrigger;
+    public DialogTrigger DialogTrigger;
 
     private void Start() {
         unlockImg.SetActive(false);
     }
     void OnMouseDown()
     {
-        if (isActive && !HolyUtilities.isOnUI() && dialogTrigger.dialogIndex < subTask.task[3].getTask + 1)
+        if (isActive && !HolyUtilities.isOnUI() && DialogTrigger.dialogIndex < subTask.task[3].getTask + 1)
         {
             SoundEffectController.PlaySFX(LockSFX);
             //Invoke("LockImageOpening", 1f);
             //LockImageOpening();
             ImageInSceneOpening(lockImg);
-            if (dialogTrigger.dialogIndex == subTask.task[1].getTask + 1) dialogTrigger.dialogIndex++;
+            if (DialogTrigger.dialogIndex == subTask.task[1].getTask + 1){
+                DialogTrigger.dialogIndex++;
+                GetComponent<changecolor>().NotColorChange();
+
+            }
         }
         else if (isActive && !HolyUtilities.isOnUI())
         {
@@ -34,17 +38,19 @@ public class ChestSubtask : Interactable
             ImageInSceneClosing(lockImg);
             ImageInSceneOpening(unlockImg);
             MapImageOpening();
-            if (dialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
+            if (DialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
             {
-                dialogTrigger.dialogIndex++;
+                DialogTrigger.dialogIndex++;
                 tasksDone = true;
+                GetComponent<changecolor>().NotColorChange();
             }
         }
     }
 
-    void LockImageOpening()
-    {
-        // ImageManager.instance.OpenImageCanvas(lockImg);
+    private void OnMouseEnter() {
+        if (DialogTrigger.dialogIndex == subTask.task[1].getTask + 1 || DialogTrigger.dialogIndex == subTask.task[3].getTask + 1){
+            GetComponent<changecolor>().ColorChange();
+        }
     }
     void MapImageOpening()
     {
