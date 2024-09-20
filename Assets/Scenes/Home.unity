@@ -5127,7 +5127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 0}
-  check: 0
+  check: 1
 --- !u!50 &1370981947
 Rigidbody2D:
   serializedVersion: 4
@@ -7091,7 +7091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 0}
-  check: 0
+  check: 1
 --- !u!50 &1817220283
 Rigidbody2D:
   serializedVersion: 4
@@ -7298,7 +7298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 0}
-  check: 0
+  check: 1
 --- !u!50 &1829168415
 Rigidbody2D:
   serializedVersion: 4
@@ -8043,7 +8043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 0}
-  check: 0
+  check: 1
 --- !u!50 &2042485329
 Rigidbody2D:
   serializedVersion: 4
