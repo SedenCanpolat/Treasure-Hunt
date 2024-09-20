@@ -74,7 +74,9 @@ public class DialogTrigger : Interactable
 
             if (dialogIndex == 1)
             {
-                exitHome.ChangeScene();
+                //if(tasksDone){
+                    exitHome.ChangeScene();
+                //} 
             }
             else if (subTask.allTasksDone == true && dialogIndex == 0)
             {
