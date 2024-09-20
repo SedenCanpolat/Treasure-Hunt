@@ -23,8 +23,8 @@ public class ImageManager : MonoBehaviour
     public void OpenImageCanvas(Sprite sprite){
         imageCanvas.transform.parent.gameObject.SetActive(true);
         imageCanvas.sprite = sprite;
-        FindAnyObjectByType<PlayerMovement>().enabled = false; // only update closed
-        //FindAnyObjectByType<PlayerMovement>().isLocked = true;
+        //FindAnyObjectByType<PlayerMovement>().enabled = false; // only update closed
+        FindAnyObjectByType<PlayerMovement>().isLocked = true;
         isImageActive = true;
         
     }
@@ -33,7 +33,7 @@ public class ImageManager : MonoBehaviour
         imageCanvas.transform.parent.gameObject.SetActive(false);
         isImageActive = false;
         FindAnyObjectByType<PlayerMovement>().enabled = true;
-        //FindAnyObjectByType<PlayerMovement>().isLocked = false;
+        FindAnyObjectByType<PlayerMovement>().isLocked = false;
         //FindAnyObjectByType<OpenImageCanvas>().opened = false;
         //Debug.Log("Image Closed");
     }
