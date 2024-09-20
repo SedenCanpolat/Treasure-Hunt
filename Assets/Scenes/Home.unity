@@ -1393,7 +1393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 307655319281533825, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.62
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 307655319281533825, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3873,7 +3873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1027228965
 Transform:
   m_ObjectHideFlags: 0
@@ -3992,7 +3992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -4521,8 +4521,35 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 5.48, y: -3.31}
       - {x: 4.7999997, y: -1.79}
+      - {x: 7.002357, y: -1.7591677}
       - {x: 6.5021644, y: -0.24535143}
       - {x: 8.45, y: -3.31}
+--- !u!61 &1204632325
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204632307}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.584463, y: -2.5755086}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2832756, y: 1.4084487}
+  m_EdgeRadius: 0
 --- !u!1 &1219096676
 GameObject:
   m_ObjectHideFlags: 0
@@ -8213,7 +8240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
---- !u!60 &2065697900
+--- !u!60 &2065697903
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8242,6 +8269,32 @@ PolygonCollider2D:
       - {x: 4.89, y: -1.75}
       - {x: 7.81, y: -1.7099999}
       - {x: 8.32, y: -2.79}
+--- !u!61 &2065697904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065697889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.3891754, y: -2.2379515}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1350899, y: 1.0504842}
+  m_EdgeRadius: 0
 --- !u!1 &2074639615
 GameObject:
   m_ObjectHideFlags: 0
@@ -8628,13 +8681,14 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.48999998, y: -1.655}
-      - {x: -0.14, y: -1.6949999}
+      - {x: -0.58931494, y: -1.5573866}
       - {x: -0.59, y: -1.5749999}
       - {x: -0.59, y: -1.175}
       - {x: -0.45, y: -0.98499995}
       - {x: -0.07, y: -0.885}
       - {x: -0.45999998, y: 1.535}
       - {x: -0.26999998, y: 1.5649999}
+      - {x: -0.15495576, y: 0.9173972}
       - {x: 0.14, y: -0.835}
       - {x: 0.62, y: -0.935}
       - {x: 0.79999995, y: -1.355}
@@ -9088,8 +9142,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8009142610958670133, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009142610958670133, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.42
+      value: 2.45
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_Name
