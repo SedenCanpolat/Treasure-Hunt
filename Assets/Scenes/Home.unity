@@ -558,7 +558,7 @@ SphereCollider:
   m_GameObject: {fileID: 158233695}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.574661
   m_Center: {x: -0.74114585, y: 0, z: 0}
@@ -1615,24 +1615,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1099663539104260500, guid: 32a53aaa8a79a3e4ba2ad95f31d994f7, type: 3}
   m_PrefabInstance: {fileID: 412699630}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &412699632 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1099663539104260501, guid: 32a53aaa8a79a3e4ba2ad95f31d994f7, type: 3}
-  m_PrefabInstance: {fileID: 412699630}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &412699633
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412699632}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.519075
-  m_Center: {x: -0.78746736, y: 0, z: 0}
 --- !u!1 &423939300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1799,7 @@ SphereCollider:
   m_GameObject: {fileID: 493330043}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.482018
   m_Center: {x: -0.5373306, y: 0, z: 0}
@@ -3992,7 +3974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -4026,7 +4008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1128984396
 Transform:
   m_ObjectHideFlags: 0
@@ -4537,7 +4519,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.584463, y: -2.5755086}
+  m_Offset: {x: 6.5963697, y: -2.5397868}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4548,7 +4530,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2832756, y: 1.4084487}
+  m_Size: {x: 2.2118325, y: 1.4798918}
   m_EdgeRadius: 0
 --- !u!1 &1219096676
 GameObject:
@@ -7894,7 +7876,7 @@ SphereCollider:
   m_GameObject: {fileID: 1975168785}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.4881945
   m_Center: {x: -0.8029071, y: 0, z: 0}
@@ -8533,7 +8515,7 @@ GameObject:
   - component: {fileID: 2136685284}
   - component: {fileID: 2136685286}
   - component: {fileID: 2136685287}
-  - component: {fileID: 2136685288}
+  - component: {fileID: 2136685289}
   m_Layer: 0
   m_Name: Vileda
   m_TagString: Untagged
@@ -8655,8 +8637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
---- !u!60 &2136685288
-PolygonCollider2D:
+--- !u!61 &2136685289
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8668,7 +8650,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.07559478, y: -0.06133938}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8678,20 +8660,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.48999998, y: -1.655}
-      - {x: -0.58931494, y: -1.5573866}
-      - {x: -0.59, y: -1.5749999}
-      - {x: -0.59, y: -1.175}
-      - {x: -0.45, y: -0.98499995}
-      - {x: -0.07, y: -0.885}
-      - {x: -0.45999998, y: 1.535}
-      - {x: -0.26999998, y: 1.5649999}
-      - {x: -0.15495576, y: 0.9173972}
-      - {x: 0.14, y: -0.835}
-      - {x: 0.62, y: -0.935}
-      - {x: 0.79999995, y: -1.355}
+  serializedVersion: 2
+  m_Size: {x: 1.4072502, y: 3.364643}
+  m_EdgeRadius: 0
 --- !u!225 &2143075505 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8776491652479883539, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
