@@ -11,10 +11,12 @@ public class ChestSubtask : Interactable
     [SerializeField] AudioClip LockSFX;
     [SerializeField] AudioClip MapSFX;
 
+    public bool checkchest = false;
     public SubTask subTask;
     public DialogTrigger DialogTrigger;
 
-    private void Start() {
+    private void Start()
+    {
         unlockImg.SetActive(false);
     }
     void OnMouseDown()
@@ -25,14 +27,21 @@ public class ChestSubtask : Interactable
             //Invoke("LockImageOpening", 1f);
             //LockImageOpening();
             ImageInSceneOpening(lockImg);
-            if (DialogTrigger.dialogIndex == subTask.task[1].getTask + 1){
+            if (DialogTrigger.dialogIndex == subTask.task[1].getTask + 1)
+            {
+                checkchest = true;
                 DialogTrigger.dialogIndex++;
                 GetComponent<changecolor>().NotColorChange();
 
             }
+            else if (DialogTrigger.dialogIndex == subTask.task[2].getTask + 1)
+            {
+                //checkchest = false;
+            }
         }
         else if (isActive && !HolyUtilities.isOnUI())
         {
+            checkchest = false;
             SoundEffectController.PlaySFX(MapSFX).SetVolume(0.4f);
             //Invoke("MapImageOpening", 1f);
             ImageInSceneClosing(lockImg);
@@ -47,8 +56,10 @@ public class ChestSubtask : Interactable
         }
     }
 
-    private void OnMouseEnter() {
-        if (DialogTrigger.dialogIndex == subTask.task[1].getTask + 1 || DialogTrigger.dialogIndex == subTask.task[3].getTask + 1){
+    private void OnMouseEnter()
+    {
+        if (DialogTrigger.dialogIndex == subTask.task[1].getTask + 1 || DialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
+        {
             GetComponent<changecolor>().ColorChange();
         }
     }

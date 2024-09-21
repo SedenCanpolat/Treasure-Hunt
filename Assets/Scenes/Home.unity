@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 7429923}
   - component: {fileID: 7429924}
   - component: {fileID: 7429925}
+  - component: {fileID: 7429926}
   m_Layer: 0
   m_Name: haritaKoli
   m_TagString: Untagged
@@ -257,6 +258,7 @@ MonoBehaviour:
   mapImg: {fileID: 21300000, guid: 457b7f321c1db264fa72b9d890879d0e, type: 3}
   LockSFX: {fileID: 8300000, guid: 5402efbb3926db542bc097c2fcf1614d, type: 3}
   MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
+  checkchest: 0
   subTask: {fileID: 1830460539}
   DialogTrigger: {fileID: 556706934}
 --- !u!114 &7429924
@@ -286,6 +288,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subTask: {fileID: 1830460539}
+  check: 0
+--- !u!114 &7429926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933db47aeeef33a459ff10cc83e87624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitHome: {fileID: 1613437466}
+  chestSubtask: {fileID: 7429923}
+  tasksDone: 0
+  subTask: {fileID: 1830460539}
+  actors:
+  - name: Marcus
+    sprite: {fileID: 21300000, guid: bfab4aab78d933948837fc6cae6e50db, type: 3}
+  dialogIndex: 0
+  dialogs:
+  - dialog:
+    - actorId: 0
+      message: My grandmother must be talking about this chest
+    - actorId: 0
+      message: But it is locked...
+  - dialog:
+    - actorId: 0
+      message: This is locked
   check: 0
 --- !u!1 &126587057
 GameObject:
@@ -1091,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors: []
@@ -2066,6 +2099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 1830460539}
   actors:
@@ -2325,6 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -2426,6 +2461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -2769,6 +2805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -3144,6 +3181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 1830460539}
   actors:
@@ -3846,6 +3884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -3992,7 +4031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -4026,7 +4065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1128984396
 Transform:
   m_ObjectHideFlags: 0
@@ -4966,6 +5005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -5830,6 +5870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -6676,6 +6717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
@@ -6857,6 +6899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 1613437466}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 1830460539}
   actors:
@@ -7622,6 +7665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitHome: {fileID: 0}
+  chestSubtask: {fileID: 0}
   tasksDone: 0
   subTask: {fileID: 0}
   actors:
