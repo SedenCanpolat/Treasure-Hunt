@@ -558,10 +558,10 @@ SphereCollider:
   m_GameObject: {fileID: 158233695}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.574661
-  m_Center: {x: -0.74114585, y: 0, z: 0}
+  m_Radius: 2.0759354
+  m_Center: {x: -0.7411459, y: -0.50127417, z: 0}
 --- !u!1 &211997822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8776491651214561471, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
@@ -669,11 +669,11 @@ PrefabInstance:
       objectReference: {fileID: 2143075505}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.x
-      value: 4.49
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.y
-      value: -1.66
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedThisPosition.x
@@ -1497,11 +1497,11 @@ PrefabInstance:
       objectReference: {fileID: 2143075505}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.x
-      value: 1.85
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.y
-      value: -1.3
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedThisPosition.x
@@ -1615,6 +1615,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1099663539104260500, guid: 32a53aaa8a79a3e4ba2ad95f31d994f7, type: 3}
   m_PrefabInstance: {fileID: 412699630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &412699632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1099663539104260501, guid: 32a53aaa8a79a3e4ba2ad95f31d994f7, type: 3}
+  m_PrefabInstance: {fileID: 412699630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &412699633
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412699632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.3056464
+  m_Center: {x: -1.2531865, y: -0.56393266, z: 0}
 --- !u!1 &423939300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,10 +1817,10 @@ SphereCollider:
   m_GameObject: {fileID: 493330043}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.482018
-  m_Center: {x: -0.5373306, y: 0, z: 0}
+  m_Radius: 2.5681138
+  m_Center: {x: -0.20314753, y: -0.75191236, z: 0}
 --- !u!1 &546951652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,7 +3873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1027228965
 Transform:
   m_ObjectHideFlags: 0
@@ -3974,7 +3992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -5436,11 +5454,11 @@ PrefabInstance:
       objectReference: {fileID: 2143075505}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.x
-      value: 7.32
+      value: 6.95
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.y
-      value: -2.33
+      value: -3.87
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedThisPosition.x
@@ -7876,7 +7894,7 @@ SphereCollider:
   m_GameObject: {fileID: 1975168785}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.4881945
   m_Center: {x: -0.8029071, y: 0, z: 0}
@@ -8516,6 +8534,7 @@ GameObject:
   - component: {fileID: 2136685286}
   - component: {fileID: 2136685287}
   - component: {fileID: 2136685289}
+  - component: {fileID: 2136685288}
   m_Layer: 0
   m_Name: Vileda
   m_TagString: Untagged
@@ -8637,32 +8656,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
---- !u!61 &2136685289
-BoxCollider2D:
+--- !u!65 &2136685288
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136685280}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.07559478, y: -0.06133938}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.12, y: 3.61}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4072502, y: 3.364643}
-  m_EdgeRadius: 0
+  m_Size: {x: 1.3929914, y: 3.3180234, z: 0.2}
+  m_Center: {x: 0.099137716, y: -0.041710928, z: 0}
+--- !u!54 &2136685289
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136685280}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!225 &2143075505 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8776491652479883539, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
@@ -8793,11 +8815,11 @@ PrefabInstance:
       objectReference: {fileID: 2143075505}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.x
-      value: 4.28
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedPosition.y
-      value: -0.78
+      value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: 5702791683300561909, guid: 6275433286bef3247bf8af94874ec9f4, type: 3}
       propertyPath: supposedThisPosition.x
