@@ -73,15 +73,15 @@ public class DialogTrigger : Interactable
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
 
-            if (dialogIndex == 1)
+            //if (dialogIndex == 1)
+            //{
+            //if(tasksDone){
+            //exitHome.ChangeScene();
+            //} 
+            //}
+            if (subTask.allTasksDone == true && dialogIndex == 0)
             {
-                //if(tasksDone){
                 exitHome.ChangeScene();
-                //} 
-            }
-            else if (subTask.allTasksDone == true && dialogIndex == 0)
-            {
-                dialogIndex++;
             }
             StartDialogue();
             Debug.Log(dialogIndex);
