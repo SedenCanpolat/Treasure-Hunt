@@ -9519,6 +9519,18 @@ PrefabInstance:
       propertyPath: floorScript
       value: 
       objectReference: {fileID: 924427895}
+    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: floorScriptRoom
+      value: 
+      objectReference: {fileID: 67346566}
+    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: floorScriptKitchen
+      value: 
+      objectReference: {fileID: 924427895}
+    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: floorScriptBasement
+      value: 
+      objectReference: {fileID: 1336193632}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_RootOrder
       value: 2
