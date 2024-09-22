@@ -81,6 +81,7 @@ public class DialogTrigger : Interactable
             //}
             if (subTask.allTasksDone == true && dialogIndex == 0)
             {
+                dialogIndex=1;
                 exitHome.ChangeScene();
             }
             StartDialogue();
