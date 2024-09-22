@@ -15,7 +15,7 @@ public class OpenImageCanvas : DialogTrigger
             if (ImageOpeningSFX != null) {
                 SoundEffectController.PlaySFX(ImageOpeningSFX);
             }
-            Invoke("ImageOpening", 1f);        
+            Invoke("ImageOpening", 0.5f);        
         }
     }
 
