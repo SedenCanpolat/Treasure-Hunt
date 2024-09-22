@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 67346566}
   - component: {fileID: 67346565}
   m_Layer: 0
-  m_Name: FloorRoom
+  m_Name: Floor (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3637,7 +3637,7 @@ GameObject:
   - component: {fileID: 924427895}
   - component: {fileID: 924427898}
   m_Layer: 0
-  m_Name: FloorKitchen
+  m_Name: Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5339,7 +5339,7 @@ GameObject:
   - component: {fileID: 1336193632}
   - component: {fileID: 1336193631}
   m_Layer: 0
-  m_Name: FloorBasement
+  m_Name: Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

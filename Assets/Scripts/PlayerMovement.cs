@@ -4,9 +4,7 @@ using Holylib.HolySoundEffects;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Floor floorScriptRoom;
-    public Floor floorScriptKitchen;
-    public Floor floorScriptBasement;
+    public Floor floorScript;
     public float speed = 10f;
 
     public float xRange;
@@ -20,11 +18,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip walkSFX;
     SoundSource walksound;
 
-    private void Start()
-    {
+    private void Start() {
         FindObjectOfType<SettingOpenClose>().onsettingOpenAction += LockMovement;
         FindObjectOfType<SettingOpenClose>().onsettingCloseAction += UnlockMovement;
-    }
+    }    
 
     void Update()
     {
