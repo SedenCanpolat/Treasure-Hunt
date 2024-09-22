@@ -14,7 +14,7 @@ public class LevelManagement : MonoBehaviour
             Destroy(this);
         } 
         else{ 
-            instance = this; 
+            instance = this;
         } 
     }
     

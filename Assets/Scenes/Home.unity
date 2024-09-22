@@ -2168,7 +2168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556706929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.47, y: -0.02, z: 0.07947456}
+  m_LocalPosition: {x: -1.25, y: -0.1, z: 0.07947456}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3531,7 +3531,6 @@ GameObject:
   m_Component:
   - component: {fileID: 900929685}
   - component: {fileID: 900929689}
-  - component: {fileID: 900929690}
   m_Layer: 0
   m_Name: Masa
   m_TagString: Untagged
@@ -3547,7 +3546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900929684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.27, y: -2.89, z: -0.06}
+  m_LocalPosition: {x: 1.5, y: -2.27, z: -0.06}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3592,9 +3591,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 555310707
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 1506286267
+  m_SortingLayer: 5
+  m_SortingOrder: 124
   m_Sprite: {fileID: 21300000, guid: 23e426767b6028140bbc896e52077804, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3606,18 +3605,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &900929690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900929684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365d3996408af4448908a9e043b12933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &909785249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1304181987, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
@@ -4080,7 +4067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1027228965
 Transform:
   m_ObjectHideFlags: 0
@@ -7094,6 +7081,7 @@ GameObject:
   - component: {fileID: 1613437466}
   - component: {fileID: 1613437467}
   - component: {fileID: 1613437469}
+  - component: {fileID: 1613437470}
   m_Layer: 0
   m_Name: HomeDoor
   m_TagString: Untagged
@@ -7123,7 +7111,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613437460}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -7250,6 +7238,39 @@ MonoBehaviour:
     - actorId: 0
       message: 'Now I can find the treasure! '
   check: 0
+--- !u!60 &1613437470
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613437460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.61, y: 5.25}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.545, y: 2.325}
+      - {x: -1.4785885, y: -2.0605023}
+      - {x: -0.69215053, y: -2.031138}
+      - {x: -0.6324432, y: -0.73227257}
+      - {x: 0.66515696, y: -0.7214151}
+      - {x: 0.7371344, y: -2.0011687}
+      - {x: 1.4487796, y: -1.977488}
+      - {x: 1.5649999, y: 2.325}
 --- !u!1 &1656284541
 GameObject:
   m_ObjectHideFlags: 0
@@ -8996,7 +9017,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1506286267
   m_SortingLayer: 5
-  m_SortingOrder: 142
+  m_SortingOrder: 66
   m_Sprite: {fileID: 21300000, guid: b6cf1058a07233b4ea9752dffdbbeb7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9469,6 +9490,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 986470776}
+    - target: {fileID: 3312633869182518188, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OpenSettingsMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
 --- !u!1001 &8009142610385908682
@@ -9657,6 +9682,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 535313289, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478137831, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9117652089042750402, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9707,6 +9740,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9117652090154868735, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117652090163811123, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9117652090244599908, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
