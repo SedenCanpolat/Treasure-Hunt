@@ -22,9 +22,9 @@ public class ExitHome : MonoBehaviour
 
     public void ChangeScene()
     {
-        sceneMan.ChangeScene(2);
-        //SoundEffectController.PlaySFX(ExitHomeSFX);
-        //Invoke("Ending", 1.5f);
+        //sceneMan.ChangeScene(2);
+        SoundEffectController.PlaySFX(ExitHomeSFX);
+        Invoke("Ending", 1.5f);
         //LevelManagement.instance.ChangeLevelWithTransition(2);
 
     }
