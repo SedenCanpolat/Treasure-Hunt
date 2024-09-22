@@ -9490,6 +9490,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 986470776}
+    - target: {fileID: 3312633869182518188, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OpenSettingsMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
 --- !u!1001 &8009142610385908682
@@ -9678,6 +9682,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 535313289, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478137831, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9117652089042750402, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9728,6 +9740,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9117652090154868735, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117652090163811123, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9117652090244599908, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
