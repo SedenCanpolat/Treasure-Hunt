@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Quit : MonoBehaviour
@@ -12,6 +13,8 @@ public class Quit : MonoBehaviour
     {
         // FindObjectOfType<LevelManagement>().ChangeLevelWithTransition();
         Debug.Log("RestartGame");
-        LevelManagement.instance.ChangeLevelWithTransition(0);
+        //LevelManagement.instance.ChangeLevelWithTransition(0);
+        SceneManager.LoadScene(0);
+
     }
 }
