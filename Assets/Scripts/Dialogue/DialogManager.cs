@@ -73,7 +73,8 @@ public class DialogManager : MonoBehaviour
         backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
         isActive = false;
         player.GetComponent<PlayerMovement>().UnlockMovement();
-        if(leanBreathing != null){
+        if (leanBreathing != null)
+        {
             leanBreathing.StopBreathing();
         }
     }

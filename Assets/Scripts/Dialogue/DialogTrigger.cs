@@ -3,6 +3,7 @@ using UnityEngine;
 public class DialogTrigger : Interactable
 {
     public ExitHome exitHome;
+    public ChestSubtask chestSubtask;
     public bool tasksDone = false;
     public SubTask subTask;
     public Actor[] actors;
@@ -72,26 +73,36 @@ public class DialogTrigger : Interactable
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
 
-            if (dialogIndex == 1)
+            //if (dialogIndex == 1)
+            //{
+            //if(tasksDone){
+            //exitHome.ChangeScene();
+            //} 
+            //}
+            if (subTask.allTasksDone == true && dialogIndex == 0)
             {
-                //if(tasksDone){
-                    exitHome.ChangeScene();
-                //} 
-            }
-            else if (subTask.allTasksDone == true && dialogIndex == 0)
-            {
-                dialogIndex++;
+                exitHome.ChangeScene();
             }
             StartDialogue();
             Debug.Log(dialogIndex);
         }
+
+        else if (isActive && this.gameObject.name == "haritaKoli")
+        {
+            if (chestSubtask.checkchest)
+            {
+                StartDialogue();
+                if (dialogIndex == 0)
+                    dialogIndex = 1;
+            }
+        }
+
         else if (isActive)
         {
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue();
             if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
-
         }
     }
 }

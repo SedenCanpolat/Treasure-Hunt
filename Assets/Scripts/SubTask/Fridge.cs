@@ -34,13 +34,15 @@ public class Fridge : MonoBehaviour
     {
         SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(1.30f, 1.60f);
         moving = true;
-        playerMovement.enabled = false;
+        playerMovement.isLocked = true;
+        //playerMovement.enabled = false;
     }
     public void OnMouseUp()
     {
         SoundEffectController.PlaySFX(MagnetSFX).SetVolume(0.90f).RandomPitchRange(0.90f, 1.10f);
         moving = false;
-        playerMovement.enabled = true;
+        playerMovement.UnlockMovement();
+        //playerMovement.enabled = true;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
