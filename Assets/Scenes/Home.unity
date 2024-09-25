@@ -9606,11 +9606,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -62
+      value: -126
       objectReference: {fileID: 0}
     - target: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -56
+      value: -151
       objectReference: {fileID: 0}
     - target: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9852,6 +9852,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9117652089403121262, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_margin.z
+      value: 237.68835
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117652089403121262, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117652089403121262, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9117652089859743611, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9980,6 +9992,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9117652090760773037, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9117652090911945127, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9987,6 +10003,14 @@ PrefabInstance:
     - target: {fileID: 9117652090911945127, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117652091119595821, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_Name
+      value: xbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117652091119595821, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9117652091119595857, guid: afc38189510865e45820d9fc85a2fa2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
