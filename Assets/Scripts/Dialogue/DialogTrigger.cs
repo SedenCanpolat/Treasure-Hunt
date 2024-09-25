@@ -19,9 +19,9 @@ public class DialogTrigger : Interactable
         openImageCanvas = FindObjectOfType<OpenImageCanvas>();
     }
 
-    public void StartDialogue()
+    public void StartDialogue(int waitms)
     {
-        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors);
+        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors, waitms);
     }
 
     protected virtual void OnMouseDown()
@@ -45,14 +45,15 @@ public class DialogTrigger : Interactable
 
     }
 
-    protected virtual void TriggerDialog()
+    protected virtual void TriggerDialog(int waitms =0)
     {
+        
         if (isActive && this.gameObject.name == "Capsule")
         {
             GetComponent<LeanBreathing>().StartBreathing();
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
-            StartDialogue();
+            StartDialogue(waitms);
             for (int i = 0; i < subTask.taskNum; i++)
             {
                 if (dialogIndex == subTask.task[i].getTask) dialogIndex++;
@@ -84,7 +85,7 @@ public class DialogTrigger : Interactable
                 dialogIndex=1;
                 exitHome.ChangeScene();
             }
-            StartDialogue();
+            StartDialogue(waitms);
             Debug.Log(dialogIndex);
         }
 
@@ -92,7 +93,7 @@ public class DialogTrigger : Interactable
         {
             if (chestSubtask.checkchest)
             {
-                StartDialogue();
+                StartDialogue(waitms);
                 if (dialogIndex == 0)
                     dialogIndex = 1;
             }
@@ -102,7 +103,7 @@ public class DialogTrigger : Interactable
         {
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
-            StartDialogue();
+            StartDialogue(waitms);
             if (dialogs.Length > 1 && dialogIndex == 0) dialogIndex = 1;
         }
     }

@@ -20,11 +20,13 @@ public class ImageManager : MonoBehaviour
     private void Start() {
        CloseImageCanvas();
     }
-    public void OpenImageCanvas(Sprite sprite){
-        imageCanvas.transform.parent.gameObject.SetActive(true);
-        imageCanvas.sprite = sprite;
+    public async void OpenImageCanvas(Sprite sprite, int waitms=0){
         //FindAnyObjectByType<PlayerMovement>().enabled = false; // only update closed
         FindAnyObjectByType<PlayerMovement>().isLocked = true;
+        await System.Threading.Tasks.Task.Delay(waitms);
+        imageCanvas.transform.parent.gameObject.SetActive(true);
+        imageCanvas.sprite = sprite;
+        
         isImageActive = true;
         
     }
@@ -34,8 +36,7 @@ public class ImageManager : MonoBehaviour
         isImageActive = false;
         FindAnyObjectByType<PlayerMovement>().enabled = true;
         FindAnyObjectByType<PlayerMovement>().isLocked = false;
-        //FindAnyObjectByType<OpenImageCanvas>().opened = false;
-        //Debug.Log("Image Closed");
+        FindAnyObjectByType<DialogManager>().FinishDialog();
     }
 
 }

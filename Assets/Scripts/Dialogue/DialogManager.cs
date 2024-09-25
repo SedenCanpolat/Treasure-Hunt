@@ -21,15 +21,17 @@ public class DialogManager : MonoBehaviour
     int activeMessage = 0;
     public static bool isActive = false; // singleton also can be used   
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public async void OpenDialogue(Message[] messages, Actor[] actors, int waitms=0)
     {
         Interactable.isActive = false;
+        
+        
+        player.GetComponent<PlayerMovement>().LockMovement();
+        await System.Threading.Tasks.Task.Delay(waitms);
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;
         isActive = true;
-        player.GetComponent<PlayerMovement>().LockMovement();
-
         DisplayMessage();
         //Debug.Log("Started conversation! Loaded messages: " + messages.Length);
 
@@ -42,6 +44,7 @@ public class DialogManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
+        
 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
@@ -66,16 +69,18 @@ public class DialogManager : MonoBehaviour
         SoundEffectController.PlaySFX(DialogSFX).SetVolume(0.06f).SetPitch(Random.Range(0.7f, 1f));
     }
 
-    void FinishDialog()
+    public void FinishDialog()
     {
-        Interactable.isActive = true;
-        //Debug.Log("Conversation eneded!");
-        backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
-        isActive = false;
-        player.GetComponent<PlayerMovement>().UnlockMovement();
-        if (leanBreathing != null)
-        {
-            leanBreathing.StopBreathing();
+        if(isActive){
+            Interactable.isActive = true;
+            //Debug.Log("Conversation eneded!");
+            backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
+            isActive = false;
+            player.GetComponent<PlayerMovement>().UnlockMovement();
+            if (leanBreathing != null)
+            {
+                leanBreathing.StopBreathing();
+            }
         }
     }
 
