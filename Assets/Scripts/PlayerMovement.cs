@@ -4,9 +4,6 @@ using Holylib.HolySoundEffects;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Floor floorScriptRoom;
-    public Floor floorScriptKitchen;
-    public Floor floorScriptBasement;
     public float speed = 10f;
 
     public float xRange;
@@ -19,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private int lockCount = 0;
     [SerializeField] AudioClip walkSFX;
     SoundSource walksound;
+
+    [SerializeField] LayerMask groundmMask;
 
     private void Start()
     {
@@ -38,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         //return;
 
         //if (Input.GetMouseButtonDown(0) && floorScript.check)
-        if (floorScriptRoom.check || floorScriptKitchen.check || floorScriptBasement.check)
+        if (isPointerOnGround && Input.GetMouseButtonDown(0))
         {
             lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving = true;
@@ -58,14 +57,21 @@ public class PlayerMovement : MonoBehaviour
 
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, lastClickedPos, step);
-            floorScriptRoom.check = false;
-            floorScriptKitchen.check = false;
-            floorScriptBasement.check = false;
         }
         else
         {
             moving = false;
             CancelMovement();
+        }  
+    }
+
+    bool isPointerOnGround{ // statement
+        get{
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction,Mathf.Infinity, groundmMask);
+
+        return hit.collider != null;
         }
     }
 
@@ -106,10 +112,6 @@ public class PlayerMovement : MonoBehaviour
 
     void CancelMovement()
     {
-        floorScriptRoom.check = false;
-        floorScriptKitchen.check = false;
-        floorScriptBasement.check = false;
-
         if (walksound)
         {
             SoundEffectController.StopSFX(walksound);
