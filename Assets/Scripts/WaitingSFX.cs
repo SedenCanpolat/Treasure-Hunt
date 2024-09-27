@@ -13,11 +13,12 @@ public class WaitingSFX : DialogTrigger
             if (WaitSFX != null) {
                 SoundEffectController.PlaySFX(WaitSFX);
             }
-            Invoke("DialogTime", 1.3f);        
+            //Invoke("DialogTime", 0.6f); 
+            TriggerDialog(600);       
         }
     }
 
-    public void DialogTime(){
-        TriggerDialog();
-    }
+    //public void DialogTime(){
+        
+    //}
 }
