@@ -4265,6 +4265,52 @@ Transform:
   m_Father: {fileID: 550238765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129441435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129441437}
+  - component: {fileID: 1129441436}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1129441436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129441435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334883f3fcd20594cabe740bc20ed951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageCanvas: {fileID: 1459930165}
+  isImageActive: 0
+--- !u!4 &1129441437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129441435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2970643, y: -1.5629084, z: -2.423741}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1130467628
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6548,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &1459930165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1902619046304334504, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+  m_PrefabInstance: {fileID: 1902619047029421728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1476612975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1345949077, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
@@ -9316,9 +9373,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1202328447}
     m_Modifications:
+    - target: {fileID: 1902619046125282304, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1129441436}
+    - target: {fileID: 1902619046125282304, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseImageCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1902619046706592946, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
       propertyPath: m_Name
       value: Images
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902619046706592946, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1902619046706592947, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
       propertyPath: m_Pivot.x

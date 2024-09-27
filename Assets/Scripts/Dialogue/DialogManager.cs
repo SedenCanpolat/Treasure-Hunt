@@ -25,7 +25,6 @@ public class DialogManager : MonoBehaviour
     {
         Interactable.isActive = false;
         
-        
         player.GetComponent<PlayerMovement>().LockMovement();
         await System.Threading.Tasks.Task.Delay(waitms);
         currentMessages = messages;
