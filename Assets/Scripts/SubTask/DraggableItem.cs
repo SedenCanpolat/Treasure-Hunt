@@ -45,8 +45,9 @@ public class DraggableItem : MonoBehaviour
         if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1){
             SoundEffectController.PlaySFX(ClothSFX).RandomPitchRange(0.90f, 1.10f);
             moving = true;
-            playerMovement.isLocked = true;
+            
         }
+        playerMovement.isLocked = true;
     }
 
     public void OnMouseUp()

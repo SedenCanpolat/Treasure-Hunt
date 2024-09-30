@@ -329,9 +329,8 @@ GameObject:
   m_Component:
   - component: {fileID: 67346564}
   - component: {fileID: 67346567}
-  - component: {fileID: 67346566}
   - component: {fileID: 67346565}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorRoom
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -411,19 +410,6 @@ PolygonCollider2D:
       - {x: 9.599999, y: -5.4}
       - {x: 9.599999, y: -5.31}
       - {x: 9.469999, y: -5.0699997}
---- !u!114 &67346566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67346563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8da08b2f203ab145926554b3b55b563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  check: 0
 --- !u!212 &67346567
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2374,8 +2360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365d3996408af4448908a9e043b12933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &556706938
-PolygonCollider2D:
+--- !u!61 &556706938
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2387,142 +2373,19 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.1975534, y: 3.562704}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.50872594, y: 0.061081987}
     oldSize: {x: 8, y: 8}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.59999996, y: -3.6399999}
-      - {x: 0.65999997, y: -3.51}
-      - {x: 0.64, y: -3.37}
-      - {x: 0.57, y: -3.25}
-      - {x: 0.64, y: -3.1499999}
-      - {x: 0.65999997, y: -3.1}
-      - {x: 0.71, y: -2.99}
-      - {x: 0.75, y: -2.62}
-      - {x: 0.76, y: -2.53}
-      - {x: 0.78, y: -2.26}
-      - {x: 0.82, y: -1.91}
-      - {x: 0.84999996, y: -1.65}
-      - {x: 0.87, y: -1.39}
-      - {x: 0.94, y: -1.37}
-      - {x: 1.04, y: -1.3}
-      - {x: 1.05, y: -1.25}
-      - {x: 1.06, y: -1.14}
-      - {x: 1.15, y: -1.01}
-      - {x: 1.14, y: -0.89}
-      - {x: 1.17, y: -0.83}
-      - {x: 1.23, y: -0.64}
-      - {x: 1.29, y: -0.26999998}
-      - {x: 1.31, y: -0.16}
-      - {x: 1.31, y: 0.12}
-      - {x: 1.3, y: 0.22}
-      - {x: 1.28, y: 0.47}
-      - {x: 1.26, y: 0.66999996}
-      - {x: 1.23, y: 0.82}
-      - {x: 1.1, y: 1.18}
-      - {x: 1.02, y: 1.31}
-      - {x: 0.93, y: 1.43}
-      - {x: 0.78, y: 1.5799999}
-      - {x: 0.55, y: 1.73}
-      - {x: 0.58, y: 1.8}
-      - {x: 0.65999997, y: 1.88}
-      - {x: 0.75, y: 2}
-      - {x: 0.78999996, y: 2.1599998}
-      - {x: 0.87, y: 2.51}
-      - {x: 0.85999995, y: 2.7}
-      - {x: 0.74, y: 3}
-      - {x: 0.63, y: 3.1799998}
-      - {x: 0.56, y: 3.25}
-      - {x: 0.37, y: 3.35}
-      - {x: 0.14999999, y: 3.4199998}
-      - {x: 0.11, y: 3.48}
-      - {x: 0.02, y: 3.57}
-      - {x: -0.14, y: 3.62}
-      - {x: -0.32, y: 3.6399999}
-      - {x: -0.53999996, y: 3.6399999}
-      - {x: -0.65, y: 3.6}
-      - {x: -0.72999996, y: 3.56}
-      - {x: -0.85999995, y: 3.49}
-      - {x: -0.94, y: 3.4199998}
-      - {x: -1.01, y: 3.33}
-      - {x: -1.0699999, y: 3.21}
-      - {x: -1.11, y: 3.09}
-      - {x: -1.18, y: 3.02}
-      - {x: -1.2099999, y: 2.97}
-      - {x: -1.24, y: 2.8999999}
-      - {x: -1.28, y: 2.8}
-      - {x: -1.3199999, y: 2.6399999}
-      - {x: -1.3199999, y: 2.4299998}
-      - {x: -1.3, y: 2.35}
-      - {x: -1.27, y: 2.27}
-      - {x: -1.18, y: 2.12}
-      - {x: -1.13, y: 2.07}
-      - {x: -1.13, y: 1.87}
-      - {x: -1.11, y: 1.81}
-      - {x: -1.0799999, y: 1.74}
-      - {x: -0.96999997, y: 1.64}
-      - {x: -0.88, y: 1.52}
-      - {x: -0.79999995, y: 1.4499999}
-      - {x: -0.75, y: 1.41}
-      - {x: -0.84, y: 1.3199999}
-      - {x: -0.91999996, y: 1.13}
-      - {x: -1.03, y: 0.84}
-      - {x: -1.1, y: 0.56}
-      - {x: -1.12, y: 0.45999998}
-      - {x: -1.15, y: 0.14999999}
-      - {x: -1.17, y: -0.17999999}
-      - {x: -1.29, y: -0.32}
-      - {x: -1.41, y: -0.48}
-      - {x: -1.4, y: -0.57}
-      - {x: -1.51, y: -0.66999996}
-      - {x: -1.61, y: -0.79999995}
-      - {x: -1.63, y: -0.85999995}
-      - {x: -1.63, y: -1.01}
-      - {x: -1.5699999, y: -1.1}
-      - {x: -1.4599999, y: -1.1999999}
-      - {x: -1.3, y: -1.25}
-      - {x: -1.26, y: -1.23}
-      - {x: -1.2099999, y: -1.17}
-      - {x: -1.2099999, y: -1.13}
-      - {x: -1.14, y: -1.11}
-      - {x: -1.0699999, y: -1.05}
-      - {x: -0.96, y: -1.35}
-      - {x: -0.91999996, y: -1.5}
-      - {x: -0.87, y: -1.75}
-      - {x: -0.78, y: -2.11}
-      - {x: -0.63, y: -2.6399999}
-      - {x: -0.5, y: -3.09}
-      - {x: -0.47, y: -3.1299999}
-      - {x: -0.32999998, y: -3.1599998}
-      - {x: -0.16, y: -3.1599998}
-      - {x: -0.26, y: -3.28}
-      - {x: -0.53999996, y: -3.28}
-      - {x: -0.64, y: -3.35}
-      - {x: -0.68, y: -3.4199998}
-      - {x: -0.65, y: -3.56}
-      - {x: -0.59, y: -3.61}
-      - {x: -0.53999996, y: -3.6399999}
-      - {x: -0.42999998, y: -3.6499999}
-      - {x: 0, y: -3.6499999}
-      - {x: 0.17, y: -3.6399999}
-      - {x: 0.37, y: -3.6499999}
-      - {x: 0.53999996, y: -3.6499999}
-    - - {x: 0.19, y: -3.23}
-      - {x: 0.19, y: -3.21}
-      - {x: 0.19999999, y: -3.1999998}
-      - {x: 0.19, y: -3.1799998}
-      - {x: 0.19999999, y: -3.1899998}
-      - {x: 0.21, y: -3.1899998}
-      - {x: 0.22, y: -3.28}
-      - {x: 0.22999999, y: -3.27}
+  serializedVersion: 2
+  m_Size: {x: 2.7154179, y: 7.4863997}
+  m_EdgeRadius: 0
 --- !u!1 &606434943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,28 +3628,14 @@ GameObject:
   m_Component:
   - component: {fileID: 924427897}
   - component: {fileID: 924427896}
-  - component: {fileID: 924427895}
   - component: {fileID: 924427898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorKitchen
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &924427895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924427894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8da08b2f203ab145926554b3b55b563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  check: 0
 --- !u!212 &924427896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4387,6 +4236,52 @@ Transform:
   - {fileID: 924427897}
   m_Father: {fileID: 550238765}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129441435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129441437}
+  - component: {fileID: 1129441436}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1129441436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129441435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334883f3fcd20594cabe740bc20ed951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageCanvas: {fileID: 1459930165}
+  isImageActive: 0
+--- !u!4 &1129441437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129441435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2970643, y: -1.5629084, z: -2.423741}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1130467628
 GameObject:
@@ -5476,9 +5371,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1336193630}
   - component: {fileID: 1336193633}
-  - component: {fileID: 1336193632}
   - component: {fileID: 1336193631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorBasement
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -5566,19 +5460,6 @@ PolygonCollider2D:
       - {x: 9.599999, y: -5.4}
       - {x: 9.599999, y: -5.31}
       - {x: 9.469999, y: -5.0699997}
---- !u!114 &1336193632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336193629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8da08b2f203ab145926554b3b55b563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  check: 0
 --- !u!212 &1336193633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6625,6 +6506,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDefault: {fileID: 2800000, guid: 51bbc1d686e72434a9e374bc2382362a, type: 3}
   cursorHover: {fileID: 2800000, guid: e5cf60c60d62213458086b8d4a8db9f4, type: 3}
+--- !u!114 &1459930165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1902619046304334504, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+  m_PrefabInstance: {fileID: 1902619047029421728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1476612975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1345949077, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
@@ -6814,7 +6706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495608593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.41, y: -1.87, z: -0.07947456}
+  m_LocalPosition: {x: -4.3, y: -4.75, z: -0.07947456}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9439,9 +9331,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1202328447}
     m_Modifications:
+    - target: {fileID: 1902619046125282304, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1129441436}
+    - target: {fileID: 1902619046125282304, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseImageCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1902619046706592946, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
       propertyPath: m_Name
       value: Images
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902619046706592946, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1902619046706592947, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
       propertyPath: m_Pivot.x
@@ -9708,19 +9612,23 @@ PrefabInstance:
     - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: floorScript
       value: 
-      objectReference: {fileID: 924427895}
+      objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: floorScriptRoom
       value: 
-      objectReference: {fileID: 67346566}
+      objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: floorScriptKitchen
       value: 
-      objectReference: {fileID: 924427895}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      propertyPath: groundmMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: floorScriptBasement
       value: 
-      objectReference: {fileID: 1336193632}
+      objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_RootOrder
       value: 2

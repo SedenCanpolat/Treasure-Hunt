@@ -27,21 +27,6 @@ public class DialogTrigger : Interactable
     protected virtual void OnMouseDown()
     {
         TriggerDialog();
-        /*
-        if (openImageCanvas == null)
-        {
-            Debug.Log("OpenImageCanvas is null");
-            TriggerDialog();
-        }
-        if(openImageCanvas != null && openImageCanvas.opened == false)
-        {
-            TriggerDialog();
-        }
-        if(openImageCanvas != null && ImageManager.instance.isImageActive == false)
-        {
-            TriggerDialog();
-        }
-        */
 
     }
 

@@ -18,7 +18,7 @@ public class ImageManager : MonoBehaviour
     }
 
     private void Start() {
-       CloseImageCanvas();
+       //CloseImageCanvas();
     }
     public async void OpenImageCanvas(Sprite sprite, int waitms=0){
         //FindAnyObjectByType<PlayerMovement>().enabled = false; // only update closed
@@ -34,7 +34,6 @@ public class ImageManager : MonoBehaviour
     public void CloseImageCanvas(){
         imageCanvas.transform.parent.gameObject.SetActive(false);
         isImageActive = false;
-        FindAnyObjectByType<PlayerMovement>().enabled = true;
         FindAnyObjectByType<PlayerMovement>().isLocked = false;
         FindAnyObjectByType<DialogManager>().FinishDialog();
     }
