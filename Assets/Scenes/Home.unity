@@ -4178,7 +4178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1099961400
 Transform:
   m_ObjectHideFlags: 0
@@ -9435,10 +9435,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackImage
       objectReference: {fileID: 0}
-    - target: {fileID: 5117455286754809257, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
-      propertyPath: m_Color.a
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d154c141f155844a5149e3e5a6dc99, type: 3}
 --- !u!1001 &3312633867907368401
@@ -9518,11 +9514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -111
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -103
+      value: -162
       objectReference: {fileID: 0}
     - target: {fileID: 3312633869182518184, guid: 745bad01034b53943ba6d09cb87715d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
