@@ -25,7 +25,7 @@ public class Cleaning : Interactable
 
     private bool isTaskActive()
     {
-        return dialogTrigger.dialogIndex == subTask.task[2].getTask + 1;
+        return dialogTrigger.dialogIndex == subTask.task[(int)taskType.Cleaning].getTask + 1;
     }
 
     private void OnMouseDown()
