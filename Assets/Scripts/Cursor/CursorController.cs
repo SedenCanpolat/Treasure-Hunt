@@ -43,7 +43,7 @@ public class CursorController : MonoBehaviour
     }
     private void ChangeCursor(Texture2D cursorType)
     {
-        Vector2 hotspot= new Vector2(cursorType.width/2, cursorType.height/2);
+        Vector2 hotspot = new Vector2(cursorType.width / 2, cursorType.height / 2);
         Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
     }
 }
