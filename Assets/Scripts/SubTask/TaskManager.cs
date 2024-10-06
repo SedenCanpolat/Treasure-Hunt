@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum taskType{
+    DraggableItem=0, Cleaning=2, ChestSubtask
+
+}
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager instance;
