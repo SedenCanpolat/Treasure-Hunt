@@ -3,7 +3,6 @@ using Holylib.HolySoundEffects;
 
 public class ExitHome : MonoBehaviour
 {
-    public SceneMan sceneMan;
     //public DialogTrigger dialogTrigger;
 
     public AudioClip ExitHomeSFX;
@@ -22,15 +21,13 @@ public class ExitHome : MonoBehaviour
 
     public void ChangeScene()
     {
-        //sceneMan.ChangeScene(2);
         SoundEffectController.PlaySFX(ExitHomeSFX);
         Invoke("Ending", 1.5f);
-        //LevelManagement.instance.ChangeLevelWithTransition(2);
 
     }
 
     void Ending()
     {
-        sceneMan.ChangeScene(2);
+        LevelManagement.instance.ChangeLevelWithTransition(2);
     }
 }
