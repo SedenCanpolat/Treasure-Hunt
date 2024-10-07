@@ -21,7 +21,9 @@ public class DialogTrigger : Interactable
 
     public void StartDialogue(int waitms)
     {
-        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors, waitms);
+        FindObjectOfType<DialogManager>().StartCoroutine(
+        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors, waitms)
+        );
     }
 
     protected virtual void OnMouseDown()

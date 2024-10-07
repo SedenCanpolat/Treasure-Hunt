@@ -65,7 +65,7 @@ public class ChestSubtask : Interactable
     }
     void MapImageOpening()
     {
-        ImageManager.instance.OpenImageCanvas(mapImg);
+        StartCoroutine(ImageManager.instance.OpenImageCanvas(mapImg));
     }
 
     void ImageInSceneOpening(GameObject image)

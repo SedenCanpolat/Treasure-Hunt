@@ -21,12 +21,12 @@ public class DialogManager : MonoBehaviour
     int activeMessage = 0;
     public static bool isActive = false; // singleton also can be used   
 
-    public async void OpenDialogue(Message[] messages, Actor[] actors, int waitms=0)
+    public IEnumerator OpenDialogue(Message[] messages, Actor[] actors, int waitms=0)
     {
         Interactable.isActive = false;
         
         player.GetComponent<PlayerMovement>().LockMovement();
-        await System.Threading.Tasks.Task.Delay(waitms);
+        yield return new WaitForSeconds(waitms / 1000f);
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;

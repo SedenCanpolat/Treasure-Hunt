@@ -20,7 +20,7 @@ public class DT : Interactable
 
     public void StartDialogue()
     {
-        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors);
+        // FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors);
     }
 
     protected virtual void OnMouseDown()

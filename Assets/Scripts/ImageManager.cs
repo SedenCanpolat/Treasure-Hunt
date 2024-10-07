@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,10 +21,10 @@ public class ImageManager : MonoBehaviour
     private void Start() {
        //CloseImageCanvas();
     }
-    public async void OpenImageCanvas(Sprite sprite, int waitms=0){
+    public IEnumerator OpenImageCanvas(Sprite sprite, int waitms=0){
         //FindAnyObjectByType<PlayerMovement>().enabled = false; // only update closed
         FindAnyObjectByType<PlayerMovement>().isLocked = true;
-        await System.Threading.Tasks.Task.Delay(waitms);
+        yield return new WaitForSeconds(waitms / 1000f);
         imageCanvas.transform.parent.gameObject.SetActive(true);
         imageCanvas.sprite = sprite;
         

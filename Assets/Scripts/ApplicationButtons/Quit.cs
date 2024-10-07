@@ -12,8 +12,8 @@ public class Quit : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("RestartGame");
-        //LevelManagement.instance.ChangeLevelWithTransition(0);
-        SceneManager.LoadScene(0);
+        LevelManagement.instance.ChangeLevelWithTransition(0);
+        //SceneManager.LoadScene(0);
 
     }
 }
