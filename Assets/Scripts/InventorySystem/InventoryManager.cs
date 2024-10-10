@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Destroy(this); // self destruction for singularity
+            Destroy(this);
         }
         else
         {
