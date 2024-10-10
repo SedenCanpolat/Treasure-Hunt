@@ -25,6 +25,13 @@ public class InventoryManager : MonoBehaviour
         itemImage.sprite = sprite;
         Debug.Log("çalışıyor");
     }
+
+    public void takeItem(Sprite sprite)
+    {
+        itemImage.sprite = sprite;
+        Debug.Log("çalışıyor");
+    }
+
     void Start()
     {
 

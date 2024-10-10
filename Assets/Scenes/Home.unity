@@ -5429,6 +5429,7 @@ GameObject:
   - component: {fileID: 1230503613}
   - component: {fileID: 1230503615}
   - component: {fileID: 1230503614}
+  - component: {fileID: 1230503616}
   m_Layer: 5
   m_Name: Bag
   m_TagString: Untagged
@@ -5493,6 +5494,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230503612}
   m_CullTransparentMesh: 1
+--- !u!114 &1230503616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230503612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c142564e1c66cae4cbdc4b2d23ae86f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1236688998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8776491651774563780, guid: dc509d5a6ef242e4d98bcf1508b109c0, type: 3}
