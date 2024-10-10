@@ -34,18 +34,21 @@ public class DraggableItem : MonoBehaviour
         }
     }
 
-    private void OnMouseEnter() {
-        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1){
+    private void OnMouseEnter()
+    {
+        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1)
+        {
             GetComponent<changecolor>().ColorChange();
         }
     }
 
     private void OnMouseDown()
     {
-        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1){
+        if (dialogTrigger.dialogIndex == subTask.task[0].getTask + 1)
+        {
             SoundEffectController.PlaySFX(ClothSFX).RandomPitchRange(0.90f, 1.10f);
             moving = true;
-            
+
         }
         playerMovement.isLocked = true;
     }
@@ -64,6 +67,7 @@ public class DraggableItem : MonoBehaviour
             subTask.clothesNum--;
             pitchRangeNum += 0.20f;
             SoundEffectController.PlaySFX(PutSFX).SetPitch(pitchRangeNum);
+            this.gameObject.SetActive(false);
 
 
             if (subTask.clothesNum == 0)
