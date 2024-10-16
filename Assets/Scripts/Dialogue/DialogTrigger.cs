@@ -13,16 +13,18 @@ public class DialogTrigger : Interactable
 
 
     private OpenImageCanvas openImageCanvas;
+    private DialogManager dialogManager;
 
     private void Start()
     {
         openImageCanvas = FindObjectOfType<OpenImageCanvas>();
+        dialogManager = FindObjectOfType<DialogManager>();
     }
 
     public void StartDialogue(int waitms)
     {
-        FindObjectOfType<DialogManager>().StartCoroutine(
-        FindObjectOfType<DialogManager>().OpenDialogue(dialogs[dialogIndex].dialog, actors, waitms)
+        dialogManager.StartCoroutine(
+        dialogManager.OpenDialogue(dialogs[dialogIndex].dialog, actors, waitms)
         );
     }
 
