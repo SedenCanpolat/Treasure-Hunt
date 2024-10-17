@@ -44,7 +44,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     void Start()
     {
         startPos = this.transform.position;
-        Deug.Log()
+        Debug.Log("cc");
 
 
     }
