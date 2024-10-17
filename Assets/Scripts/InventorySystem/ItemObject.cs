@@ -12,7 +12,7 @@ public class ItemObject : MonoBehaviour
         spriteRenderer.sprite = item.sprite;
     }
 
-    public void OnMouseEnter()
+    private void OnMouseDown()
     {
         InventoryManager.instance.addItem(item.sprite);
         Debug.Log("" + item.sprite);
