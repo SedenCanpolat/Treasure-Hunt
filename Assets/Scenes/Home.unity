@@ -5086,6 +5086,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1230503614}
+  slots:
+  - {fileID: 798983949}
+  - {fileID: 955865282}
 --- !u!1 &1130467628
 GameObject:
   m_ObjectHideFlags: 0
