@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 
 public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    Vector2 startPos;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("bb");
@@ -21,6 +23,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        this.transform.position = startPos;
         Debug.Log("dd");
     }
 
@@ -40,6 +43,9 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     // Start is called before the first frame update
     void Start()
     {
+        startPos = this.transform.position;
+        Deug.Log()
+
 
     }
 
