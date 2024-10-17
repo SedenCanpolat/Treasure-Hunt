@@ -6,7 +6,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public string ItemName;
-    public string Target;
+    public string Target; // interactableObject type not string
     public Sprite sprite;
 }
 
