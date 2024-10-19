@@ -22,12 +22,15 @@ public class Transition : Interactable
 
     void OnMouseDown(){
         UseStairs();
-
+        Debug.Log("OnTransition");
     } 
 
     public void UseStairs(){
+        Debug.Log("Transition0");
         if(isActive && !HolyUtilities.isOnUI()){
-            if(!ImageManager.instance.isImageActive){                
+            Debug.Log("Transition1");
+            if(!ImageManager.instance.isImageActive){ 
+                Debug.Log("Transition2");               
                 SoundEffectController.PlaySFX(StairSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
                 LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
                 LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
