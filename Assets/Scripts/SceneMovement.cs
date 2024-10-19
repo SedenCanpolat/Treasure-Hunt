@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class SceneMovement : MonoBehaviour
 {
-    //public GameObject[] sceneArr;
     private GameObject[] sceneArr;
 
     public static SceneMovement instance; // tek yere atabilirsin sadece bunu kullaniyorsan
@@ -18,9 +17,10 @@ public class SceneMovement : MonoBehaviour
         } 
     }
 
-    private void Start() {
-        sceneArr = FindAnyObjectByType<SceneArr>().sceneArr;
+    public void Initialize(GameObject[] scenes){
+        sceneArr = scenes;
         changeScene(0);
+        
     }
 
 
@@ -29,6 +29,8 @@ public class SceneMovement : MonoBehaviour
             Debug.LogError("sceneArr is not set or is empty!");
             return;
         }
+        
+        if(sceneArr[roomId] == null) return;
 
         for(int i = 0; i< sceneArr.Length; i++){
             sceneArr[i].SetActive(false);

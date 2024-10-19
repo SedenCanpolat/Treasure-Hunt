@@ -29,12 +29,12 @@ public class Transition : Interactable
         Debug.Log("Transition0");
         if(isActive && !HolyUtilities.isOnUI()){
             Debug.Log("Transition1");
-            if(!ImageManager.instance.isImageActive){ 
+            //if(!ImageManager.instance.isImageActive){ 
                 Debug.Log("Transition2");               
                 SoundEffectController.PlaySFX(StairSFX).SetVolume(2.00f).RandomPitchRange(0.90f,1.05f);
                 LoadCanvas.gameObject.LeanCancel(); // to cancel the previous for spamming
                 LoadCanvas.GetComponent<CanvasGroup>().LeanAlpha(1f, time).setOnComplete(SceneChangend); // call the function inside of it when it's completed
-            }
+            //}
         }
     }
 

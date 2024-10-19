@@ -8,12 +8,8 @@ public class SceneArr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SceneMovement.instance.Initialize(sceneArr);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
