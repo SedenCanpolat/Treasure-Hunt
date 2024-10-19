@@ -29,8 +29,6 @@ public class SceneMovement : MonoBehaviour
             Debug.LogError("sceneArr is not set or is empty!");
             return;
         }
-        
-        if(sceneArr[roomId] == null) return;
 
         for(int i = 0; i< sceneArr.Length; i++){
             sceneArr[i].SetActive(false);
