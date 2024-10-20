@@ -27,6 +27,7 @@ public class Transition : Interactable
 
     public void UseStairs(){
         Debug.Log("Transition0");
+        Debug.Log(isActive);
         if(isActive && !HolyUtilities.isOnUI()){
             Debug.Log("Transition1");
             //if(!ImageManager.instance.isImageActive){ 

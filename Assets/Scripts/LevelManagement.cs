@@ -26,6 +26,7 @@ public class LevelManagement : MonoBehaviour
 
     void ChangeLevel(){
         SceneManager.LoadScene(_sceneIndex);
+        Interactable.isActive = true;
     }
 
 
