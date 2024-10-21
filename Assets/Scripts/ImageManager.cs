@@ -27,7 +27,6 @@ public class ImageManager : MonoBehaviour
         yield return new WaitForSeconds(waitms / 1000f);
         imageCanvas.transform.parent.gameObject.SetActive(true);
         imageCanvas.sprite = sprite;
-        
         isImageActive = true;
         
     }

@@ -34,7 +34,7 @@ public class DT : Interactable
         {
 
             dialogIndex = TaskManager.instance.finishTaskControl(dialogIndex);
-            GetComponent<LeanBreathing>().StartBreathing();
+            //GetComponent<LeanBreathing>().StartBreathing();
             Debug.Log("DT: " + dialogIndex);
             StartDialogue();
             dialogIndex = TaskManager.instance.getTaskControl(dialogIndex);

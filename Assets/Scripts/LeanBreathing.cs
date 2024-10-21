@@ -8,9 +8,8 @@ public class LeanBreathing : MonoBehaviour
     public void StartBreathing()
     {
         LeanTween.cancel(gameObject);
-        gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f); 
+        gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         gameObject.LeanScale(new Vector3(rate, rate, rate), 0.7f).setLoopPingPong();
-        
     }
 
      public void StopBreathing()

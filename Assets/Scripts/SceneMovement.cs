@@ -17,10 +17,10 @@ public class SceneMovement : MonoBehaviour
         } 
     }
 
+
     public void Initialize(GameObject[] scenes){
         sceneArr = scenes;
-        changeScene(0);
-        
+        changeScene(0);  
     }
 
 
@@ -33,8 +33,9 @@ public class SceneMovement : MonoBehaviour
         for(int i = 0; i< sceneArr.Length; i++){
             sceneArr[i].SetActive(false);
         }
-        Debug.Log("Load correct one");
+
         sceneArr[roomId].SetActive(true);
+        
     }
 
 }
