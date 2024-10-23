@@ -9,24 +9,24 @@ using UnityEngine.UIElements;
 public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     Vector2 startPos;
+    private Canvas canvas;
+    private Transform originalParent;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("bb");
+        transform.SetParent(canvas.transform, true);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("cc");
         this.transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         this.transform.position = startPos;
-        Debug.Log("dd");
+        transform.SetParent(originalParent, true);
     }
-
 
 
     /*
@@ -37,16 +37,12 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     */
 
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         startPos = this.transform.position;
-        Debug.Log("cc");
-
-
+        originalParent = transform.parent;
+        canvas = GameObject.FindObjectOfType<Canvas>();
     }
 
     // Update is called once per frame
