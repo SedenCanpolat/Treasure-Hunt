@@ -42,6 +42,10 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("çalışıyor");
     }
 
+    public int isRightPlace(int check){
+        return check;
+    }
+
     void Start()
     {
 
