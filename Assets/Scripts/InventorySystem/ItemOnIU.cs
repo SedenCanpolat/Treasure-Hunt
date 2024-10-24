@@ -13,8 +13,10 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private Canvas canvas;
     private Transform originalParent;
     public GameObject slot;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+        startPos = this.transform.position;
         transform.SetParent(canvas.transform, true);
         Debug.Log("Canvas");
 
@@ -29,6 +31,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         this.transform.position = startPos;
         transform.SetParent(originalParent, true);
+        //Destroy(this.gameObject);
         Debug.Log("Original");
     }
 
@@ -44,7 +47,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     // Start is called before the first frame update
     void Start()
     {
-        startPos = this.transform.position;
+        
         originalParent = transform.parent;
         canvas = GameObject.FindObjectOfType<Canvas>();
     }
