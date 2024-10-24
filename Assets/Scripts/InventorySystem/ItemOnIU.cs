@@ -6,15 +6,18 @@ using Holylib.Utilities;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
 
+
 public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     Vector2 startPos;
     private Canvas canvas;
     private Transform originalParent;
-
+    public GameObject slot;
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.SetParent(canvas.transform, true);
+        Debug.Log("Canvas");
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -26,6 +29,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         this.transform.position = startPos;
         transform.SetParent(originalParent, true);
+        Debug.Log("Original");
     }
 
 
@@ -44,5 +48,6 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         originalParent = transform.parent;
         canvas = GameObject.FindObjectOfType<Canvas>();
     }
+   
 
 }

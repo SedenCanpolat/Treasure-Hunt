@@ -7,7 +7,10 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
     [SerializeField] Image itemImage;
-    List<GameObject> slots;
+    
+  
+    public int index;
+    
 
     private void Awake()
     {
@@ -23,8 +26,8 @@ public class InventoryManager : MonoBehaviour
 
     public void addItem(Sprite sprite)
     {
-
-        itemImage.sprite = sprite;
+        FindAnyObjectByType<Slots>().createSlot(sprite);
+        //itemImage.sprite = sprite;
         Debug.Log("çalışıyor");
     }
 
