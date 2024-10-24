@@ -6,7 +6,7 @@ public class ItemObject : MonoBehaviour
 {
     public Item item;
     [SerializeField] SpriteRenderer spriteRenderer;
-    // Start is called before the first frame update
+
     public void Start()
     {
         spriteRenderer.sprite = item.sprite;
@@ -14,8 +14,7 @@ public class ItemObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        InventoryManager.instance.addItem(item.sprite);
-        Debug.Log("" + item.sprite);
+        InventoryManager.instance.addItem(item);
         Destroy(this.gameObject);
     }
 

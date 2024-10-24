@@ -24,9 +24,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void addItem(Sprite sprite)
+    public void addItem(Item item)
     {
-        FindAnyObjectByType<Slots>().createSlot(sprite);
+        FindAnyObjectByType<Slots>().createSlot(item);
         //itemImage.sprite = sprite;
         Debug.Log("çalışıyor");
     }
