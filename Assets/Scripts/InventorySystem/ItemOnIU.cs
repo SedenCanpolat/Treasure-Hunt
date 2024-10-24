@@ -45,9 +45,4 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         canvas = GameObject.FindObjectOfType<Canvas>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
