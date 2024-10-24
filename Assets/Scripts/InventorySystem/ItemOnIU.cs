@@ -32,8 +32,11 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         this.transform.position = startPos;
         transform.SetParent(originalParent, true);
         //Destroy(this.gameObject);
+        //if(this.gameObject.GetComponent<Image>().sprite == )
         Debug.Log("Original");
     }
+
+    
 
 
     /*
