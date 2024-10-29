@@ -1617,10 +1617,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
   m_PrefabInstance: {fileID: 8009142610385908682}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &355445156 stripped
+--- !u!114 &355445156
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-  m_PrefabInstance: {fileID: 8009142610385908682}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355445155}
   m_Enabled: 1
@@ -1628,6 +1629,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2ac1daf83f7f94593862b7fd63a0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  xRange: 7.27
+  yRange: -2.41
+  animator: {fileID: 355445157}
+  walkSFX: {fileID: 8300000, guid: eec5ff2b3982a8b42886548c280b6d24, type: 3}
+  groundmMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!95 &355445157 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 355445160, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+  m_PrefabInstance: {fileID: 8009142610385908682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &366841272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11237,22 +11251,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-      propertyPath: floorScript
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-      propertyPath: floorScriptRoom
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-      propertyPath: floorScriptKitchen
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8009142611614438709, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-      propertyPath: floorScriptBasement
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11301,7 +11299,10 @@ PrefabInstance:
     - {fileID: 8009142611614438711, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 355445156}
   m_SourcePrefab: {fileID: 100100000, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
 --- !u!1001 &8776491650588485026
 PrefabInstance:

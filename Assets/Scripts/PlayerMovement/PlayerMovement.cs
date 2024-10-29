@@ -62,16 +62,18 @@ public class PlayerMovement : MonoBehaviour
         {
             moving = false;
             CancelMovement();
-        }  
+        }
     }
 
-    bool isPointerOnGround{ // statement
-        get{
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction,Mathf.Infinity, groundmMask);
+    bool isPointerOnGround
+    { // statement
+        get
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        return hit.collider != null;
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, groundmMask);
+
+            return hit.collider != null;
         }
     }
 
