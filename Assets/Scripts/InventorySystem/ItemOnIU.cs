@@ -32,6 +32,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         //if(this.gameObject.GetComponent<Image>().sprite == )
         if(this.GetComponent<Slot>().item){
             InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item);
+            Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
         }    
     }
 
