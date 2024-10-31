@@ -28,14 +28,18 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         this.transform.position = startPos;
         transform.SetParent(originalParent, true);
-        //Destroy(this.gameObject);
-        //if(this.gameObject.GetComponent<Image>().sprite == )
+        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if(hit.collider.gameObject == InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item)){
-            Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
-            Destroy(this.GetComponent<Slot>().item);
-        }    
+        RaycastHit2D[] hits = Physics2D.RaycastAll(ray.origin, ray.direction, Mathf.Infinity);
+            
+            for(int i=0; i<hits.Length; i++){
+                Debug.Log(hits[i].collider.name);
+                if(hits[i].collider != null && hits[i].collider.gameObject == InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item)){
+                Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
+                Destroy(this.gameObject);
+            } 
+        }
+           
         
     }
 
