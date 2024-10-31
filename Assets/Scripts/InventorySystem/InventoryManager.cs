@@ -45,7 +45,6 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject rightPlaceInDictionary(Item item){
         foreach (var kvp in objectMatch.ObjectTargetDictionary){
-            //Debug.Log($"Key: {kvp.Key}, Value: {kvp.Value}");
             if(item == kvp.Key){
                 return kvp.Value;
             }

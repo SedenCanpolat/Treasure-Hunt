@@ -11,4 +11,8 @@ public class Slot : MonoBehaviour
         this.item = item;
         GetComponent<Image>().sprite = item.sprite;
     }
+
+    public void destroySlot(Item item){
+        Destroy(item);
+    }
 }

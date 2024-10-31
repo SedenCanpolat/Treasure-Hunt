@@ -13,7 +13,7 @@ public class Slots : MonoBehaviour
 
     }
 
-    public void deleteSlot(Sprite sprite)
+    public void deleteSlot(Item item)
     {
         
     }    

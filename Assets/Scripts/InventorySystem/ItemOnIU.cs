@@ -30,10 +30,13 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.SetParent(originalParent, true);
         //Destroy(this.gameObject);
         //if(this.gameObject.GetComponent<Image>().sprite == )
-        if(this.GetComponent<Slot>().item){
-            InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        if(hit.collider.gameObject == InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item)){
             Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
+            Destroy(this.GetComponent<Slot>().item);
         }    
+        
     }
 
     
