@@ -30,7 +30,9 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.SetParent(originalParent, true);
         //Destroy(this.gameObject);
         //if(this.gameObject.GetComponent<Image>().sprite == )
-        Debug.Log("Original");
+        if(this.GetComponent<Slot>().item){
+            InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item);
+        }    
     }
 
     

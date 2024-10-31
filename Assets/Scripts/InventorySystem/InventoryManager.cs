@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
     [SerializeField] Image itemImage;
+    public ObjectMatch objectMatch;
     
   
     public int index;
@@ -42,13 +43,19 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("çalışıyor");
     }
 
-    public int isRightPlace(int check){
-        return check;
+    public GameObject rightPlaceInDictionary(Item item){
+        foreach (var kvp in objectMatch.ObjectTargetDictionary){
+            //Debug.Log($"Key: {kvp.Key}, Value: {kvp.Value}");
+            if(item == kvp.Key){
+                return kvp.Value;
+            }
+        }
+        return null;
     }
 
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

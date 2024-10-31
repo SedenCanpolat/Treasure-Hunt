@@ -9,7 +9,7 @@ public class ObjectMatch : MonoBehaviour
     public List<GameObject> values;
 
     // Dictionary to hold the key-value pairs at runtime
-    private Dictionary<Item, GameObject> ObjectTargetDictionary;
+    public Dictionary<Item, GameObject> ObjectTargetDictionary;
 
     private void Awake()
     {
@@ -23,6 +23,8 @@ public class ObjectMatch : MonoBehaviour
                 ObjectTargetDictionary.Add(keys[i], values[i]);
             }
         }
+        
     }
 
+    
 }
