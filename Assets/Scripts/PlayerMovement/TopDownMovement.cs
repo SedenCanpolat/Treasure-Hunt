@@ -1,41 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Holylib.HolySoundEffects;
 
 public class TopDownMovement : MonoBehaviour
 {
+    //components
     public Rigidbody2D rb;
-    public float speed = 10f;
-    Vector3 movement;
+
+    //Player
+    float walkSpeed = 4f;
+    float speedLimiter = 0.7f;
+    float inputHorizontal;
+    float inputVertical;
+
+    //Animations and states
     public Animator animator;
-    [SerializeField] AudioClip walkSFX;
-    SoundSource walksound;
+
+
+    //Sounds
+    //[SerializeField] AudioClip walkSFX;
+    //SoundSource walksound;
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
 
-        if (0 > movement.x)
-            transform.localScale = new Vector3(-1, 1, 1);
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+        inputVertical = Input.GetAxisRaw("Vertical");
 
-        if (0 < movement.x)
-            transform.localScale = new Vector3(1, 1, 1);
 
-        if (!walksound)
-            walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f, 2.40f).SetLoop(true);
-
-        animator.SetBool("walk", true);
-        float step = speed * Time.deltaTime;
-        //rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
-        transform.position = Vector2.MoveTowards(transform.position, transform.position + movement, step);
-        animator.SetBool("walk", false);
     }
+
+    private void FixedUpdate()
+    {
+        if (inputHorizontal != 0 || inputVertical != 0)
+        {
+            if (inputHorizontal != 0 && inputVertical != 0)
+            {
+                inputHorizontal *= speedLimiter;
+                inputVertical *= speedLimiter;
+            }
+            if (inputHorizontal > 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+
+            if (inputHorizontal < 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+
+            rb.velocity = new Vector2(inputHorizontal * walkSpeed, inputVertical * walkSpeed);
+            animator.SetBool("walk", true);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0f, 0f);
+            animator.SetBool("walk", false);
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
