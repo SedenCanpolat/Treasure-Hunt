@@ -14,9 +14,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         startPos = this.transform.position;
-        transform.SetParent(transform.parent.parent);
-        Debug.Log("Canvas");
-
+        transform.SetParent(transform.parent.parent.parent);
     }
 
     public void OnDrag(PointerEventData eventData)

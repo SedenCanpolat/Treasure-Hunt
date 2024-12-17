@@ -29,4 +29,14 @@ public class SedenDeneme : MonoBehaviour
         // fonki kapatma da yok
         // ayni zamanda her frame bunu kontrol etmek kotu bir fikir
     }
+
+    void func(){
+        /*
+        LeanTween.moveX(item.gameObject, 250, closeDuration).setOnComplete(() =>
+        {
+            item.gameObject.SetActive(false);
+        }
+        );
+        */        
+    }
 }
