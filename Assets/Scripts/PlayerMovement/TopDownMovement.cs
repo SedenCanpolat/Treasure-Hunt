@@ -42,11 +42,9 @@ public class TopDownMovement : MonoBehaviour
             {
                 walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f, 2.40f).SetLoop(true);
             }
-
-
             float step = speed * Time.deltaTime;
             animator.SetBool("walk", true);
-            transform.position = Vector2.MoveTowards(transform.position, transform.position + movement, step);
+            transform.position = Vector2.MoveTowards(transform.position, transform.position + movement * speed, step);
             //transform.position = Vector2.MoveTowards(transform.position, transform.position + movement, step);
         }
 
