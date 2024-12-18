@@ -7,8 +7,9 @@ public class TopDownMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 5f;
-    public float speedMultiplier = 1.5;
-    //public float ShiftSpeed = 5f;
+    public float speedMultiplier = 2f;
+    public float Speed;
+    
     Vector3 movement;
     public Animator animator;
     [SerializeField] AudioClip walkSFX;
@@ -18,13 +19,12 @@ public class TopDownMovement : MonoBehaviour
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {
+        Speed = speed;
 
-        public float Speed = speed;
-    movement.x = Input.GetAxisRaw("Horizontal");
+        movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
 
@@ -34,31 +34,30 @@ public class TopDownMovement : MonoBehaviour
             if (0 > movement.x)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
-}
+            }
 
-if (0 < movement.x)
-{
-    transform.localScale = new Vector3(1, 1, 1);
-}
+            if (0 < movement.x)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
 
-if (!walksound)
-{
-    walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f, 2.40f).SetLoop(true);
-}
-if (Input.GetKey(KeyCode.LeftShift))
-{
-    Speed *= speedMultiplier;
+            if (!walksound)
+            {
+                walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f, 2.40f).SetLoop(true);
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                Speed *= speedMultiplier;
 
-}
-step = Speed * Time.deltaTime;
-transform.position = Vector2.MoveTowards(transform.position, transform.position + movement * speedMultiplier * speed, step);
+            }
+            step = Speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, transform.position + movement * speedMultiplier * speed, step);
 
-animator.SetBool("walk", true);
+            animator.SetBool("walk", true);
 
-            //transform.position = Vector2.MoveTowards(transform.position, transform.position + movement, step);
+                    //transform.position = Vector2.MoveTowards(transform.position, transform.position + movement, step);
         }
 
         else animator.SetBool("walk", false);
-    }
+    }
 }
-lkdlkeldkl
