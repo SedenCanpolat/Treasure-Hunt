@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Map
   Target: HomeDoor
-  sprite: {fileID: 21300000, guid: 8284ec52f439eb84ea593abd24833718, type: 3}
+  sprite: {fileID: 21300000, guid: dca5af3a4c075fe4ca2323b7a1ba2001, type: 3}
