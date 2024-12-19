@@ -18,6 +18,9 @@ public class ItemObject : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-
+    public void getObject()
+    {
+        InventoryManager.instance.addItem(item);
+    }
 
 }

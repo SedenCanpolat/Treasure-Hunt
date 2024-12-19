@@ -11,6 +11,7 @@ public class ChestSubtask : Interactable
     [SerializeField] AudioClip LockSFX;
     [SerializeField] AudioClip MapSFX;
 
+    public Item item;
     public bool checkchest = false;
     public SubTask subTask;
     public DialogTrigger DialogTrigger;
@@ -47,6 +48,7 @@ public class ChestSubtask : Interactable
             ImageInSceneClosing(lockImg);
             ImageInSceneOpening(unlockImg);
             MapImageOpening();
+            InventoryManager.instance.addItem(item);
             if (DialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
             {
                 DialogTrigger.dialogIndex++;

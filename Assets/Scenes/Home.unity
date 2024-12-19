@@ -276,6 +276,7 @@ MonoBehaviour:
   mapImg: {fileID: 21300000, guid: 457b7f321c1db264fa72b9d890879d0e, type: 3}
   LockSFX: {fileID: 8300000, guid: 5402efbb3926db542bc097c2fcf1614d, type: 3}
   MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
+  item: {fileID: 11400000, guid: 95bd39e3f46f2ab44b6a6e23ebc756b3, type: 2}
   checkchest: 0
   subTask: {fileID: 1830460539}
   DialogTrigger: {fileID: 556706934}
@@ -3476,6 +3477,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &829254374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829254376}
+  - component: {fileID: 829254375}
+  m_Layer: 0
+  m_Name: deneme
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &829254375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829254374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626e3b6374c1b9248b43084b13d64646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 96a6df2ff83ba324eb1f043baa4d49d1, type: 2}
+  spriteRenderer: {fileID: 0}
+--- !u!4 &829254376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829254374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.014526, y: 0.99750733, z: 0.02241018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839403627
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,6 +10464,7 @@ MonoBehaviour:
   CleanSFX: {fileID: 8300000, guid: d79f41ce041247c4bbd5f6c344d2a031, type: 3}
   CompleteSFX: {fileID: 8300000, guid: 601a6bf57d06add4ca0d3b9432a17b1c, type: 3}
   PutSFX: {fileID: 8300000, guid: f884a5c4770ceb242b5b91f1f5202369, type: 3}
+  item: {fileID: 11400000, guid: 96a6df2ff83ba324eb1f043baa4d49d1, type: 2}
 --- !u!212 &2136685285
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11331,3 +11379,4 @@ SceneRoots:
   - {fileID: 126587059}
   - {fileID: 1219096679}
   - {fileID: 1129441437}
+  - {fileID: 829254376}

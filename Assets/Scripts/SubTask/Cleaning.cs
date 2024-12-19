@@ -16,6 +16,7 @@ public class Cleaning : Interactable
     [SerializeField] AudioClip CompleteSFX;
     [SerializeField] AudioClip PutSFX;
     SoundSource cleansource;
+    public Item item;
 
 
     private void Start()
@@ -76,6 +77,7 @@ public class Cleaning : Interactable
             SoundEffectController.PlaySFX(PutSFX).SetVolume(0.90f); ;
             if (dirtParent.transform.childCount == 0 && missionCompleted == false)
             {
+                InventoryManager.instance.addItem(item);
                 print("YEYY");
                 missionCompleted = true;
                 SoundEffectController.PlaySFX(CompleteSFX).SetVolume(0.50f);

@@ -5,7 +5,6 @@ using Holylib.HolySoundEffects;
 
 public class TopDownMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
     public float speed = 5f;
     public float speedMultiplier = 2f;
     public float Speed;
@@ -30,7 +29,7 @@ public class TopDownMovement : MonoBehaviour
 
         if (movement.x != 0 || movement.y != 0)
         {
-            float step = speed * Time.deltaTime;
+
             if (0 > movement.x)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
@@ -45,13 +44,13 @@ public class TopDownMovement : MonoBehaviour
             {
                 walksound = SoundEffectController.PlaySFX(walkSFX).SetVolume(1.60f).RandomPitchRange(1.60f, 2.40f).SetLoop(true);
             }
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 Speed *= speedMultiplier;
 
             }
-            step = Speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, transform.position + movement * speedMultiplier * speed, step);
+            float step = Speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, transform.position + movement * Speed, step);
 
             animator.SetBool("walk", true);
 
