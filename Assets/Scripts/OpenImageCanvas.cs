@@ -21,4 +21,21 @@ public class OpenImageCanvas : DialogTrigger
     }
 
 
+    public void CanvasWithoutDialogue(){
+        if(isActive){
+            print("a");
+            
+                    print("b");
+                    if (ImageOpeningSFX != null) {
+                    SoundEffectController.PlaySFX(ImageOpeningSFX);
+                    }
+                    StartCoroutine(ImageManager.instance.OpenImageCanvas(sprite));
+            
+                
+            
+            
+        }
+    }
+
+
 }
