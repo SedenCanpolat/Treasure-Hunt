@@ -10,6 +10,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     Vector2 startPos;
     private Transform originalParent;
     public GameObject slot;
+    public bool match = false;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -33,8 +34,10 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             for(int i=0; i<hits.Length; i++){
                 Debug.Log(hits[i].collider.name);
                 if(hits[i].collider != null && hits[i].collider.gameObject == InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item)){
-                Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
-                Destroy(this.gameObject);
+                    Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
+                    Destroy(this.gameObject);
+                    match = true;
+
             } 
         }
            

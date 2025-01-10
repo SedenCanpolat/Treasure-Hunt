@@ -4,6 +4,7 @@ using Holylib.HolySoundEffects;
 
 public class ChestSubtask : Interactable
 {
+    public ItemOnIU itemOnIU;
     public bool tasksDone = false;
     [SerializeField] GameObject lockImg;
     [SerializeField] GameObject unlockImg;
@@ -11,7 +12,7 @@ public class ChestSubtask : Interactable
     [SerializeField] AudioClip LockSFX;
     [SerializeField] AudioClip MapSFX;
 
-    public Item item;
+    //public Item item;
     public bool checkchest = false;
     public SubTask subTask;
     public DialogTrigger DialogTrigger;
@@ -19,6 +20,26 @@ public class ChestSubtask : Interactable
     private void Start()
     {
         unlockImg.SetActive(false);
+    }
+
+    public void Update()
+    {
+        if(itemOnIU.match == true)
+        {
+            checkchest = false;
+            SoundEffectController.PlaySFX(MapSFX).SetVolume(0.4f);
+            //Invoke("MapImageOpening", 1f);
+            ImageInSceneClosing(lockImg);
+            ImageInSceneOpening(unlockImg);
+            MapImageOpening();
+            //InventoryManager.instance.addItem(item);
+            if (DialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
+            {
+                DialogTrigger.dialogIndex++;
+                tasksDone = true;
+                GetComponent<changecolor>().NotColorChange();
+            }
+        }
     }
     void OnMouseDown()
     {
@@ -40,7 +61,7 @@ public class ChestSubtask : Interactable
                 //checkchest = false;
             }
         }
-        else if (isActive && !HolyUtilities.isOnUI())
+        /*else if (isActive && !HolyUtilities.isOnUI())
         {
             checkchest = false;
             SoundEffectController.PlaySFX(MapSFX).SetVolume(0.4f);
@@ -48,14 +69,14 @@ public class ChestSubtask : Interactable
             ImageInSceneClosing(lockImg);
             ImageInSceneOpening(unlockImg);
             MapImageOpening();
-            InventoryManager.instance.addItem(item);
+            //InventoryManager.instance.addItem(item);
             if (DialogTrigger.dialogIndex == subTask.task[3].getTask + 1)
             {
                 DialogTrigger.dialogIndex++;
                 tasksDone = true;
                 GetComponent<changecolor>().NotColorChange();
             }
-        }
+        }*/
     }
 
     private void OnMouseEnter()
