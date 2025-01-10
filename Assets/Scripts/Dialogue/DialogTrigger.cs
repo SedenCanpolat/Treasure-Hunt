@@ -1,3 +1,4 @@
+using Holylib.Utilities;
 using UnityEngine;
 
 public class DialogTrigger : Interactable
@@ -30,7 +31,10 @@ public class DialogTrigger : Interactable
 
     protected virtual void OnMouseDown()
     {
-        TriggerDialog();
+        if(!HolyUtilities.isOnUI()){
+            TriggerDialog();
+        }
+        
 
     }
 
@@ -40,6 +44,7 @@ public class DialogTrigger : Interactable
         if (isActive && this.gameObject.name == "Capsule")
         {
             GetComponent<LeanBreathing>().StartBreathing();
+            print("g");
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue(waitms);
