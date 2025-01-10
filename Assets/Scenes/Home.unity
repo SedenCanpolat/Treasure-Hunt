@@ -270,13 +270,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8515adfadd65d184696340d8d04c86ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemOnIU: {fileID: 0}
   tasksDone: 0
   lockImg: {fileID: 1656284541}
   unlockImg: {fileID: 1791005712}
   mapImg: {fileID: 21300000, guid: 457b7f321c1db264fa72b9d890879d0e, type: 3}
   LockSFX: {fileID: 8300000, guid: 5402efbb3926db542bc097c2fcf1614d, type: 3}
   MapSFX: {fileID: 8300000, guid: b703a93ae95e15944ab703baf75babd4, type: 3}
-  item: {fileID: 11400000, guid: 95bd39e3f46f2ab44b6a6e23ebc756b3, type: 2}
   checkchest: 0
   subTask: {fileID: 1830460539}
   DialogTrigger: {fileID: 556706934}
@@ -338,6 +338,7 @@ MonoBehaviour:
     - actorId: 0
       message: This is locked
   check: 0
+  item: {fileID: 0}
 --- !u!1 &67346563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1345,7 @@ MonoBehaviour:
   dialogIndex: 0
   dialogs: []
   check: 0
+  item: {fileID: 0}
 --- !u!114 &321351256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2400,6 +2402,7 @@ MonoBehaviour:
     - actorId: 0
       message: Go and play outside.
   check: 0
+  item: {fileID: 11400000, guid: 96a6df2ff83ba324eb1f043baa4d49d1, type: 2}
 --- !u!114 &556706935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2641,6 +2644,7 @@ MonoBehaviour:
     - actorId: 0
       message: Nothing is interesting here.
   check: 0
+  item: {fileID: 0}
   WaitSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
 --- !u!114 &606434949
 MonoBehaviour:
@@ -2852,6 +2856,7 @@ MonoBehaviour:
     - actorId: 0
       message: I'm bored of playing with the toys here.
   check: 0
+  item: {fileID: 0}
 --- !u!212 &643188030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3216,6 +3221,7 @@ MonoBehaviour:
   dialogIndex: 0
   dialogs: []
   check: 0
+  item: {fileID: 0}
 --- !u!1 &686653268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,6 +3641,7 @@ MonoBehaviour:
     - actorId: 0
       message: 
   check: 0
+  item: {fileID: 0}
   sprite: {fileID: 21300000, guid: 457b7f321c1db264fa72b9d890879d0e, type: 3}
   ImageOpeningSFX: {fileID: 8300000, guid: f884a5c4770ceb242b5b91f1f5202369, type: 3}
   opened: 0
@@ -3797,6 +3804,7 @@ MonoBehaviour:
     - actorId: 0
       message: I've just got up.
   check: 0
+  item: {fileID: 0}
 --- !u!61 &839403631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4686,6 +4694,7 @@ MonoBehaviour:
     - actorId: 0
       message: Nothing is interesting here.
   check: 0
+  item: {fileID: 0}
   WaitSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
 --- !u!1 &1027228964
 GameObject:
@@ -5526,7 +5535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1213841342
 Transform:
   m_ObjectHideFlags: 0
@@ -6217,6 +6226,7 @@ MonoBehaviour:
     - actorId: 0
       message: I've read these books already.
   check: 0
+  item: {fileID: 0}
 --- !u!114 &1274205140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7354,6 +7364,7 @@ MonoBehaviour:
     - actorId: 0
       message: This is an old photo of my dad and me.
   check: 0
+  item: {fileID: 0}
   sprite: {fileID: 21300000, guid: 16040a6fd5f63614e9e71241a8dab582, type: 3}
   ImageOpeningSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
   opened: 0
@@ -8270,6 +8281,7 @@ MonoBehaviour:
     - actorId: 0
       message: This is empty.
   check: 0
+  item: {fileID: 0}
   WaitSFX: {fileID: 8300000, guid: cca364265d5dacf498f20ecc8cb3372e, type: 3}
 --- !u!114 &1600279838
 MonoBehaviour:
@@ -8474,6 +8486,7 @@ MonoBehaviour:
     - actorId: 0
       message: 'Now I can find the treasure! '
   check: 0
+  item: {fileID: 0}
 --- !u!60 &1613437470
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8629,7 +8642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1700868805
 Transform:
   m_ObjectHideFlags: 0
@@ -9537,6 +9550,7 @@ MonoBehaviour:
     - actorId: 1
       message: It's again very boring summer day.
   check: 0
+  item: {fileID: 0}
 --- !u!114 &1830460537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10626,7 +10640,6 @@ MonoBehaviour:
   CleanSFX: {fileID: 8300000, guid: d79f41ce041247c4bbd5f6c344d2a031, type: 3}
   CompleteSFX: {fileID: 8300000, guid: 601a6bf57d06add4ca0d3b9432a17b1c, type: 3}
   PutSFX: {fileID: 8300000, guid: f884a5c4770ceb242b5b91f1f5202369, type: 3}
-  item: {fileID: 11400000, guid: 96a6df2ff83ba324eb1f043baa4d49d1, type: 2}
 --- !u!212 &2136685285
 SpriteRenderer:
   m_ObjectHideFlags: 0
