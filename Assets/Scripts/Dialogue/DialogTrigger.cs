@@ -45,7 +45,6 @@ public class DialogTrigger : Interactable
         if (isActive && this.gameObject.name == "Capsule")
         {
             GetComponent<LeanBreathing>().StartBreathing();
-            print("g");
             //Debug.Log(dialogs.Length);
             //Debug.Log(dialogIndex);
             StartDialogue(waitms);
@@ -63,7 +62,7 @@ public class DialogTrigger : Interactable
             }
             if(dialogIndex == 7)
             InventoryManager.instance.addItem(item);
-
+            
 
         }
         else if (isActive && this.gameObject.name == "HomeDoor")

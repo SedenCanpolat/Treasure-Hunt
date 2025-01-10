@@ -71,17 +71,13 @@ public class DialogManager : MonoBehaviour
     public void FinishDialog()
     {
         if(isActive){
-            print("c");
             Interactable.isActive = true;
             //Debug.Log("Conversation eneded!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); //ending the conversation animation
             isActive = false;
             player.GetComponent<PlayerMovement>().UnlockMovement();
-            print("d");
-            print(leanBreathing);
             if (leanBreathing != null)
             {
-                print("f");
                 leanBreathing.StopBreathing();
             }
         }

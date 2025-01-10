@@ -10,7 +10,6 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     Vector2 startPos;
     private Transform originalParent;
     public GameObject slot;
-    public bool match = false;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -36,7 +35,7 @@ public class ItemOnIU : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 if(hits[i].collider != null && hits[i].collider.gameObject == InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item)){
                     Debug.Log(InventoryManager.instance.rightPlaceInDictionary(this.GetComponent<Slot>().item));
                     Destroy(this.gameObject);
-                    match = true;
+                    Chest2.instance.OpenChest();
 
             } 
         }
