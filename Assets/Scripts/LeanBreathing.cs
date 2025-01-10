@@ -7,7 +7,6 @@ public class LeanBreathing : MonoBehaviour
     [SerializeField] float rate;
     public void StartBreathing()
     {
-        print("a");
         LeanTween.cancel(gameObject);
         gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         gameObject.LeanScale(new Vector3(rate, rate, rate), 0.7f).setLoopPingPong();
@@ -15,7 +14,6 @@ public class LeanBreathing : MonoBehaviour
 
      public void StopBreathing()
     {
-        print("b");
         LeanTween.cancel(gameObject);  
     }
 }
