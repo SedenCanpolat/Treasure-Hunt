@@ -404,9 +404,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968521856}
-    - targetCorrespondingSourceObject: {fileID: 8009142611614438705, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1968521857}
   m_SourcePrefab: {fileID: 100100000, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
 --- !u!1001 &182207393
 PrefabInstance:
@@ -2928,7 +2925,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.56, y: 6.86}
+    oldSize: {x: 5.22, y: 6.55}
     newSize: {x: 4.56, y: 6.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2937,18 +2934,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.56, y: 6.1688533}
   m_EdgeRadius: 0
---- !u!114 &1968521857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968521848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8398f2d9c5ea9074f9f44bd25335c6fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
