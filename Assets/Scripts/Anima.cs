@@ -4,27 +4,22 @@ using UnityEngine;
 
 public class Anima: MonoBehaviour
 {
-    private float xTres = 6f;
-    private float yAmount = -1f; 
+    private float xTres = 6.25f;
+    private float yTres = -1.25f; 
     bool over = false;
 
     Animator animator;
     void Start()
     {
         animator = GetComponent<Animator>();
-        Move();
+        Move5();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void Move()
     {
-        LeanTween.moveX(gameObject, xTres, 3f);
-        LeanTween.moveY(gameObject, yAmount, 3f);
+        LeanTween.moveX(gameObject, xTres, 4.5f);
+        LeanTween.moveY(gameObject, yTres, 4.5f);
         animator.SetBool("IsAtMost", true);
         Invoke("Move3", 5f);
         if(over)
@@ -37,9 +32,9 @@ public class Anima: MonoBehaviour
     private void Move2()
     {   
             animator.SetBool("IsAtMost", false);
-            LeanTween.moveX(gameObject, 3f , 3f);
-            LeanTween.moveY(gameObject, -0.5f, 3f);
-            Invoke("Move", 5f);
+            LeanTween.moveX(gameObject, 2.5f , 4.5f);
+            LeanTween.moveY(gameObject, 0f, 4.5f);
+            Invoke("Move5", 5f);
             over = false;
         
         
@@ -47,7 +42,7 @@ public class Anima: MonoBehaviour
     private void Move3()
     {   
             animator.SetBool("IsAtMost", false);
-            LeanTween.moveX(gameObject, 3f , 3f);
+            LeanTween.moveX(gameObject, 2.5f , 4.5f);
             Invoke("Move", 5f);
             over = true;
           
@@ -55,9 +50,25 @@ public class Anima: MonoBehaviour
 
     private void Move4()
     {
-        LeanTween.moveX(gameObject, 3f, 3f);
-        LeanTween.moveY(gameObject, -0.5f, 3f);
+        LeanTween.moveX(gameObject, 2.5f, 4.5f);
+        LeanTween.moveY(gameObject, yTres, 4.5f);
         animator.SetBool("IsAtMost", false);
-        Invoke("Move", 5f);
+        Invoke("Move5", 5f);
+        over = true;
+    }
+
+    private void Move5()
+    {
+        LeanTween.moveX(gameObject, xTres, 4.5f);
+        animator.SetBool("IsAtMost", true);
+        
+        if(over)
+        {
+            Invoke("Move2", 5f);
+        }
+        else
+        {
+            Invoke("Move4", 5f);
+        }
     }
 }

@@ -347,11 +347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8009142611614438710, guid: 93061b9216869a14b86e77ca00ee06c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2290,8 +2290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -49, y: 265}
-  m_SizeDelta: {x: 1000, y: 50}
+  m_AnchoredPosition: {x: -111, y: 265}
+  m_SizeDelta: {x: 1200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800841527
 MonoBehaviour:
@@ -2313,10 +2313,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thank you for playing our demo!
+  m_text: 'Thank you for playing the beginning of our story!
 
-    Please wait to continue the adventure
-    on full release!'
+    Please wait to
+    continue the adventure on full release!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1de3c399425df0f4483f20de8c208838, type: 2}
   m_sharedMaterial: {fileID: -3591208459896963695, guid: 1de3c399425df0f4483f20de8c208838, type: 2}
@@ -2741,7 +2741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -268, y: -225}
+  m_AnchoredPosition: {x: -268, y: -299}
   m_SizeDelta: {x: 204.54675, y: 84.445984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962128701
