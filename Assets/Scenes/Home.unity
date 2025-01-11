@@ -2378,6 +2378,8 @@ MonoBehaviour:
   - dialog:
     - actorId: 0
       message: Here you go.
+    - actorId: 0
+      message: I'm putting the key in your bag.
     - actorId: 1
       message: Hooray!
     - actorId: 1
