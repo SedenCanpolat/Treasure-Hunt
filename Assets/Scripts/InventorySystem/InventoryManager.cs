@@ -52,14 +52,4 @@ public class InventoryManager : MonoBehaviour
         return null;
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

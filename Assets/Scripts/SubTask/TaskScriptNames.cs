@@ -15,9 +15,4 @@ public class TaskScriptNames : MonoBehaviour
        // scriptNames[0] = exitHome;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -12,6 +12,7 @@ public class DialogTrigger : Interactable
     public Dialogs[] dialogs;
     public bool check = false;
     public Item item;
+    private bool took = false;
 
 
     private OpenImageCanvas openImageCanvas;
@@ -60,8 +61,12 @@ public class DialogTrigger : Interactable
                 //Debug.Log("control: ");
                 //Debug.Log(tasksDone);
             }
-            if(dialogIndex == 7)
-            InventoryManager.instance.addItem(item);
+            if(dialogIndex == 7 && !took){
+                InventoryManager.instance.addItem(item);
+                took = true;
+                
+            }
+            
             
 
         }
