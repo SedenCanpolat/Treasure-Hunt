@@ -3,7 +3,7 @@
 **Treasure Hunt** is a 2D narrative point-and-click game, developed using Unity.  
 Players navigate through various scenes, interact with objects, and complete tasks to uncover hidden treasure.
 
-🎮 **Play Now**: [https://seden.itch.io/treasure-hunt](https://seden.itch.io/treasure-hunt)
+🎮 **Play From Here**: [https://seden.itch.io/treasure-hunt](https://seden.itch.io/treasure-hunt)
 
 
 **Seden Canpolat**: I worked as the lead developer. I did coding and worked on the story, game design, audio, and UI.  
