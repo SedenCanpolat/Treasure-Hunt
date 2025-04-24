@@ -5,8 +5,7 @@ Players navigate through various scenes, interact with objects, and complete tas
 
 🎮 **Play Now**: [https://seden.itch.io/treasure-hunt](https://seden.itch.io/treasure-hunt)
 
-**Seden Canpolat**: I worked as the lead developer. I did coding and worked on the story, game design, audio, and UI.
-
+**Seden Canpolat**: I worked as the lead developer. I did coding and worked on the story, game design, audio, and UI.  
  In terms of coding, I worked on:
 - Transition system  
 - Scene management  
