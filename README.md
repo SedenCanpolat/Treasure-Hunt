@@ -18,4 +18,4 @@ Players navigate through various scenes, interact with objects, and complete tas
 - Dialogue system  
 - Animations 
 
-![08-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d309657a-fa45-4d89-80d8-4d8847d0532b)
+![082-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e341c5aa-e262-4c0b-ae37-89fa24bd3e49)
