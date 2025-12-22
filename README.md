@@ -7,7 +7,7 @@ Players navigate through various scenes, interact with objects, and complete tas
 
 ![0817-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/ef96054a-2af0-499f-baa4-dc5075536f82)
 
-**Seden Canpolat**: I worked as the lead developer. I did coding and worked on the story, game design, audio, and UI.  
+**Seden Canpolat**: I worked as the lead developer. I did the coding and worked on the story, game design, audio, and UI.  
  In terms of coding, I worked on:
 - Transition system  
 - Scene management  
