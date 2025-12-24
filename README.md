@@ -60,6 +60,7 @@ public bool isLocked {
 
 Multiple systems (dialogs, dragging, settings, image viewer) can lock player movement simultaneously. A simple boolean flag would fail when multiple systems overlap. Reference counting ensures movement only unlocks when **all** systems release their locks.
 
+<!--
 ### 3. Dialog-Indexed Quest State Machine
 
 Built a multi-stage task system tightly integrated with narrative flow:
@@ -83,8 +84,9 @@ public int getTaskControl(int dialogIndex) {
 ```
 
 Tasks can only be completed at specific dialog stages, creating controlled narrative pacing. When the dialog reaches `onMission`, the task activates. After completion, it advances to `afterMission`, enabling branching dialog paths based on player actions and supporting non-linear storytelling.
+-->
 
-### 4. Dictionary-Based Item-Target Matching with Raycasting
+### 3. Dictionary-Based Item-Target Matching with Raycasting
 
 Created an inventory puzzle system using drag-and-drop mechanics:
 
@@ -106,7 +108,7 @@ public void OnEndDrag(PointerEventData eventData) {
 
 Players drag UI items and release them over world objects. The system raycasts from UI space into world space, checks if the hit object matches the item’s target in the dictionary, and triggers the appropriate response. This bridges UI and world interactions cleanly for inventory-based puzzles.
 
-### 5. Callback-Based Transition System with Time Scaling
+### 4. Callback-Based Transition System with Time Scaling
 
 Built a flexible transition system using `Action` delegates:
 
