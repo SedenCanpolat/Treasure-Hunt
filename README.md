@@ -128,3 +128,61 @@ public void OpenSettingsMenu() {
 
 Using `setIgnoreTimeScale(true)` ensures transitions function while the game is paused. Action delegates allow scene changes, state updates, or position changes during fade-outs, while the settings menu uses its own delegates to coordinate player movement locking.
 
+### 5. PlayerPrefs Settings Management
+
+Implemented persistent audio settings using Unity’s `PlayerPrefs`:
+
+```csharp
+if (!PlayerPrefs.HasKey("MasterVolume"))
+    PlayerPrefs.SetFloat("MasterVolume", 0.5f);
+
+SoundEffectController.MasterVolume =
+    PlayerPrefs.GetFloat("MasterVolume");
+```
+
+Settings persist between sessions without requiring a complex save system. This approach is appropriate for a narrative-driven game where audio preferences matter but full game-state saving is unnecessary.
+
+
+### 6. LayerMask-Based Click Filtering for Input Conflict Prevention
+
+Implemented ground-only click detection to prevent UI interactions from triggering player movement:
+
+```csharp
+bool isPointerOnGround {
+    get {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit =
+            Physics2D.Raycast(ray.origin, ray.direction,
+                              Mathf.Infinity, groundmMask);
+        return hit.collider != null;
+    }
+}
+
+void Update() {
+    if (isPointerOnGround && Input.GetMouseButtonDown(0)) {
+        lastClickedPos =
+            Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        moving = true;
+    }
+}
+```
+
+By raycasting only against ground layers, clicks on UI elements (inventory, dialog, settings) do not issue movement commands. This resolves input conflicts common in point-and-click games where UI overlays the game world.
+
+### 7. Time.timeScale Coordination with Action Delegates
+
+Built a pause system that synchronizes multiple game systems during time freezes:
+
+```csharp
+public Action onsettingOpenAction;
+public Action onsettingCloseAction;
+
+public void OpenSettingsMenu() {
+    settingmenu.SetActive(true);
+    onsettingOpenAction?.Invoke();
+    Time.timeScale = 0;
+}
+```
+
+When `Time.timeScale = 0` freezes the game, Action delegates notify subscribed systems (player movement, AI, audio) to lock their states. UI transitions continue using `setIgnoreTimeScale(true)`, and on unpause, corresponding delegates unlock systems in sync, preventing desynchronization.
+
